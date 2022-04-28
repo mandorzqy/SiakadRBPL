@@ -7,4 +7,4 @@ Anggota Kelompok 3 :
 4. Rahma Fauzia
 5. Mirza Badaruddin
 6. Chang Hong Kwang
-7. 
+7. Al Habsi Waliyul Khaq
