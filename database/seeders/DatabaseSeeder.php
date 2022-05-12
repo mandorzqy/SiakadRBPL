@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        // mengisi tabel data mahasiswa
         User::create([
                 'name'=>'Al Habsi Waliyul Khaq',
                 'email'=>'habsikhaq@gmail.com',
