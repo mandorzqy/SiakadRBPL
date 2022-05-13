@@ -20,11 +20,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home',[UserController::class,'home']);
+Route::get('/home',[UserController::class,'home'])->middleware('auth');
 
+Route::get('/register',[RegisterController::class,'create'])->middleware('auth');
+Route::post('/register',[RegisterController::class,'store']);
 
-Route::get('/login',[LoginController::class,'index']);
+Route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
 Route::post('/login',[LoginController::class,'authenticate']);
 
-Route::get('/register',[RegisterController::class,'create']);
-Route::post('/register',[RegisterController::class,'store']);
+Route::post('/logout',[LoginController::class,'logout']);
