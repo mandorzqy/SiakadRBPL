@@ -7,7 +7,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link {{ ($title==="Home") ? 'active': '' }}" aria-current="page" href="/home">Home</a>
+            <a class="nav-link {{ ($title==="Dashboard") ? 'active': '' }}" aria-current="page" href="/dashboard">Dashboard</a>
           </li>
         </ul>
 

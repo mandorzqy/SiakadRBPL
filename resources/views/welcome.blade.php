@@ -27,9 +27,6 @@
                 <div class="justify-center">
                     <span> Sistem Akademik Kelompok 3 RBPL C </span>
                     <span> masih dalam tahap pengembangan </span>
-                    <span>Coba commit</span>
-                    <span> Percobaan</span>
-                    <span> Percobaan 2</span>
                 </div>
             </div>
         </div>

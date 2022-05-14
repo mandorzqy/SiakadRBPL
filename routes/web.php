@@ -20,7 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home',[UserController::class,'home'])->middleware('auth');
+Route::get('/dashboard',function(){
+    return view('dashboard.index');
+})->middleware('auth');
 
 Route::get('/register',[RegisterController::class,'create'])->middleware('auth');
 Route::post('/register',[RegisterController::class,'store']);
