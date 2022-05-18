@@ -17,11 +17,15 @@ use App\Http\Controllers\RegisterController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('dashboard.index');
+})->middleware('auth');
 
 Route::get('/dashboard',function(){
     return view('dashboard.index');
+})->middleware('auth');
+
+Route::get('/biodata',function(){
+    return view('biodata.index');
 })->middleware('auth');
 
 Route::get('/register',[RegisterController::class,'create'])->middleware('auth');
