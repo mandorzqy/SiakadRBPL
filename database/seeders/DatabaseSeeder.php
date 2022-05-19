@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
                 'faculty'=>'FTEIC',
                 'password'=>bcrypt('akusukakuliah123')
             ]);
-    
+
             User::create([
                 'name'=>'Hatif Isfahani',
                 'email'=>'hatif@gmail.com',
@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
                 'faculty'=>'Sistem Informasi',
                 'password'=>bcrypt('akusukakuliah123')
             ]);
-    
+
             User::create([
                 'name'=>'Abyan Tahta',
                 'email'=>'abyan@gmail.com',
@@ -48,6 +48,18 @@ class DatabaseSeeder extends Seeder
                 'major'=>'Teknik Komputer',
                 'faculty'=>'FTEIC',
                 'password'=>bcrypt('akusukakuliah123')
+            ]);
+
+            User::create([
+                'name'=>'Ernando Taufiq',
+                'email'=>'ernando@gmail.com',
+                'nrp'=>6035601012,
+                'address'=>'Jalan Bungah 42 Malang',
+                'generation'=>2020,
+                'major'=>'Teknik Komputer',
+                'faculty'=>'FTEIC',
+                'password'=>bcrypt('akusukakuliah123')
+
             ]);
 
 
