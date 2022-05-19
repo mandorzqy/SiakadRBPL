@@ -10,10 +10,9 @@
             @csrf
             <button type="submit" class="dropdown-item">
                 <span class='text-white mx-3'>Logout</span>
-              
+
             </button>
           </form>
           </li>
     </div>
   </header>
-  
