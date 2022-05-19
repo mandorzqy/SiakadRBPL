@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Course;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,34 +21,42 @@ class DatabaseSeeder extends Seeder
                 'name'=>'Al Habsi Waliyul Khaq',
                 'email'=>'habsikhaq@gmail.com',
                 'nrp'=>6026201010,
-                'address'=>'Jalan Wijaya Kusuma 123 Jogjakarta',
+                'address'=>'Jalan Wijaya Kusuma 123 Yogyakarta',
                 'generation'=>2020,
-                'major'=>'FTEIC',
-                'faculty'=>'Information System',
+                'major'=>'Sistem Informasi',
+                'faculty'=>'FTEIC',
                 'password'=>bcrypt('akusukakuliah123')
             ]);
     
             User::create([
-                'name'=>'Ernando Taufiq Nur Hidayat',
-                'email'=>'ernando@gmail.com',
+                'name'=>'Hatif Isfahani',
+                'email'=>'hatif@gmail.com',
                 'nrp'=>6026201011,
                 'address'=>'Jalan Pahlawan 123 Surabaya',
                 'generation'=>2020,
                 'major'=>'FTEIC',
-                'faculty'=>'Information System',
-                'password'=>bcrypt('akusukasi123')
+                'faculty'=>'Sistem Informasi',
+                'password'=>bcrypt('akusukakuliah123')
             ]);
     
             User::create([
-                'name'=>'Muhammad Fathurahmman',
-                'email'=>'fathoor@gmail.com',
+                'name'=>'Abyan Tahta',
+                'email'=>'abyan@gmail.com',
                 'nrp'=>6026201012,
                 'address'=>'Jalan Kartini 42 Malang',
                 'generation'=>2020,
-                'major'=>'FTEIC',
-                'faculty'=>'Information System',
-                'password'=>bcrypt('akusukainformasi123')
+                'major'=>'Teknik Komputer',
+                'faculty'=>'FTEIC',
+                'password'=>bcrypt('akusukakuliah123')
             ]);
 
+
+            Course::create([
+                'kode_mk'=>'IS184307',
+                'nama_mata_kuliah'=>'Pemrograman Web',
+                'kode_kelas'=>'SI1101',
+                'dosen_pengampu'=>'Faisal Johan',
+                'sks'=>3,
+            ]);
     }
 }

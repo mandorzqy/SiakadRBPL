@@ -8,7 +8,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/biodata">
+          <a class="nav-link" href="/biodata/{{auth()->user()->name}}">
             <span data-feather="file"></span>
             Biodata
           </a>

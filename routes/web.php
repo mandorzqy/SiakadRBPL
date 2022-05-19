@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\DashboardBioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,9 +25,9 @@ Route::get('/dashboard',function(){
     return view('dashboard.index');
 })->middleware('auth');
 
-Route::get('/biodata',function(){
-    return view('biodata.index');
-})->middleware('auth');
+// Route::get('/biodata',function(){
+//     return view('biodata.index');
+// })->middleware('auth');
 
 Route::get('/register',[RegisterController::class,'create'])->middleware('auth');
 Route::post('/register',[RegisterController::class,'store']);
@@ -35,3 +36,5 @@ Route::get('/login',[LoginController::class,'index'])->name('login')->middleware
 Route::post('/login',[LoginController::class,'authenticate']);
 
 Route::post('/logout',[LoginController::class,'logout']);
+
+Route::resource('/biodata/{user:name}',DashboardBioController::class)->middleware('auth');
