@@ -11,6 +11,6 @@ class Course extends Model
     protected $guarded=['id'];
 
     public function score(){
-        return $this->belongsTo(Score::class);
+        return $this->hasMany(Score::class);
     }
 }

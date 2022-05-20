@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Score;
 use App\Models\Course;
 use Illuminate\Database\Seeder;
 
@@ -69,6 +70,28 @@ class DatabaseSeeder extends Seeder
                 'kode_kelas'=>'SI1101',
                 'dosen_pengampu'=>'Faisal Johan',
                 'sks'=>3,
+            ]);
+
+            Course::create([
+                'kode_mk'=>'IS184308',
+                'nama_mata_kuliah'=>'Algoritma Pemrograman',
+                'kode_kelas'=>'SI1101',
+                'dosen_pengampu'=>'Renny',
+                'sks'=>4,
+            ]);
+
+            Score::create([
+                'user_id'=>1,
+                'course_id'=>2,
+                'nilai_angka'=>3.5,
+                'nilai_huruf'=>'B'
+            ]);
+
+            Score::create([
+                'user_id'=>1,
+                'course_id'=>1,
+                'nilai_angka'=>4,
+                'nilai_huruf'=>'A'
             ]);
     }
 }

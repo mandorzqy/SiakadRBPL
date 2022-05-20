@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Score;
 use App\Http\Requests\StoreScoreRequest;
 use App\Http\Requests\UpdateScoreRequest;
+use App\Models\User;
 
 class ScoreController extends Controller
 {
@@ -16,6 +17,15 @@ class ScoreController extends Controller
     public function index()
     {
         //
+        return view('frs.index',['title'=>'Biodata']);
+    }
+
+    public function user(User $user){
+        return view('frs.index',[
+            'title'=>'FRS',
+            'score'=>$user->score,
+            'scores'=>Score::all()
+        ]);
     }
 
     /**

@@ -9,11 +9,12 @@ class Score extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+    protected $with=['user','course'];
     public function user(){
         return $this->belongsTo(User::class);
     }
 
     public function course(){
-        return $this->hasMany(Course::class);
+        return $this->belongsTo(Course::class);
     }
 }

@@ -15,7 +15,7 @@ class DashboardBioController extends Controller
     public function index()
     {
         //
-        return view('biodata.index');
+        return view('biodata.index',['title'=>'Biodata']);
     }
 
     /**
