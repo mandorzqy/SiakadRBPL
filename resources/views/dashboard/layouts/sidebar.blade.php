@@ -14,9 +14,9 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/frs/{{auth()->user()->name}}">
+          <a class="nav-link" href="/transkrip/{{auth()->user()->name}}">
             <span data-feather="file"></span>
-            FRS
+            Transkrip
           </a>
         </li>
       </ul>

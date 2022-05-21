@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('address');
             $table->integer('generation');
             $table->string('major');
-            $table->string('faculty');
+            $table->string('faculty'); 
             $table->rememberToken();
             $table->timestamps();
         });

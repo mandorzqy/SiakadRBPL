@@ -17,14 +17,15 @@ class ScoreController extends Controller
     public function index()
     {
         //
-        return view('frs.index',['title'=>'Biodata']);
+        return view('transkrip.index',['title'=>'Biodata']);
     }
 
-    public function frs(User $user){
-        return view('frs.index',[
-            'title'=>'FRS',
+
+    public function transkrip(User $user){
+        return view('transkrip.index',[
+            'title'=>'Transkrip',
             'score'=>$user->score->load('user','course'),
-            'scores'=>Score::all()
+            // 'scores'=>Score::all()
         ]);
     }
 

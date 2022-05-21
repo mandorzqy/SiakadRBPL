@@ -18,6 +18,13 @@ class DashboardBioController extends Controller
         return view('biodata.index',['title'=>'Biodata']);
     }
 
+
+    // public function biodata(User $user){
+    //     return view('biodata.index',[
+    //         'title'=>'Biodata',
+    //         'biodata'=>$user->load('user')
+    //     ]);
+    // }
     /**
      * Show the form for creating a new resource.
      *
