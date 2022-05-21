@@ -7,6 +7,7 @@ use App\Models\Score;
 use App\Models\Course;
 use App\Models\Department;
 use App\Models\Faculty;
+use App\Models\Schedule;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -177,6 +178,29 @@ class DatabaseSeeder extends Seeder
                 'nama_departemen'=>'Teknik Mesin industri',
                 'faculty_id'=>'2'
             ]);
+            //sesi 1
+            Schedule::create([
+                'Hari'=>'Senin',
+                'Jam'=>'07.00 - 10.00',
+            ]);
+            Schedule::create([
+                'Hari'=>'Selasa',
+                'Jam'=>'07.00 - 10.00',
+            ]);
+            Schedule::create([
+                'Hari'=>'Rabu',
+                'Jam'=>'07.00 - 10.00',
+            ]);
+            Schedule::create([
+                'Hari'=>'Kamis',
+                'Jam'=>'07.00 - 10.00',
+            ]);
+            Schedule::create([
+                'Hari'=>'Jumat',
+                'Jam'=>'07.00 - 10.00',
+            ]);
+
+
 
 
 
