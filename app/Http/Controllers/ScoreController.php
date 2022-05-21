@@ -20,10 +20,10 @@ class ScoreController extends Controller
         return view('frs.index',['title'=>'Biodata']);
     }
 
-    public function user(User $user){
+    public function frs(User $user){
         return view('frs.index',[
             'title'=>'FRS',
-            'score'=>$user->score,
+            'score'=>$user->score->load('user','course'),
             'scores'=>Score::all()
         ]);
     }

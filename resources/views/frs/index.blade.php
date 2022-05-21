@@ -8,7 +8,7 @@
 </div>
 <div class="container">
     {{-- @if ($scores->count()) --}}
-            @foreach ($scores as $nilai)
+            @foreach ($score as $nilai)
             <article class="container mb-5 border-bottom">
                 <p>Mata Kuliah : {{ $nilai->course->nama_mata_kuliah}}</a></p>
                 <p>Nilai Angka : {{ $nilai->nilai_angka }}</a></p>

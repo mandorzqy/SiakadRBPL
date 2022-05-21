@@ -41,5 +41,5 @@ Route::post('/logout',[LoginController::class,'logout']);
 Route::resource('/biodata',DashboardBioController::class)->middleware('auth');
 
 // Route::resource('/frs',[ScoreController::class,'user'])->middleware('auth');
-Route::get('/frs',[ScoreController::class,'user'])->middleware('auth');
+Route::get('/frs/{user:name}',[ScoreController::class,'frs'])->middleware('auth');
 
