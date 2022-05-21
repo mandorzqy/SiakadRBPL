@@ -7,7 +7,7 @@
     {{-- <div class="btn-toolbar mb-2 mb-md-0"> --}}
 </div>
 <div class="container">
-    @if ($scores->count())
+    @if ($score->count())
             @foreach ($score as $nilai)
             <article class="container mb-5 border-bottom">
                 <p>Mata Kuliah : {{ $nilai->course->nama_mata_kuliah}}</a></p>
