@@ -23,51 +23,7 @@ class DatabaseSeeder extends Seeder
 
 
         // mengisi tabel data mahasiswa
-        User::create([
-                'name'=>'Al Habsi Waliyul Khaq',
-                'email'=>'habsikhaq@gmail.com',
-                'nrp'=>6026201010,
-                'address'=>'Jalan Wijaya Kusuma 123 Yogyakarta',
-                'generation'=>2020,
-                'major'=>'Sistem Informasi',
-                'faculty'=>'FTEIC',
-                'password'=>bcrypt('akusukakuliah123')
-            ]);
-
-            User::create([
-                'name'=>'Hatif Isfahani',
-                'email'=>'hatif@gmail.com',
-                'nrp'=>6026201011,
-                'address'=>'Jalan Pahlawan 123 Surabaya',
-                'generation'=>2020,
-                'major'=>'FTEIC',
-                'faculty'=>'Sistem Informasi',
-                'password'=>bcrypt('akusukakuliah123')
-            ]);
-
-            User::create([
-                'name'=>'Abyan Tahta',
-                'email'=>'abyan@gmail.com',
-                'nrp'=>6026201012,
-                'address'=>'Jalan Kartini 42 Malang',
-                'generation'=>2020,
-                'major'=>'Teknik Komputer',
-                'faculty'=>'FTEIC',
-                'password'=>bcrypt('akusukakuliah123')
-            ]);
-
-            User::create([
-                'name'=>'Ernando Taufiq',
-                'email'=>'ernando@gmail.com',
-                'nrp'=>6035601012,
-                'address'=>'Jalan Bungah 42 Malang',
-                'generation'=>2020,
-                'major'=>'Teknik Komputer',
-                'faculty'=>'FTEIC',
-                'password'=>bcrypt('akusukakuliah123')
-
-            ]);
-
+        
 
             Course::create([
                 'kode_mk'=>'IS184307',
@@ -200,6 +156,54 @@ class DatabaseSeeder extends Seeder
                 'Jam'=>'07.00 - 10.00',
             ]);
 
+            User::create([
+                'name'=>'Al Habsi Waliyul Khaq',
+                'major_id'=>10,
+                'email'=>'habsikhaq@gmail.com',
+                'nrp'=>6026201010,
+                'address'=>'Jalan Wijaya Kusuma 123 Yogyakarta',
+                'generation'=>2020,
+                // 'major'=>'Sistem Informasi',
+                // 'faculty'=>'FTEIC',
+                'password'=>bcrypt('akusukakuliah123')
+            ]);
+
+            User::create([
+                'name'=>'Hatif Isfahani',
+                'major_id'=>5,
+                'email'=>'hatif@gmail.com',
+                'nrp'=>6026201011,
+                'address'=>'Jalan Pahlawan 123 Surabaya',
+                'generation'=>2020,
+                // 'major'=>'FTEIC',
+                // 'faculty'=>'Sistem Informasi',
+                'password'=>bcrypt('akusukakuliah123')
+            ]);
+
+            User::create([
+                'name'=>'Abyan Tahta',
+                'major_id'=>7,
+                'email'=>'abyan@gmail.com',
+                'nrp'=>6026201012,
+                'address'=>'Jalan Kartini 42 Malang',
+                'generation'=>2020,
+                // 'major'=>'Teknik Komputer',
+                // 'faculty'=>'FTEIC',
+                'password'=>bcrypt('akusukakuliah123')
+            ]);
+
+            User::create([
+                'name'=>'Ernando Taufiq',
+                'major_id'=>10,
+                'email'=>'ernando@gmail.com',
+                'nrp'=>6035601012,
+                'address'=>'Jalan Bungah 42 Malang',
+                'generation'=>2020,
+                // 'major'=>'Teknik Komputer',
+                // 'faculty'=>'FTEIC',
+                'password'=>bcrypt('akusukakuliah123')
+
+            ]);
 
 
 

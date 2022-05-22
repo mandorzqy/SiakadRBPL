@@ -11,7 +11,7 @@
     <h4>Email: {{auth()->user()->email}}</h4>
     <h4>Alamat: {{auth()->user()->address}}</h4>
     <h4>Angkatan: {{auth()->user()->generation}}</h4>
-    <h4>Fakultas: {{auth()->user()->faculty}}</h4>
-    <h4>Jurusan: {{auth()->user()->major}}</h4>
+    <h4>Jurusan: {{auth()->user()->major->nama_jurusan}}</h4>
+    <h4>Fakultas: {{auth()->user()->major->faculty->nama_fakultas}}</h4>
 </div>
 @endsection

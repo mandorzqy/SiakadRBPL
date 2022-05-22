@@ -15,6 +15,9 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            // $table->unsignedBigInteger('major_id');
+            $table->foreignId('major_id')->constrained('majors');
+            // $table->foreign('major_id')->references('id')->on('majors');
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -22,8 +25,8 @@ class CreateUsersTable extends Migration
             $table->bigInteger('nrp');
             $table->string('address');
             $table->integer('generation');
-            $table->string('major');
-            $table->string('faculty'); 
+            // $table->string('major');
+            // $table->string('faculty'); 
             $table->rememberToken();
             $table->timestamps();
         });
