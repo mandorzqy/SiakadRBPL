@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use App\Models\Score;
 use App\Models\Course;
-use App\Models\Department;
+use App\Models\Major;
 use App\Models\Faculty;
 use App\Models\Schedule;
 use Illuminate\Database\Seeder;
@@ -120,62 +120,62 @@ class DatabaseSeeder extends Seeder
                 'nama_fakultas'=>'FDKBD',
             ]);
             //FSAD
-            Department::create([
-                'nama_departemen'=>'Fisika',
+            Major::create([
+                'nama_jurusan'=>'Fisika',
                 'faculty_id'=>'4'
             ]);
-            Department::create([
-                'nama_departemen'=>'Matematika',
+            Major::create([
+                'nama_jurusan'=>'Matematika',
                 'faculty_id'=>'4'
             ]);
-            Department::create([
-                'nama_departemen'=>'Statistika',
+            Major::create([
+                'nama_jurusan'=>'Statistika',
                 'faculty_id'=>'4'
             ]);
-            Department::create([
-                'nama_departemen'=>'Kimia',
+            Major::create([
+                'nama_jurusan'=>'Kimia',
                 'faculty_id'=>'4'
             ]);
-            Department::create([
-                'nama_departemen'=>'Biologi',
+            Major::create([
+                'nama_jurusan'=>'Biologi',
                 'faculty_id'=>'4'
             ]);
-            Department::create([
-                'nama_departemen'=>'Aktuaria',
+            Major::create([
+                'nama_jurusan'=>'Aktuaria',
                 'faculty_id'=>'4'
             ]);
             //FTK
-            Department::create([
-                'nama_departemen'=>'Teknik Perkapalan',
+            Major::create([
+                'nama_jurusan'=>'Teknik Perkapalan',
                 'faculty_id'=>'6'
             ]);
-            Department::create([
-                'nama_departemen'=>'Teknik Kelautan',
+            Major::create([
+                'nama_jurusan'=>'Teknik Kelautan',
                 'faculty_id'=>'6'
             ]);
             //FTIRS
-            Department::create([
-                'nama_departemen'=>'Teknik Mesin',
+            Major::create([
+                'nama_jurusan'=>'Teknik Mesin',
                 'faculty_id'=>'3'
             ]);
             //FTEIC
-            Department::create([
-                'nama_departemen'=>'Sistem Informasi',
+            Major::create([
+                'nama_jurusan'=>'Sistem Informasi',
                 'faculty_id'=>'1'
             ]);
             //FTSPK
-            Department::create([
-                'nama_departemen'=>'Teknik Sipil',
+            Major::create([
+                'nama_jurusan'=>'Teknik Sipil',
                 'faculty_id'=>'5'
             ]);
             //FDKBD
-            Department::create([
-                'nama_departemen'=>'Desain Interior',
+            Major::create([
+                'nama_jurusan'=>'Desain Interior',
                 'faculty_id'=>'7'
             ]);
             //Vokasi
-            Department::create([
-                'nama_departemen'=>'Teknik Mesin industri',
+            Major::create([
+                'nama_jurusan'=>'Teknik Mesin industri',
                 'faculty_id'=>'2'
             ]);
             //sesi 1

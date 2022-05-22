@@ -2,16 +2,16 @@
 
 namespace App\Models;
 
-use App\Models\Department;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Faculty extends Model
 {
-    protected $guarded=['id'];
     use HasFactory;
+    protected $guarded=['id'];
 
-    public function department(){
-        return $this->hasMany(Department::class);
-    }
+    // public function major(){
+    //     return $this->hasMany(Major::class);
+    // }
+    
 }
