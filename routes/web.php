@@ -1,11 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ScoreController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardBioController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,11 @@ Route::get('/', function () {
 //     return view('biodata.index');
 // })->middleware('auth');
 
+
+
+
+
+
 Route::get('/register',[RegisterController::class,'create'])->middleware('auth');
 Route::post('/register',[RegisterController::class,'store']);
 
@@ -43,3 +49,10 @@ Route::resource('/biodata',DashboardBioController::class)->middleware('auth');
 // Route::resource('/frs',[ScoreController::class,'user'])->middleware('auth');
 Route::get('/transkrip/{user:name}',[ScoreController::class,'transkrip'])->middleware('auth');
 
+
+
+
+
+//admin
+Route::get('/admin',[AdminController::class,'index']);
+Route::get('/adminbiodata',[AdminController::class,'biodata']);

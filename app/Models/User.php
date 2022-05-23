@@ -21,7 +21,17 @@ class User extends Authenticatable
     //     'name',
     //     'email',
     //     'password',
-    // ];
+    // ];'
+
+    // protected $fillable = [
+    //     'name',
+    //     'email',
+    //     'password',
+    //     'major_id',
+    //     'nrp',
+    //     'address',
+    //     'generation'
+    //  ];
 
     protected $guarded=['id'];
     /**
@@ -52,9 +62,12 @@ class User extends Authenticatable
         return $this->hasMany(Score::class);
     }
 
-    public function major(){
-        // return $this->hasOne(Major::class);
-        return $this->belongsTo(Major::class);
-    }
+    // public function major(){
+    //     // return $this->hasOne(Major::class);
+    //     return $this->belongsTo(Major::class);
+    // }
 
+    public function major(){
+        return $this->hasOne(Major::class,'id','major_id');
+    }
 }
