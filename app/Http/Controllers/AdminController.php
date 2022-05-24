@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Score;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -30,6 +31,15 @@ class AdminController extends Controller
         ]);
     }
 
+    public function transkrip(Score $score)
+    {
+        //
+        return view('admin.transkrip.index',[
+            'title'=>'Transkrip Mahasiswa',
+            'scores'=>Score::all()
+            
+        ]);
+    }
     /**
      * Show the form for creating a new resource.
      *

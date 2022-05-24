@@ -56,3 +56,4 @@ Route::get('/transkrip/{user:name}',[ScoreController::class,'transkrip'])->middl
 //admin
 Route::get('/admin',[AdminController::class,'index']);
 Route::get('/adminbiodata',[AdminController::class,'biodata']);
+Route::get('/admin-transkrip',[AdminController::class,'transkrip']);

@@ -21,11 +21,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-
-
-        // mengisi tabel data mahasiswa
-        
-
             Score::insert([
                 [
                     'user_id'=>1,
