@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('container')
+{{-- @section('container') --}}
 <div class="row justify-content-center">
 <div class="col-md-4">
   <main class="form-signin">
@@ -85,4 +85,4 @@
   </main>
 </div>
 </div>
-@endsection
+{{-- @endsection --}}

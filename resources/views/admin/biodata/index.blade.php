@@ -7,12 +7,25 @@
 
 <div class="container">
     @if($students->count())
-    @foreach ($students as $student)
-        <article class="container mb-5 border-bottom">
-                <p>Nama: {{$student->name}}</p>
-                <p>NRP : {{$student->nrp}}</p>
-        </article>
-    @endforeach
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nama</th>
+            <th scope="col">NRP</th>
+          </tr>
+        </thead>
+        <tbody>
+            @foreach ($students as $student)
+          <tr>
+            <th scope="row">{{$student->id}}</th>
+            <td>{{$student->name}}</td>
+            <td>{{$student->nrp}}</td>
+          </tr>
+          @endforeach
+        </tbody>
+      </table>
     @endif
 </div>
 @endsection

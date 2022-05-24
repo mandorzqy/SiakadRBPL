@@ -13,7 +13,7 @@ class RegisterController extends Controller
     public function create(){
         return view('/register.index',[
             'title'=>"Register",
-            'active'=>'register'
+            // 'active'=>'register'
         ]);
     }
     public function store(Request $request){

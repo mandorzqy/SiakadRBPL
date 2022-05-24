@@ -36,7 +36,7 @@ Route::get('/', function () {
 
 
 
-Route::get('/register',[RegisterController::class,'create'])->middleware('auth');
+Route::get('/register',[RegisterController::class,'create']);
 Route::post('/register',[RegisterController::class,'store']);
 
 Route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
