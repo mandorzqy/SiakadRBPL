@@ -10,3 +10,5 @@ Anggota Kelompok 3 :
 7. Al Habsi Waliyul Khaq
 8. Girhan Nuriski Lusandi
 9. Resha Ramzy Arkansa
+10. M. Farhan Rahmandika
+11. Juan Septian
