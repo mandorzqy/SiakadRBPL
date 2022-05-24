@@ -8,3 +8,5 @@ Anggota Kelompok 3 :
 5. Mirza Badaruddin
 6. Chang Hong Kwang
 7. Al Habsi Waliyul Khaq
+8. Girhan Nuriski Lusandi
+9. Resha Ramzy Arkansa
