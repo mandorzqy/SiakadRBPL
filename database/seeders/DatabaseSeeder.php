@@ -58,6 +58,9 @@ class DatabaseSeeder extends Seeder
                 ],
                 [
                     'nama_fakultas'=>'FDKBD',
+                ],
+                [
+                    'nama_fakultas'=>'ITS',
                 ]
                     ]);
 
@@ -109,6 +112,10 @@ class DatabaseSeeder extends Seeder
                 [
                     'nama_jurusan'=>'Teknik Mesin industri',
                     'faculty_id'=>'2'
+                ],
+                [
+                    'nama_jurusan'=>'ITS',
+                    'faculty_id'=>'8'
                 ]
                 ]);
             Schedule::insert([
@@ -147,7 +154,8 @@ class DatabaseSeeder extends Seeder
                     'generation'=>2020,
                     // 'major'=>'Sistem Informasi',
                     // 'faculty'=>'FTEIC',
-                    'password'=>bcrypt('akusukakuliah123')
+                    'password'=>bcrypt('akusukakuliah123'),
+                    'type' => 0
                 ],
                 [
                     'name'=>'Hatif Isfahani',
@@ -158,7 +166,8 @@ class DatabaseSeeder extends Seeder
                     'generation'=>2020,
                     // 'major'=>'FTEIC',
                     // 'faculty'=>'Sistem Informasi',
-                    'password'=>bcrypt('akusukakuliah123')
+                    'password'=>bcrypt('akusukakuliah123'),
+                    'type' => 0
                 ],
                 [
                     'name'=>'Abyan Tahta',
@@ -169,7 +178,8 @@ class DatabaseSeeder extends Seeder
                     'generation'=>2020,
                     // 'major'=>'Teknik Komputer',
                     // 'faculty'=>'FTEIC',
-                    'password'=>bcrypt('akusukakuliah123')
+                    'password'=>bcrypt('akusukakuliah123'),
+                    'type' => 0
                 ],
                 [
                     'name'=>'Ernando Taufiq',
@@ -180,7 +190,22 @@ class DatabaseSeeder extends Seeder
                     'generation'=>2020,
                     // 'major'=>'Teknik Komputer',
                     // 'faculty'=>'FTEIC',
-                    'password'=>bcrypt('akusukakuliah123')
+                    'password'=>bcrypt('akusukakuliah123'),
+                    'type' => 0
+    
+                ],
+
+                [
+                    'name'=>'Admin',
+                    'major_id'=>13,
+                    'email'=>'admin@gmail.com',
+                    'nrp'=>502620,
+                    'address'=>'Institut Teknologi Sepuluh Nopember Surabaya',
+                    'generation'=>2000,
+                    // 'major'=>'Teknik Komputer',
+                    // 'faculty'=>'FTEIC',
+                    'password'=>bcrypt('admin123'),
+                    'type' => 2
     
                 ]
 

@@ -25,8 +25,7 @@ class CreateUsersTable extends Migration
             $table->bigInteger('nrp');
             $table->string('address');
             $table->integer('generation');
-            // $table->string('major');
-            // $table->string('faculty'); 
+            $table->integer('type')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

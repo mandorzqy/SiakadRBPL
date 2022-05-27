@@ -16,6 +16,9 @@ class AdminController extends Controller
     public function index()
     {
         //
+        if (auth()->guest()){
+            abort(403);
+        }
         return view('admin.adminDashboard.index',[
             'title'=>'Admin Dashboard'
         ]);

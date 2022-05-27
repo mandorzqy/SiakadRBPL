@@ -23,15 +23,6 @@ Route::get('/', function () {
     return view('dashboard.index',['title'=>"Dashboard"]);
 })->middleware('auth');
 
-// Route::get('/dashboard',function(){
-//     return view('dashboard.index');
-// })->middleware('auth');
-
-// Route::get('/biodata',function(){
-//     return view('biodata.index');
-// })->middleware('auth');
-
-
 
 
 
@@ -54,6 +45,20 @@ Route::get('/transkrip/{user:name}',[ScoreController::class,'transkrip'])->middl
 
 
 //admin
-Route::get('/admin',[AdminController::class,'index']);
-Route::get('/adminbiodata',[AdminController::class,'biodata']);
-Route::get('/admin-transkrip',[AdminController::class,'transkrip']);
+
+// Route::get('/admin',[AdminController::class,'index']);
+// Route::get('/adminbiodata',[AdminController::class,'biodata']);
+// Route::get('/admin-transkrip',[AdminController::class,'transkrip']);
+
+
+Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::get('/admin',[AdminController::class,'index']);
+    Route::get('/adminbiodata',[AdminController::class,'biodata']);
+    Route::get('/admin-transkrip',[AdminController::class,'transkrip']);
+
+});
+
+
+Route::get('/restricted', function () {
+    return view('error');
+})->name('error');
