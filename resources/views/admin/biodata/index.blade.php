@@ -6,6 +6,7 @@
 </div>
 
 <div class="container">
+  <a class="btn btn-info" href="{{url('admin/biodata/create')}}">Create New Student</a>
     @if($students->count())
     
     <table class="table">
@@ -14,6 +15,7 @@
             <th scope="col">#</th>
             <th scope="col">Nama</th>
             <th scope="col">NRP</th>
+            <th colspan="2">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -22,6 +24,8 @@
             <th scope="row">{{$student->id}}</th>
             <td>{{$student->name}}</td>
             <td>{{$student->nrp}}</td>
+            <td><a class="btn btn-info" href={{url('admin/biodata/'.$student->id.'/edit')}}>Update</a></td>
+            <td>Delete</td>
           </tr>
           @endforeach
         </tbody>

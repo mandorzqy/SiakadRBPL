@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Major;
 
 class AdminBiodataController extends Controller
 {
@@ -15,6 +16,11 @@ class AdminBiodataController extends Controller
     public function index()
     {
         //
+        return view('admin.biodata.index',[
+            'title'=>'Biodata Mahasiswa',
+            'students'=>User::all()
+            
+        ]);
     }
 
     /**
@@ -25,6 +31,11 @@ class AdminBiodataController extends Controller
     public function create()
     {
         //
+        return view('admin.biodata.create',[
+            'title'=>'Tambah Biodata',
+            'active'=>'biodata',
+             'majors'=>Major::all()
+        ]);
     }
 
     /**
@@ -36,6 +47,18 @@ class AdminBiodataController extends Controller
     public function store(Request $request)
     {
         //
+        $biodata=new User;
+        $biodata->nrp=$request->nrp;
+        $biodata->name=$request->name;
+        $biodata->email=$request->email;
+        $biodata->password=bcrypt($request->password);
+        $biodata->major_id=$request->major_id;
+        $biodata->address=$request->address;
+        $biodata->generation=$request->generation;
+        $biodata->save();
+        return redirect()->route('biodata.index')->with('success','Data berhasil ditambahkan');
+
+
     }
 
     /**
@@ -55,9 +78,18 @@ class AdminBiodataController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit($id)
     {
         //
+        $user=User::find($id);
+        return view('admin.biodata.edit',
+        [
+            'title'=>'Edit Biodata',
+            'active'=>'biodata',
+            'majors'=>Major::all(),
+            'biodata'=>$user
+
+        ]);
     }
 
     /**
@@ -67,9 +99,24 @@ class AdminBiodataController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
         //
+        $biodata=User::find($id);
+        $biodata->nrp=$request->nrp;
+        $biodata->name=$request->name;
+        $biodata->email=$request->email;
+        $biodata->major_id=$request->major_id;
+        $biodata->address=$request->address;
+        $biodata->generation=$request->generation;
+        // $biodata->save();
+        User::where('id',$id)->update([
+            'password'=>bcrypt($request->password)
+        ]);
+        return redirect()->route('biodata.index')->with('success','Data berhasil disimpan');
+
+
+
     }
 
     /**

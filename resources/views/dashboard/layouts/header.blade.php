@@ -12,7 +12,14 @@
                 <span class='text-white mx-3'>Logout</span>
 
             </button>
+            
           </form>
+          @if (auth()->user()->role == 'admin')
+          <button type="submit" class="dropdown-item">
+            <a href="/admin" class='text-white mx-3'>Admin</span>
+        </button>
+          @endif
+        
           </li>
     </div>
   </header>

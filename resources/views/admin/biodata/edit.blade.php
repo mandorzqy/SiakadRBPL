@@ -2,33 +2,35 @@
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2"></div>
-<h1>Create New Student</h1>
+<h1>Edit Student</h1>
 <div class="container">
-    <form action="{{url('admin/biodata')}}" method="POST">
+    <form action="{{url('admin/biodata/'{{$id}})}}" method="POST">
         @csrf
+        <input type="hidden" name="id" value="{{ $biodata->id }}">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="{{$biodata->name}}">
         </div>
         <div class="form-group">
             <label for="nrp">NRP</label>
-            <input type="text" class="form-control" id="nrp" name="nrp" placeholder="Enter NRP">
+            <input type="text" class="form-control" id="nrp" name="nrp" placeholder="Enter NRP" value="{{$biodata->nrp}}">
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" value="{{$biodata->email}}">
         </div>
         <div class="form-group">
             <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" name="address" placeholder="Enter address">
+            <input type="text" class="form-control" id="address" name="address" placeholder="Enter address" value="{{$biodata->address}}">
         </div>
         <div class="form-group">
             <label for="generation">Generation</label>
-            <input type="text" class="form-control" id="generation" name="generation" placeholder="Enter generation">
+            <input type="text" class="form-control" id="generation" name="generation" placeholder="Enter generation" value="{{$biodata->generation}}">
         </div>
         <div class="form-group">
             <label for="major">Major</label>
-            <select class="form-control" id="major" name="major_id">
+            <select class="form-control" id="major" name="major_id" >
+                <option value="{{$biodata->major->id}}" selected disabled hidden>{{$biodata->major->nama_jurusan}}</option>
                 @foreach ($majors as $major)
                 <option value="{{$major->id}}">{{$major->nama_jurusan}}</option>
                 @endforeach

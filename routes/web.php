@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminBiodataController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\LoginController;
@@ -21,7 +22,7 @@ use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     return view('dashboard.index',['title'=>"Dashboard"]);
-})->middleware('auth');
+})->name('dashboard')->middleware('auth');
 
 
 
@@ -52,9 +53,10 @@ Route::get('/transkrip/{user:name}',[ScoreController::class,'transkrip'])->middl
 
 
 Route::middleware(['auth', 'role:admin'])->group(function () {
-    Route::get('/admin',[AdminController::class,'index']);
-    Route::get('/adminbiodata',[AdminController::class,'biodata']);
-    Route::get('/admin-transkrip',[AdminController::class,'transkrip']);
+    Route::get('/admin',[AdminController::class,'index'])->name('admin');
+    // Route::get('/adminbiodata',[AdminController::class,'biodata'])->name('adminbiodata');
+    Route::get('/admin-transkrip',[AdminController::class,'transkrip'])->name('admin-transkrip');
+    Route::resource('/admin/biodata',AdminBiodataController::class);
 
 });
 
