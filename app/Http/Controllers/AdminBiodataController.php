@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Http\Request;
 use App\Models\Major;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AdminBiodataController extends Controller
 {
@@ -67,10 +68,17 @@ class AdminBiodataController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($id)
     {
         //
+        $user=User::find($id);
+        return view('admin.biodata.show',[
+            'title'=>'Detail Biodata',
+            'majors'=>Major::all(),
+            'student'=>$user
+        ]);
     }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -106,17 +114,12 @@ class AdminBiodataController extends Controller
         $biodata->nrp=$request->nrp;
         $biodata->name=$request->name;
         $biodata->email=$request->email;
+        $biodata->password=bcrypt($request->password);
         $biodata->major_id=$request->major_id;
         $biodata->address=$request->address;
         $biodata->generation=$request->generation;
-        // $biodata->save();
-        User::where('id',$id)->update([
-            'password'=>bcrypt($request->password)
-        ]);
-        return redirect()->route('biodata.index')->with('success','Data berhasil disimpan');
-
-
-
+        $biodata->save();
+        return redirect()->route('biodata.index')->with('success','Data berhasil diubah');
     }
 
     /**
@@ -125,8 +128,11 @@ class AdminBiodataController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
         //
+        $biodata=User::find($id);
+        $biodata->delete();
+        return redirect()->route('biodata.index')->with('success','Data berhasil dihapus');
     }
 }

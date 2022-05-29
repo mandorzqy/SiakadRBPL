@@ -25,7 +25,14 @@
             <td>{{$student->name}}</td>
             <td>{{$student->nrp}}</td>
             <td><a class="btn btn-info" href={{url('admin/biodata/'.$student->id.'/edit')}}>Update</a></td>
-            <td>Delete</td>
+            <td><a class="btn btn-info" href={{url('admin/biodata/'.$student->id)}}>Show</a></td>
+            <td>
+              <form action="{{url('admin/biodata/'.$student->id)}}" method="POST">
+                @csrf
+                <input type="hidden" name="_method" value="DELETE">
+                <button class="btn btn-danger" type="submit">Delete</button>
+            </form>
+            </td>
           </tr>
           @endforeach
         </tbody>

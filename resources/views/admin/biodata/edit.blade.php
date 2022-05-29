@@ -4,16 +4,17 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2"></div>
 <h1>Edit Student</h1>
 <div class="container">
-    <form action="{{url('admin/biodata/'{{$id}})}}" method="POST">
+    <form action="{{url('admin/biodata/'.$biodata->id)}}" method="POST" enctype="multipart/form-data">
+        @method('put')
         @csrf
-        <input type="hidden" name="id" value="{{ $biodata->id }}">
+        <input type="hidden" name="_method" value="PATCH">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="{{$biodata->name}}">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="{{old('name',$biodata->name)}}">
         </div>
         <div class="form-group">
             <label for="nrp">NRP</label>
-            <input type="text" class="form-control" id="nrp" name="nrp" placeholder="Enter NRP" value="{{$biodata->nrp}}">
+            <input type="text" class="form-control" id="nrp" name="nrp" placeholder="Enter NRP" value="{{old('nrp',$biodata->nrp)}}">
         </div>
         <div class="form-group">
             <label for="email">Email</label>
@@ -27,10 +28,14 @@
             <label for="generation">Generation</label>
             <input type="text" class="form-control" id="generation" name="generation" placeholder="Enter generation" value="{{$biodata->generation}}">
         </div>
+        {{-- <div class="form-group">
+            <label for="generation">Password</label>
+            <input type="text" class="form-control" id="password" name="password" placeholder="Enter password" value="{{$biodata->password}}">
+        </div> --}}
         <div class="form-group">
             <label for="major">Major</label>
             <select class="form-control" id="major" name="major_id" >
-                <option value="{{$biodata->major->id}}" selected disabled hidden>{{$biodata->major->nama_jurusan}}</option>
+                <option value="{{$biodata->major->id}}" selected  hidden>{{$biodata->major->nama_jurusan}}</option>
                 @foreach ($majors as $major)
                 <option value="{{$major->id}}">{{$major->nama_jurusan}}</option>
                 @endforeach
