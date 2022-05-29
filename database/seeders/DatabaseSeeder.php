@@ -26,6 +26,6 @@ class DatabaseSeeder extends Seeder
         $this->call(MajorSeeder::class);
         $this->call(ScheduleSeeder::class);
         $this->call(ScoreSeeder::class);
-        $this->call(UserSeeder::class);                
+        $this->call(UserSeeder::class);
     }
 }
