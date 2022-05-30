@@ -13,14 +13,14 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="public/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="public/css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="public/css/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="public/css/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="public/css/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="css/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="css/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="public/css/dashboard.css" rel="stylesheet">
+  <link href="css/dashboard.css" rel="stylesheet">
 <style>
   body {
   background-image: url("https://media.istockphoto.com/photos/abstract-blue-cyan-background-picture-id995719694?k=20&m=995719694&s=612x612&w=0&h=zI2SFqWdZallvqgVphnq5T8ZWYK0TBIkKdyYP60JAI8=");

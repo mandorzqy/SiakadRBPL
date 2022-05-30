@@ -20,9 +20,13 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     return view('dashboard.index',['title'=>"Dashboard"]);
 })->name('dashboard')->middleware('auth');
+
+Route::get('/', function () {
+    return view('dashboard.desaindashboard.dashboard',['title'=>"Home"]);
+})->name('home')->middleware('auth');
 
 
 
@@ -52,7 +56,7 @@ Route::get('/transkrip/{user:name}',[ScoreController::class,'transkrip'])->middl
 // Route::get('/admin-transkrip',[AdminController::class,'transkrip']);
 
 
-Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin',[AdminController::class,'index'])->name('admin');
     // Route::get('/adminbiodata',[AdminController::class,'biodata'])->name('adminbiodata');
     Route::get('/admin-transkrip',[AdminController::class,'transkrip'])->name('admin-transkrip');

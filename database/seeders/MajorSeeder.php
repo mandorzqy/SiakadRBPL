@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Major;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class MajorSeeder extends Seeder
 {
@@ -15,7 +16,7 @@ class MajorSeeder extends Seeder
     public function run()
     {
         //
-        Major::insert([
+        DB::table('majors')->insert([
             [
                 'nama_jurusan'=>'Fisika',
                 'faculty_id'=>'4'

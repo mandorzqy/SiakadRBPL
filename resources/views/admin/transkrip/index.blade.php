@@ -11,8 +11,8 @@
         <article class="container mb-5 border-bottom">
                 <p>Nama: {{$score->user->name}}</p>
                 <p>NRP : {{$score->user->nrp}}</p>
-                <p>Matkul : {{$score->course->nama_mata_kuliah}}</p>
-                <p>Nilai : {{$score->nilai_angka}}</p>
+                {{-- <p>Matkul : {{$score->course->nama_mata_kuliah}}</p>
+                <p>Nilai : {{$score->nilai_angka}}</p> --}}
         </article>
     @endforeach
     @endif

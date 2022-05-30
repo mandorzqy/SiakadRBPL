@@ -17,8 +17,8 @@ class CreateScoresTable extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('course_id');
-            $table->double('nilai_angka');
-            $table->char('nilai_huruf');
+            $table->double('nilai_angka')->nullable();
+            $table->char('nilai_huruf')->nullable();
             $table->timestamps();
         });
     }
