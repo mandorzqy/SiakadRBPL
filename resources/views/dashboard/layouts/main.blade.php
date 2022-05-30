@@ -14,7 +14,7 @@
     <link href="css/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="css/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="css/swiper/swiper-bundle.min.css" rel="stylesheet">
-  
+
     <!-- Template Main CSS File -->
     <link href="css/dashboard.css" rel="stylesheet">
 
@@ -42,19 +42,8 @@
     <link href="dashboard.css" rel="stylesheet">
   </head>
   <body>
+    @include('dashboard.desaindashboard.ddashboard')
 
-@include('dashboard.layouts.header')
-<div class="container-fluid">
-  <div class="row">
-    @include('dashboard.layouts.sidebar')
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      @yield('container')
-      </div>
-
-      <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
-    </main>
-  </div>
-</div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

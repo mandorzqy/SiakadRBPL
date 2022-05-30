@@ -43,8 +43,8 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">LOGIN</a></li>
-          <li><a class="nav-link scrollto" href="#about">LOGOUT</a></li>
+          <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/">{{auth()->user()->name}}</a></li>
+          <li><a class="nav-link scrollto" href="#about">Sign Out</a></li>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -52,12 +52,13 @@
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
+
+
       <div class="container">
         <div class="container pt-5">
           <div class="section-title">
             <h2>Dashboard</h2>
-            <p>Selamat Datang, nama</p>
-            <p>Biodata</p>
+            <p>Selamat Datang, {{auth()->user()->name}}</p>
         </div>
         </div>
 
@@ -66,9 +67,9 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
-                <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                <img src="img/portfolio-1.jpg" class="img-fluid" alt="">
                 <i class="bookmarks"></i>
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a>
+                <a href="img/portfolio-1.jpg" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a>
                 <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
               </figure>
 
@@ -81,8 +82,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                <img src="assets/img/portfolio/portfolio-02.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-02.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+                <img src="img/portfolio-02.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio-02.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
                 <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
               </figure>
 
@@ -95,9 +96,9 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
             <div class="portfolio-wrap" >
               <figure>
-                <img src="assets/img/portfolio/portfolio-03.jpg" class="img-fluid" alt="">
+                <img src="img/portfolio-03.jpg" class="img-fluid" alt="">
                 <i class="bi bi-bank"></i>
-                <a href="assets/img/portfolio/portfolio-03.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+                <a href="img/portfolio-03.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
                 <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
               </figure>
 
@@ -110,8 +111,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
-                <img src="assets/img/portfolio/portfolio-04.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-04.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+                <img src="img/portfolio-04.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio-04.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
                 <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
               </figure>
 
@@ -124,8 +125,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                <img src="assets/img/portfolio/portfolio-05.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-05.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+                <img src="img/portfolio-05.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio-05.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
                 <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
               </figure>
 
@@ -138,8 +139,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
             <div class="portfolio-wrap">
               <figure>
-                <img src="assets/img/portfolio/portfolio-06.jpg" class="img-fluid" alt="">
-                <a href="assets/img/portfolio/portfolio-06.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+                <img src="img/portfolio-06.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio-06.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
                 <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
               </figure>
 
