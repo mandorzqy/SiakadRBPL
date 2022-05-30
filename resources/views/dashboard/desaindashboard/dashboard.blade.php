@@ -43,8 +43,8 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/">{{auth()->user()->name}}</a></li>
-          <li><a class="nav-link scrollto" href="#about">Sign Out</a></li>
+          <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/biodata">{{auth()->user()->name}}</a></li>
+          <li><a class="nav-link scrollto" href="/login" action="/logout">Sign Out</a></li>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -131,7 +131,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Laporan</a></h4>
+                <h4><a href="/transkrip/{{auth()->user()->name}}">Laporan</a></h4>
               </div>
             </div>
           </div>

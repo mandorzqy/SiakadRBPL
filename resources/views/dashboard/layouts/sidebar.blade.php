@@ -2,7 +2,7 @@
     <div class="position-sticky pt-3">
       <ul class="nav flex-column">
         <li class="nav-item">
-            <img src="img/Badge_ITS.png" class="navbar-brand-img h-100" alt="Logo">
+            {{-- <img src="img/Badge_ITS.png" class="navbar-brand-img h-100" alt="Logo"> --}}
           </li>
         <li class="nav-item">
           <a class="nav-link {{ ($title==="Dashboard") ? 'active': '' }}" aria-current="page" href="/">
