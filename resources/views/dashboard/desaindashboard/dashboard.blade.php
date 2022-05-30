@@ -44,7 +44,15 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/biodata">{{auth()->user()->name}}</a></li>
-          <li><a class="nav-link scrollto" href="/login" action="/logout">Sign Out</a></li>
+          <li><form action="/logout" method="post">
+            @csrf<button style="
+            background:none;
+            border:none;
+            margin:0;
+            padding: 10px 0 10px 30px;;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;"
+            class="nav-link scrollto" action="/logout">Sign Out</button></form></li>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -153,5 +161,6 @@
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
 
+    </section><!-- End Portfolio Section -->
+</body>
