@@ -21,7 +21,7 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/dashboard', function () {
-    return view('dashboard.index',['title'=>"Dashboard"]);
+    return view('dashboard.desaindashboard.dashboard',['title'=>"Dashboard"]);
 })->name('dashboard')->middleware('auth');
 
 Route::get('/', function () {
