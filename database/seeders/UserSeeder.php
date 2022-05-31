@@ -79,6 +79,19 @@ class UserSeeder extends Seeder
                 'password'=>bcrypt('admin123'),
                 'type' => 2
 
+            ],
+            [
+                'name'=>'Dosen',
+                'major_id'=>13,
+                'email'=>'dosen@gmail.com',
+                'nrp'=>602620,
+                'address'=>'Institut Teknologi Sepuluh Nopember Surabaya',
+                'generation'=>2000,
+                // 'major'=>'Teknik Komputer',
+                // 'faculty'=>'FTEIC',
+                'password'=>bcrypt('dosen123'),
+                'type' => 1
+
             ]
 
             ]);

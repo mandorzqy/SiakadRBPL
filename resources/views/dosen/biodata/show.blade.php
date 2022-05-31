@@ -57,6 +57,6 @@
     <h4>Angkatan: {{$student->generation}}</h4> --}}
      {{-- <h4>Jurusan: {{$student->major->nama_jurusan}}</h4>
     <h4>Fakultas: {{$student->major->faculty->nama_fakultas}}</h4> --}}
-
+</div>
 
 @endsection
