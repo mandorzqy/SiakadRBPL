@@ -2,9 +2,9 @@
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2"></div>
-<h1>Edit Student</h1>
+<h1>Edit Biodata</h1>
 <div class="container">
-    <form action="{{url('admin/biodata/'.$biodata->id)}}" method="POST" enctype="multipart/form-data">
+    <form action="{{url('dosen/biodata/'.$biodata->id)}}" method="POST" enctype="multipart/form-data">
         @method('put')
         @csrf
         <input type="hidden" name="_method" value="PATCH">

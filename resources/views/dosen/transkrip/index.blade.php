@@ -1,4 +1,4 @@
-@extends('admin.adminDashboard.layouts.main')
+@extends('dosen.dosenDashboard.layouts.main')
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -21,7 +21,7 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Nama</th>
+        <th scope="col">Mahasiswa</th>
         <th scope="col">NRP</th>
         <th scope="col">Action</th>
       </tr>
@@ -34,7 +34,7 @@
         
         <td>{{$users->name}}</td>
         <td>{{$users->nrp}}</td>
-        <td><a class="btn btn-info col" href={{url('admin/transkrip/'.$users->id)}}>Show</a></td>
+        <td><a class="btn btn-info col" href={{url('dosen/transkrip/'.$users->id)}}>Show</a></td>
       </tr>
       @endforeach
     </tbody>

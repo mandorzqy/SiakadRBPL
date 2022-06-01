@@ -31,9 +31,15 @@
         <td>
           <span class="text-xs font-weight-bold">{{ $nilai->nilai_huruf }}</span>
         </td>
+        <td>
+          
+            <a class="btn btn-info " href={{url('dosen/transkrip/'.$user->id.'/edit')}}>Update</a>
+        </td>
       </tr>
       @endforeach
       @endif
     </tbody>
+   
   </table>
+  
   @endsection

@@ -36,4 +36,7 @@
       @endif
     </tbody>
   </table>
+  <div class=" d-flex justify-content-center mt-5">
+    <a class="btn btn-info " href={{url('dosen/transkrip/'.$user->id.'/edit')}}>Update</a>
+</div>
   @endsection

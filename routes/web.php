@@ -6,10 +6,12 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ScoreController;
+use App\Http\Controllers\DosenBioController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminBiodataController;
 use App\Http\Controllers\DashboardBioController;
 use App\Http\Controllers\AdminTranskripController;
+use App\Http\Controllers\DosenTranskripController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,6 +58,8 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
 Route::middleware(['auth', 'role:dosen'])->group(function () {
     Route::get('/dosen',[DosenController::class,'index'])->name('dosen');
+    Route::resource('/dosen/biodata',DosenBioController::class);
+    Route::resource('/dosen/transkrip',DosenTranskripController::class);
 });
 
 
