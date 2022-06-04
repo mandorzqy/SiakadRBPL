@@ -16,6 +16,18 @@
             Biodata
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/kurikulum">
+            <span data-feather="file"></span>
+            Kurikulum
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/jadwal">
+            <span data-feather="file"></span>
+            Jadwal Kuliah
+          </a>
+        </li>
       </ul>
 
       <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">

@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
                 'generation'=>2020,
                 // 'major'=>'Sistem Informasi',
                 // 'faculty'=>'FTEIC',
-                'password'=>bcrypt('akusukakuliah123'),
+                'password'=>bcrypt('admin123'),
                 'type' => 0
             ],
             [
@@ -38,7 +38,7 @@ class UserSeeder extends Seeder
                 'generation'=>2020,
                 // 'major'=>'FTEIC',
                 // 'faculty'=>'Sistem Informasi',
-                'password'=>bcrypt('akusukakuliah123'),
+                'password'=>bcrypt('admin123'),
                 'type' => 0
             ],
             [
@@ -50,7 +50,7 @@ class UserSeeder extends Seeder
                 'generation'=>2020,
                 // 'major'=>'Teknik Komputer',
                 // 'faculty'=>'FTEIC',
-                'password'=>bcrypt('akusukakuliah123'),
+                'password'=>bcrypt('admin123'),
                 'type' => 0
             ],
             [
@@ -62,7 +62,7 @@ class UserSeeder extends Seeder
                 'generation'=>2020,
                 // 'major'=>'Teknik Komputer',
                 // 'faculty'=>'FTEIC',
-                'password'=>bcrypt('akusukakuliah123'),
+                'password'=>bcrypt('admin123'),
                 'type' => 0
 
             ],
@@ -92,6 +92,31 @@ class UserSeeder extends Seeder
                 'password'=>bcrypt('dosen123'),
                 'type' => 1
 
+            ],
+            [
+                'name'=>'Radityo Prasetianto Wibowo',
+                'major_id'=>13,
+                'email'=>'radityo@gmail.com',
+                'nrp'=>602621,
+                'address'=>'Institut Teknologi Sepuluh Nopember Surabaya',
+                'generation'=>2000,
+                // 'major'=>'Teknik Komputer',
+                // 'faculty'=>'FTEIC',
+                'password'=>bcrypt('dosen123'),
+                'type' => 1
+
+            ],
+            [
+                'name'=>'Faizal Johan Atletiko',
+                'major_id'=>13,
+                'email'=>'faizal@gmail.com',
+                'nrp'=>602621,
+                'address'=>'Institut Teknologi Sepuluh Nopember Surabaya',
+                'generation'=>2000,
+                // 'major'=>'Teknik Komputer',
+                // 'faculty'=>'FTEIC',
+                'password'=>bcrypt('dosen123'),
+                'type' => 1
             ]
 
             ]);

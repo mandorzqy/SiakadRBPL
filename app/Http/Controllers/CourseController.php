@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Score;
-use App\Models\User;
+use App\Models\Course;
 use Illuminate\Http\Request;
 
-class AdminTranskripController extends Controller
+class CourseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,12 +15,34 @@ class AdminTranskripController extends Controller
     public function index()
     {
         //
-        return view('admin.transkrip.index',[
-            'title'=>'Transkrip Mahasiswa',
-            'users'=>User::all()            
+        return view('course.index',[
+            'no'=>1,
+            'title'=>'Mata Kuliah',
+            'courses'=>Course::all()
         ]);
     }
 
+    public function search(Request $request){
+        $keyword = $request->search;
+        $keyword2=$request->name;
+        if($keyword=='all'){
+            return view('course.index',[
+                'no'=>1,
+                'title'=>'Mata Kuliah',
+                'courses'=>Course::all()
+            ]);
+        }
+        else{
+             $courses=Course::where([['semester','like','%'.$keyword.'%'],['nama_mata_kuliah','like','%'.$keyword2.'%']])->get();
+        return view('course.index',[
+            'no'=>1,
+            'title'=>'Mata Kuliah',
+            'courses'=>$courses
+        ]);
+        }
+
+       
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -46,28 +67,21 @@ class AdminTranskripController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Course $course)
     {
         //
-        $user=User::find($id);
-        return view('admin.transkrip.show',[
-            'title'=>'Detail Nilai',
-            // 'majors'=>Major::all(),
-            'user'=>$user,
-            'score'=>$user->score->load('user','course')
-        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function edit(Score $score)
+    public function edit(Course $course)
     {
         //
     }
@@ -76,10 +90,10 @@ class AdminTranskripController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Score $score)
+    public function update(Request $request, Course $course)
     {
         //
     }
@@ -87,10 +101,10 @@ class AdminTranskripController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Course  $course
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Score $score)
+    public function destroy(Course $course)
     {
         //
     }

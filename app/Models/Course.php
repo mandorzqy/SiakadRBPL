@@ -13,4 +13,8 @@ class Course extends Model
     public function score(){
         return $this->hasMany(Score::class);
     }
+
+    public function schedule(){
+        return $this->hasMany(Schedule::class,'id','schedule_id');
+    }
 }

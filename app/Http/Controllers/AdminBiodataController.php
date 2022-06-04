@@ -119,7 +119,7 @@ class AdminBiodataController extends Controller
         $biodata->address=$request->address;
         $biodata->generation=$request->generation;
         $biodata->save();
-        return redirect()->route('biodata.index')->with('success','Data berhasil diubah');
+        return redirect('admin/biodata')->with('success','Data berhasil diubah');
     }
 
     /**
@@ -133,6 +133,6 @@ class AdminBiodataController extends Controller
         //
         $biodata=User::find($id);
         $biodata->delete();
-        return redirect()->route('biodata.index')->with('success','Data berhasil dihapus');
+        return redirect('admin/biodata')->with('success','Data berhasil dihapus');
     }
 }

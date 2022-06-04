@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Score;
-use App\Models\User;
+use App\Models\Lecturer;
 use Illuminate\Http\Request;
 
-class AdminTranskripController extends Controller
+class LecturerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +15,6 @@ class AdminTranskripController extends Controller
     public function index()
     {
         //
-        return view('admin.transkrip.index',[
-            'title'=>'Transkrip Mahasiswa',
-            'users'=>User::all()            
-        ]);
     }
 
     /**
@@ -46,28 +41,21 @@ class AdminTranskripController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Lecturer  $lecturer
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Lecturer $lecturer)
     {
         //
-        $user=User::find($id);
-        return view('admin.transkrip.show',[
-            'title'=>'Detail Nilai',
-            // 'majors'=>Major::all(),
-            'user'=>$user,
-            'score'=>$user->score->load('user','course')
-        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Lecturer  $lecturer
      * @return \Illuminate\Http\Response
      */
-    public function edit(Score $score)
+    public function edit(Lecturer $lecturer)
     {
         //
     }
@@ -76,10 +64,10 @@ class AdminTranskripController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Lecturer  $lecturer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Score $score)
+    public function update(Request $request, Lecturer $lecturer)
     {
         //
     }
@@ -87,10 +75,10 @@ class AdminTranskripController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Lecturer  $lecturer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Score $score)
+    public function destroy(Lecturer $lecturer)
     {
         //
     }

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use App\Models\Schedule;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -18,26 +19,39 @@ class ScheduleSeeder extends Seeder
         //
         DB::table('schedules')->insert([
             [
-                'Hari'=>'Senin',
-                'Jam'=>'07.00 - 10.00',
+                'hari'=>'Senin',
+                'jam'=>'07.00 - 10.00',
+                'course_id'=>1,
+            ],[
+                'hari'=>'Senin',
+                'jam'=>'11.00 - 13.00',
+                'course_id'=>2,
             ],
             [
-                'Hari'=>'Selasa',
-                'Jam'=>'07.00 - 10.00',
+                'hari'=>'Selasa',
+                'jam'=>'07.00 - 10.00',
+                'course_id'=>2,
             ],
             [
-                'Hari'=>'Rabu',
-                'Jam'=>'07.00 - 10.00',
+                'hari'=>'Rabu',
+                'jam'=>'07.00 - 10.00',
+                'course_id'=>3,
             ],
             [
-                'Hari'=>'Kamis',
-                'Jam'=>'07.00 - 10.00',
+                'hari'=>'Kamis',
+                'jam'=>'07.00 - 10.00',
+                'course_id'=>1,
             ],
             [
-                'Hari'=>'Jumat',
-                'Jam'=>'07.00 - 10.00',
+                'hari'=>'Jumat',
+                'jam'=>'07.00 - 10.00',
+                'course_id'=>3,
             ]
 
             ]);
+            // foreach(Schedule::all() as $schedule){
+            //     $users=User::inRandomOrder()->take(rand(1,2))->pluck('id');
+            //     $schedule->user()->attach($users);
+            // }
     }
 }

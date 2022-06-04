@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\Major;
 use App\Models\Score;
+use App\Models\Schedule;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -20,21 +21,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    // protected $fillable = [
-    //     'name',
-    //     'email',
-    //     'password',
-    // ];'
-
-    // protected $fillable = [
-    //     'name',
-    //     'email',
-    //     'password',
-    //     'major_id',
-    //     'nrp',
-    //     'address',
-    //     'generation'
-    //  ];
+    
 
     protected $guarded=['id'];
     /**
@@ -64,15 +51,21 @@ class User extends Authenticatable
     public function score(){
         return $this->hasMany(Score::class);
     }
-
-    // public function major(){
-    //     // return $this->hasOne(Major::class);
-    //     return $this->belongsTo(Major::class);
-    // }
-
+    
     public function major(){
         return $this->hasOne(Major::class,'id','major_id');
     }
+
+    public function schedules(){
+        return $this->belongsToMany(Schedule::class,'schedule_user','user_id','schedule_id');
+        // 'schedule_user','user_id','schedule_id'
+    }
+
+    public function lecturers(){
+        return $this->belongsTo(Lecturer::class,'id','lecturer_id');
+    }
+    
+    
 
     protected function type(): Attribute
     {

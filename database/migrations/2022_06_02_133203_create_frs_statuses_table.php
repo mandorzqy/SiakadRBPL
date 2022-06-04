@@ -1,11 +1,10 @@
-<!-- create_schedules_table -->
 <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSchedulesTable extends Migration
+class CreateFrsStatusesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,15 +13,14 @@ class CreateSchedulesTable extends Migration
      */
     public function up()
     {
-        Schema::create('schedules', function (Blueprint $table) {
+        Schema::create('frs_statuses', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('course_id')->constrained('courses')->nullable();
+            $table->foreignId('user_id')->constrained('users')->nullable();
+            $table->foreignId('form_id')->constrained('forms')->nullable();
+            $table->boolean('status')->default(false);
             $table->timestamps();
-            $table->string('hari');
-            $table->string('jam');
-            
-
         });
+
     }
 
     /**
@@ -32,6 +30,6 @@ class CreateSchedulesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('schedules');
+        Schema::dropIfExists('frs_statuses');
     }
 }

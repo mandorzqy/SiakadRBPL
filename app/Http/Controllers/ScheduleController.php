@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Score;
 use App\Models\User;
+use App\Models\Schedule;
+use App\Http\Controllers\DB;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
-class AdminTranskripController extends Controller
+class ScheduleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +18,30 @@ class AdminTranskripController extends Controller
     public function index()
     {
         //
-        return view('admin.transkrip.index',[
-            'title'=>'Transkrip Mahasiswa',
-            'users'=>User::all()            
+        $user=auth()->user();
+        $schedules=$user->schedules;
+        return view('schedule.index',['title'=>'Jadwal','schedules'=>$schedules]);
+    }
+
+
+    public function search(Request $request){
+        $user=auth()->user();
+        $hari = $request->hari;
+        // $nama_mata_kuliah=$request->name;
+        $schedules1=$user->schedules;
+        if($hari==='all'){
+            return view('schedule.index',[
+                'title'=>'Jadwal',
+                'schedules'=>$schedules1
+            ]);
+        }
+        else{
+             $schedules2=$user->schedules->where('hari','=',$hari);
+        return view('schedule.index',[
+            'title'=>$hari,
+            'schedules'=>$schedules2
         ]);
+        }
     }
 
     /**
@@ -46,28 +68,21 @@ class AdminTranskripController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Schedule $schedule)
     {
         //
-        $user=User::find($id);
-        return view('admin.transkrip.show',[
-            'title'=>'Detail Nilai',
-            // 'majors'=>Major::all(),
-            'user'=>$user,
-            'score'=>$user->score->load('user','course')
-        ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function edit(Score $score)
+    public function edit(Schedule $schedule)
     {
         //
     }
@@ -76,10 +91,10 @@ class AdminTranskripController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Score $score)
+    public function update(Request $request, Schedule $schedule)
     {
         //
     }
@@ -87,10 +102,10 @@ class AdminTranskripController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Schedule  $schedule
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Score $score)
+    public function destroy(Schedule $schedule)
     {
         //
     }

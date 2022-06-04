@@ -6,8 +6,10 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ScoreController;
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DosenBioController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\AdminBiodataController;
 use App\Http\Controllers\DashboardBioController;
 use App\Http\Controllers\AdminTranskripController;
@@ -37,7 +39,10 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
 
     Route::get('/transkrip/{user:name}',[ScoreController::class,'transkrip']);
 
-
+    Route::resource('/kurikulum',CourseController::class);
+    Route::get('/search',[CourseController::class,'search'])->name('search');
+    Route::get('/search-jadwal',[ScheduleController::class,'search'])->name('hari');
+    Route::resource('/jadwal',ScheduleController::class);
 
 });
 
@@ -57,7 +62,9 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 
 
 Route::middleware(['auth', 'role:dosen'])->group(function () {
-    Route::get('/dosen',[DosenController::class,'index'])->name('dosen');
+    Route::get('/dosen',function () {
+        return view('dosen.dosenDashboard.index',['title'=>"Dashboard"]);
+    })->name('dosen');
     Route::resource('/dosen/biodata',DosenBioController::class);
     Route::resource('/dosen/transkrip',DosenTranskripController::class);
 });
