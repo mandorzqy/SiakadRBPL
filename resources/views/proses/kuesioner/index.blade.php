@@ -1,16 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Kuesioner Dosen dan Mata Kuliah</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
+@extends('dashboard.layouts.main')
+
+@section('container')
+<style>
+    h2{
+        margin-top: 15px;
+    }
+    .table{
+    background-color: rgba(192,229,247,255);
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #d2d2d2;
+    border-right-color: #d2d2d2;
+    border-bottom-color: #d2d2d2;
+    border-left-color: #d2d2d2;
+
+    padding-top: 16px;
+    padding-right: 11px;
+    padding-bottom: 13px;
+    padding-left: 14px;
+    margin-bottom: 15px;
+    display: inline-block;
+    position: relative;
+    border-collapse: collapse;
+}
+</style>
+
+
 <body>
 <center>
   <h2>Kuesioner Evaluasi Mata Kuliah</h2>
-  <h4>Riwayat Pengisian Kuesioner</h4>
+  <h5></h5>
+  <h5>Riwayat Pengisian Kuesioner</h5>
   <p></p>
   <div class="btn-group">
     <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Periode</button>
@@ -46,7 +68,7 @@
     </tbody>
   </table>
 </div>
-
+@endsection
 </body>
 </center>
-</html>
+
