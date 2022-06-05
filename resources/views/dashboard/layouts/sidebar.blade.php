@@ -1,39 +1,101 @@
-`<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-    <div class="position-sticky pt-3">
-      <ul class="nav flex-column">
-        <li class="nav-item">
-            {{-- <img src="img/Badge_ITS.png" class="navbar-brand-img h-100" alt="Logo"> --}}
-          </li>
-        <li class="nav-item">
-          <a class="nav-link {{ ($title==="Dashboard") ? 'active': '' }}" aria-current="page" href="/">
+<style>
+    .sidebar {
+        margin: 0;
+        padding: 0;
+        width: 250px;
+        background-color: white;
+        height: 100%;
+        overflow: auto;
+        margin-top: 20px;
+        }
+        .sidebar footer{
+            color: white;
+            font-family: "Libre Franklin";
+            font-size: 10px;
+            margin: 5px;
+        }
+
+        .sidebar a {
+        margin: 5px;
+        display: block;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: "Libre Franklin";
+        border-radius:5px;
+        }
+
+        .sidebar h4{
+            margin: 10px;
+            text-align: center;
+            color: white;
+            font-family: "Libre Franklin";
+            font-size: 15px;
+        }
+
+        .sidebar a.active {
+        background-color: beige;
+        color: black;
+        }
+
+        .sidebar a:hover:not(.active) {
+        background-color: rgba(192,229,247,255);
+        color: black;
+        }
+
+        div.content {
+        margin-left: 250px;
+        padding: 1px 16px;
+        height: 1000px;
+        }
+
+        @media screen and (max-width: 700px) {
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+        .sidebar a {float: left;}
+        div.content {margin-left: 0;}
+        }
+
+        @media screen and (max-width: 400px) {
+        .sidebar a {
+            text-align: center;
+            float: none;
+        }
+        }
+        ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        }
+        ::-webkit-scrollbar-track {
+        background-color: transparent;
+        border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        }
+    </style>
+
+
+<div class="sidebar">
+      <a class="nav-link {{ ($title==="Dashboard") ? 'active': '' }}" aria-current="page" href="/">
             <span data-feather="home"></span>
             Dashboard
           </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/biodata">
+      <a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/biodata">
             <span data-feather="file"></span>
             Biodata
           </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/kurikulum">
+      <a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/kurikulum">
             <span data-feather="file"></span>
             Kurikulum
           </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/jadwal">
+	<a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/jadwal">
             <span data-feather="file"></span>
             Jadwal Kuliah
           </a>
-        </li>
-      </ul>
-
-      <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-        <a class="link-secondary" href="#" aria-label="Add a new report">
-          <span data-feather="plus-circle"></span>
-        </a>
-      </h6>
-    </div>
-  </nav>
+      </div>
