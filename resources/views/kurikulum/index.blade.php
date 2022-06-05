@@ -1,14 +1,41 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
-    
+
+<style>
+    h1{
+        margin-top: 15px;
+    }
+    .table{
+    background-color: rgba(192,229,247,255);
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #d2d2d2;
+    border-right-color: #d2d2d2;
+    border-bottom-color: #d2d2d2;
+    border-left-color: #d2d2d2;
+
+    padding-top: 16px;
+    padding-right: 11px;
+    padding-bottom: 13px;
+    padding-left: 14px;
+    margin-bottom: 15px;
+    display: inline-block;
+    position: relative;
+    border-collapse: collapse;
+}
+
+</style>
 <div class="container">
+    <h1>Kurikulum Semester</h1>
     {{-- <a class="btn btn-info" href="{{url('admin/biodata/create')}}">Create New course</a> --}}
       @if($courses->count())
       <div class="d-flex flex-col mx-3 col-3 mt-5 mb-3">
         <form class="form" method="get" action="{{route('search')}}">
           <select class="form-select " aria-label="Default select example" id="search" name="search" onchange="this.form.submit()">
-            <option selected>Semester</option>
+            <option selected>Pilih Semester</option>
             <option value='all'>Semua</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -25,11 +52,11 @@
 </form>
 
     </div>
-        
-      <table class="table">
+
+      <table class="table" id="tabelkurikulum">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">No.</th>
               <th scope="col">Mata Kuliah</th>
               <th scope="col">Kode MK</th>
               <th scope="col">SKS</th>
@@ -41,7 +68,7 @@
             <tr>
               <div class="row"></div>
               <th scope="row">{{$no++}}</th>
-              
+
               <td>{{$course->nama_mata_kuliah}}</td>
               <td>{{$course->kode_mk}}</td>
               <td>{{$course->sks}}</td>
