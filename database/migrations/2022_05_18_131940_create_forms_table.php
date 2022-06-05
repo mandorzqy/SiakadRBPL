@@ -16,14 +16,10 @@ class CreateFormsTable extends Migration
         Schema::create('forms', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->nullable();
-            $table->foreignId('course_id')->constrained('courses')->nullable();
-            $table->foreignId('score_id')->constrained('scores')->nullable();
-            $table->string('periode');
-            $table->boolean('matkul_atas')->default(false);
+            $table->string('periode')->nullable();
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      *

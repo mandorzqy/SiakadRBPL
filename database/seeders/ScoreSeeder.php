@@ -17,165 +17,210 @@ class ScoreSeeder extends Seeder
     {
         //
         Score::insert([
-            // [
-            //     'user_id'=>1,
-            //     'course_id'=>2,
-            //     'nilai_angka'=>3.5,
-            //     'nilai_huruf'=>'AB'
-            // ],
-            // [
-            //     'user_id'=>1,
-            //     'course_id'=>1,
-            //     'nilai_angka'=>4,
-            //     'nilai_huruf'=>'A'
-            // ],
-            // [
-            //     'user_id'=>1,
-            //     'course_id'=>3,
-            //     'nilai_angka'=>3.7,
-            //     'nilai_huruf'=>'AB'
-            // ],
-            // [
-            //     'user_id'=>1,
-            //     'course_id'=>4,
-            //     'nilai_angka'=>3.6,
-            //     'nilai_huruf'=>'AB'
-            // ],
-            // [
-            //     'user_id'=>1,
-            //     'course_id'=>5,
-            //     'nilai_angka'=>3.3,
-            //     'nilai_huruf'=>'AB'
-            // ],
-            // [
-            //     'user_id'=>1,
-            //     'course_id'=>6,
-            //     'nilai_angka'=>3.5,
-            //     'nilai_huruf'=>'B'
-            // ],
-
-
-
             [
                 'user_id' => '1',
                 'course_id' => '1',
-                'nilai_angka' => '4',
-                'nilai_huruf' =>'A'
-
+                'nilai_angka' => 100,
+                'tahun' => 2020,
+                'periode'=>'1'
             ],
             [
                 'user_id' => '1',
                 'course_id' => '2',
-                'nilai_angka' => '3.4',
-                'nilai_huruf' =>'AB'
+                'nilai_angka' => 100,
+                'tahun' => 2020,
+                'periode'=>'1'
+
             ],
             [
                 'user_id' => '1',
                 'course_id' => '3',
-                'nilai_angka' => '3.6',
-                'nilai_huruf' =>'AB'
+                'nilai_angka' => 100,
+                'tahun' => 2020,
+                'periode'=>'1'
+
             ],
             [
                 'user_id' => '1',
                 'course_id' => '4',
-                'nilai_angka' => '3.4',
-                'nilai_huruf' =>'AB'
+                'nilai_angka' => 100,
+                'tahun' => 2020,
+                'periode'=>'1'
+
             ],
             [
                 'user_id' => '1',
                 'course_id' => '5',
-                'nilai_angka' => '3.7',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => 100,
+                'tahun' => 2020,
+                'periode'=>'1'
             ],
             [
                 'user_id' => '1',
                 'course_id' => '6',
-                'nilai_angka' => '3.5',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => 100,
+                'tahun' => 2021,
+                'periode'=>'1'
             ],
             [
                 'user_id' => '1',
                 'course_id' => '7',
-                'nilai_angka' => '3.67',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => 100,
+                'tahun' => 2021,
+                'periode'=>'1'
+
             ],
             [
                 'user_id' => '1',
                 'course_id' => '8',
-                'nilai_angka' => '3.78',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => 100,
+                'tahun' => 2021,
+                'periode'=>'1'
+
             ],
             [
                 'user_id' => '1',
                 'course_id' => '9',
-                'nilai_angka' => '3.5',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => 100,
+                'tahun' => 2021,
+                'periode'=>'1'
+
+            ],
+            [
+                'user_id' => '1',
+                'course_id' => '13',
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'2'
+
+            ],
+            [
+                'user_id' => '1',
+                'course_id' => '14',
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'1'
+
+            ],
+            [
+                'user_id' => '1',
+                'course_id' => '15',
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'2'
+
+            ],
+            [
+                'user_id' => '1',
+                'course_id' => '23',
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'2'
+
+            ],
+            [
+                'user_id' => '1',
+                'course_id' => '24',
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'2'
+
+            ],
+            [
+                'user_id' => '1',
+                'course_id' => '25',
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'2'
+
             ],
             [
                 'user_id' => '1',
                 'course_id' => '10',
-                'nilai_angka' => '3.1',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'2'
+
             ],
             [
                 'user_id' => '2',
                 'course_id' => '1',
-                'nilai_angka' => '3',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>2
+
+
             ],
             [
                 'user_id' => '2',
                 'course_id' => '2',
-                'nilai_angka' => '3.5',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>1
+
             ],
             [
                 'user_id' => '2',
                 'course_id' => '3',
-                'nilai_angka' => '3.5',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => 100,
+                'tahun' => 2022,
+                'periode'=>1
+
             ],
             [
                 'user_id' => '2',
                 'course_id' => '4',
-                'nilai_angka' => '3.5',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => 100,
+                'tahun' => 2022,
+                'periode'=>1
+
             ],
             [
                 'user_id' => '2',
                 'course_id' => '5',
-                'nilai_angka' => '3.5',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => 100,
+                'tahun' => 2022,
+                'periode'=>1
+
             ],
             [
                 'user_id' => '2',
                 'course_id' => '6',
-                'nilai_angka' => '3.5',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => 100,
+                'tahun' => 2022,
+                'periode'=>1
+
             ],
             [
                 'user_id' => '2',
                 'course_id' => '7',
-                'nilai_angka' => '3.5',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => 100,
+                'tahun' => 2022,
+                'periode'=>2
             ],
             [
                 'user_id' => '2',
                 'course_id' => '8',
-                'nilai_angka' => '3.5',
-                'nilai_huruf' =>'A'
+                'nilai_angka' => 100,
+                'tahun' => 2022,
+                'periode'=>2
+
             ],
             [
                 'user_id' => '2',
                 'course_id' => '9',
-                'nilai_angka' => '3.5',
-                'nilai_huruf' =>'A'
+                'tahun' => 2022,
+                'periode'=>2,
+                'nilai_angka' => null,
+
             ],
             [
                 'user_id' => '2',
                 'course_id' => '10',
-                'nilai_angka' => '3.5',
-                'nilai_huruf' =>'A'
+                'tahun' => 2023,
+                'periode'=>2,
+                'nilai_angka' => null,
+
             ],
             // [
             //     'user_id' => '5026201139',

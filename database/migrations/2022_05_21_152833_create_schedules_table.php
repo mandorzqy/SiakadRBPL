@@ -20,8 +20,6 @@ class CreateSchedulesTable extends Migration
             $table->timestamps();
             $table->string('hari');
             $table->string('jam');
-            
-
         });
     }
 

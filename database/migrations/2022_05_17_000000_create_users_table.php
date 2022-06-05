@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->foreignId('major_id')->constrained('majors');
             // $table->foreign('major_id')->references('id')->on('majors');
             $table->string('name');
+            $table->boolean('status_frs')->default(false);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->default('password123');

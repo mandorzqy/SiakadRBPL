@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ScoreController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\DosenBioController;
+use App\Http\Controllers\DosenFRSController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\AdminBiodataController;
@@ -46,7 +47,6 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
     Route::get('/search',[CourseController::class,'search'])->name('search');
     Route::get('/search-jadwal',[ScheduleController::class,'search'])->name('hari');
     Route::resource('/jadwal',ScheduleController::class);
-
 });
 
 
@@ -70,6 +70,10 @@ Route::middleware(['auth', 'role:dosen'])->group(function () {
     })->name('dosen');
     Route::resource('/dosen/biodata',DosenBioController::class);
     Route::resource('/dosen/transkrip',DosenTranskripController::class);
+    Route::get('dosen/frs',[DosenFRSController::class,'index'])->name('frs');
+    Route::get('dosen/frs/{user:nrp}',[DosenFRSController::class,'show'])->name('frs.show');
+    Route::get('/search/frs/{nrp}',[DosenFRSController::class,'search'])->name('frs.search');
+    Route::post('dosen/frs/accept/{user:id}',[DosenFRSController::class,'accept'])->name('frs.accept');
 });
 
 
@@ -82,5 +86,7 @@ Route::get('/proses',[ProsesController::class,'index']);
 Route::get('/frs',[FRSController::class,'index']);
 
 Route::get('/kuesioner',[KuesionerController::class,'index']);
+
+
 
 

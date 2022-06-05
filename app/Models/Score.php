@@ -17,4 +17,12 @@ class Score extends Model
     public function course(){
         return $this->belongsTo(Course::class);
     }
+
+    // public function forms(){
+    //     return $this->belongsToMany(Form::class,'form_score','score_id','form_id');
+    // }
+
+    public function forms(){
+        return $this->belongsTo(Form::class,'form_id');
+    }
 }

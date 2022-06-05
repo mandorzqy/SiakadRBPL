@@ -9,4 +9,8 @@ class Form extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+
+    public function Scores(){
+        return $this->hasMany(Score::class);
+    }
 }
