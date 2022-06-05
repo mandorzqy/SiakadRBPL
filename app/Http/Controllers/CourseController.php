@@ -15,7 +15,7 @@ class CourseController extends Controller
     public function index()
     {
         //
-        return view('course.index',[
+        return view('proses.kurikulum.index',[
             'no'=>1,
             'title'=>'Mata Kuliah',
             'courses'=>Course::all()
@@ -26,7 +26,7 @@ class CourseController extends Controller
         $keyword = $request->search;
         $keyword2=$request->name;
         if($keyword=='all'){
-            return view('course.index',[
+            return view('proses.kurikulum.index',[
                 'no'=>1,
                 'title'=>'Mata Kuliah',
                 'courses'=>Course::all()
@@ -34,14 +34,14 @@ class CourseController extends Controller
         }
         else{
              $courses=Course::where([['semester','like','%'.$keyword.'%'],['nama_mata_kuliah','like','%'.$keyword2.'%']])->get();
-        return view('course.index',[
+        return view('proses.kurikulum.index',[
             'no'=>1,
             'title'=>'Mata Kuliah',
             'courses'=>$courses
         ]);
         }
 
-       
+
     }
     /**
      * Show the form for creating a new resource.
