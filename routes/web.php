@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ScoreController;
@@ -18,11 +17,13 @@ use App\Http\Controllers\DosenTranskripController;
 use App\Http\Controllers\ProsesController;
 use App\Http\Controllers\FRSController;
 use App\Http\Controllers\KuesionerController;
+use App\Http\Controllers\SuratMahasiswaController;
+use App\Http\Controllers\SuratCutiController;
+use App\Http\Controllers\SuratUndurDiriController;
+use App\Http\Controllers\SuratKeteranganAktifController;
 use App\Http\Controllers\UktController;
 use App\Http\Controllers\IkomaController;
 use App\Http\Controllers\BiayaPendidikanController;
-
-
 
 
 /*
@@ -92,6 +93,22 @@ Route::get('/proses',[ProsesController::class,'index']);
 Route::get('/frs',[FRSController::class,'index']);
 
 Route::get('/kuesioner',[KuesionerController::class,'index']);
+
+Route::get('/suratundurdiri',[SuratUndurDiriController::class,'index']);
+
+Route::get('/suratcuti',[SuratCutiController::class,'index']);
+
+Route::get('/suratmahasiswa',[SuratMahasiswaController::class,'index']);
+
+Route::get('/suratketeranganaktif',[SuratKeteranganAktifController::class,'index']);
+
+Route::get('/ikoma',[IkomaController::class,'index']);
+
+Route::get('/ukt',[UktController::class,'index']);
+
+Route::get('/ikoma',[IkomaController::class,'index']);
+
+Route::get('/ukt',[UktController::class,'index']);
 
 Route::get('/ikoma',[IkomaController::class,'index']);
 
