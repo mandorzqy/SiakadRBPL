@@ -107,7 +107,7 @@
                 <img src="img/portfolio-03.jpg" class="img-fluid" alt="">
                 <i class="bi bi-bank"></i>
                 <a href="img/portfolio-03.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+                <a href="/suratmahasiswa">{{auth()->user()->name}} class="link-details" title="More Details"><i class="bx bx-link"></i></a>
               </figure>
 
               <div class="portfolio-info">
