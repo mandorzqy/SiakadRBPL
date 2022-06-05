@@ -18,6 +18,12 @@ use App\Http\Controllers\DosenTranskripController;
 use App\Http\Controllers\ProsesController;
 use App\Http\Controllers\FRSController;
 use App\Http\Controllers\KuesionerController;
+use App\Http\Controllers\UktController;
+use App\Http\Controllers\IkomaController;
+use App\Http\Controllers\BiayaPendidikanController;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -87,6 +93,9 @@ Route::get('/frs',[FRSController::class,'index']);
 
 Route::get('/kuesioner',[KuesionerController::class,'index']);
 
+Route::get('/ikoma',[IkomaController::class,'index']);
 
+Route::get('/ukt',[UktController::class,'index']);
 
+Route::get('/biayapendidikan',[BiayaPendidikanController::class,'index']);
 
