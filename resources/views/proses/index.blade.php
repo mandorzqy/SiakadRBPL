@@ -64,11 +64,10 @@
 
       <div class="container">
         <div class="container pt-5">
-          <div class="section-title">
-            <h2>Dashboard</h2>
-            <p>Selamat Datang, {{auth()->user()->name}}</p>
-        </div>
-        </div>
+            <div class="section-title">
+              <h2>Proses</h2>
+          </div>
+          </div>
 
         <div class="row portfolio-container">
 
@@ -82,7 +81,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="/proses">Proses</a></h4>
+                <h4><a href="/kurikulum">Kurikulum Semester</a></h4>
               </div>
             </div>
           </div>
@@ -96,7 +95,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="/suratmahasiswa">Surat Mahasiswa</a></h4>
+                <h4><a href="/frs">Formulir Rencana Studi</a></h4>
               </div>
             </div>
           </div>
@@ -111,52 +110,12 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="/biayapendidikan">Biaya Pendidikan</a></h4>
+                <h4><a href="/kuesioner">Kuesioner Dosen dan MK</a></h4>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio-04.jpg" class="img-fluid" alt="">
-                <a href="img/portfolio-04.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
 
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Akademik</a></h4>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio-05.jpg" class="img-fluid" alt="">
-                <a href="img/portfolio-05.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="/transkrip/{{auth()->user()->name}}">Laporan</a></h4>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio-06.jpg" class="img-fluid" alt="">
-                <a href="img/portfolio-06.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Yudisium</a></h4>
-              </div>
-            </div>
-          </div>
 
         </div>
 

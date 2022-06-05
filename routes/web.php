@@ -14,6 +14,9 @@ use App\Http\Controllers\AdminBiodataController;
 use App\Http\Controllers\DashboardBioController;
 use App\Http\Controllers\AdminTranskripController;
 use App\Http\Controllers\DosenTranskripController;
+use App\Http\Controllers\ProsesController;
+use App\Http\Controllers\FRSController;
+use App\Http\Controllers\KuesionerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +33,7 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard.desaindashboard.dashboard',['title'=>"Dashboard"]);
     })->name('dashboard');
-    
+
     Route::get('/', function () {
         return view('dashboard.desaindashboard.dashboard',['title'=>"Home"]);
     })->name('home');
@@ -73,5 +76,11 @@ Route::middleware(['auth', 'role:dosen'])->group(function () {
 Route::get('/restricted', function () {
     return view('error');
 })->name('error');
+
+Route::get('/proses',[ProsesController::class,'index']);
+
+Route::get('/frs',[FRSController::class,'index']);
+
+Route::get('/kuesioner',[KuesionerController::class,'index']);
 
 
