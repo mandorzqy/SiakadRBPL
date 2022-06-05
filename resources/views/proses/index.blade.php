@@ -89,8 +89,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                <img src="img/portfolio-02.jpg" class="img-fluid" alt="">
-                <a href="img/portfolio-02.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+                <img src="img/portfolio-1.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio-1.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
                 <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
               </figure>
 
@@ -103,9 +103,9 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
             <div class="portfolio-wrap" >
               <figure>
-                <img src="img/portfolio-03.jpg" class="img-fluid" alt="">
+                <img src="img/portfolio-1.jpg" class="img-fluid" alt="">
                 <i class="bi bi-bank"></i>
-                <a href="img/portfolio-03.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+                <a href="img/portfolio-1.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
                 <a href="/suratmahasiswa">{{auth()->user()->name}} class="link-details" title="More Details"><i class="bx bx-link"></i></a>
               </figure>
 
