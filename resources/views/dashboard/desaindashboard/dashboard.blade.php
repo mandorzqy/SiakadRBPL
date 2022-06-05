@@ -82,7 +82,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Proses</a></h4>
+                <h4><a href="/proses">Proses</a></h4>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Surat Mahasiswa</a></h4>
+                <h4><a href="/suratmahasiswa">Surat Mahasiswa</a></h4>
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Biaya Pendidikan</a></h4>
+                <h4><a href="/biayapendidikan">Biaya Pendidikan</a></h4>
               </div>
             </div>
           </div>
