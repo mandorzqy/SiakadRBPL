@@ -125,7 +125,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Akademik</a></h4>
+                <h4><a href="/akademik">Akademik</a></h4>
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="/transkrip/{{auth()->user()->name}}">Laporan</a></h4>
+                <h4><a href="/laporan">Laporan</a></h4>
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Yudisium</a></h4>
+                <h4><a href="/yudisium">Yudisium</a></h4>
               </div>
             </div>
           </div>

@@ -25,6 +25,14 @@ use App\Http\Controllers\SuratMahasiswaController;
 use App\Http\Controllers\SuratUndurDiriController;
 use App\Http\Controllers\BiayaPendidikanController;
 use App\Http\Controllers\SuratKeteranganAktifController;
+use App\Http\Controllers\AkademikController;
+use App\Http\Controllers\IpsIpkController;
+use App\Http\Controllers\TranskripController;
+use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\DaftarMhsMkController;
+use App\Http\Controllers\JadwalKuliahController;
+use App\Http\Controllers\YudisiumController;
+use App\Http\Controllers\UnggahBahasaController;
 
 
 
@@ -90,6 +98,22 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
     Route::resource('/frs',MahasiswaFRSController::class);
 
     Route::get('/biayapendidikan',[BiayaPendidikanController::class,'index']);
+
+    Route::get('/akademik',[AkademikController::class,'index']);
+
+    Route::get('/ipsipk',[IpsIpkController::class,'index']);
+
+    Route::get('/transkrip',[TranskripController::class,'index']);
+
+    Route::get('/laporan',[LaporanController::class,'index']);
+
+    Route::get('/daftarmhsmk',[DaftarMhsMkController::class,'index']);
+
+    Route::get('/jadwalkuliah',[JadwalKuliahController::class,'index']);
+
+    Route::get('/yudisium',[YudisiumController::class,'index']);
+
+    Route::get('/ukt',[UnggahBahasaController::class,'index']);
 
 });
 
