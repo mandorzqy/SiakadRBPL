@@ -1,29 +1,30 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FRSController;
+use App\Http\Controllers\UktController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DosenController;
+use App\Http\Controllers\IkomaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ScoreController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\ProsesController;
 use App\Http\Controllers\DosenBioController;
 use App\Http\Controllers\DosenFRSController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\KuesionerController;
+use App\Http\Controllers\SuratCutiController;
 use App\Http\Controllers\AdminBiodataController;
 use App\Http\Controllers\DashboardBioController;
+use App\Http\Controllers\MahasiswaFRSController;
 use App\Http\Controllers\AdminTranskripController;
 use App\Http\Controllers\DosenTranskripController;
-use App\Http\Controllers\ProsesController;
-use App\Http\Controllers\FRSController;
-use App\Http\Controllers\KuesionerController;
 use App\Http\Controllers\SuratMahasiswaController;
-use App\Http\Controllers\SuratCutiController;
 use App\Http\Controllers\SuratUndurDiriController;
-use App\Http\Controllers\SuratKeteranganAktifController;
-use App\Http\Controllers\UktController;
-use App\Http\Controllers\IkomaController;
 use App\Http\Controllers\BiayaPendidikanController;
+use App\Http\Controllers\SuratKeteranganAktifController;
 
 
 /*
@@ -62,8 +63,6 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
 
     Route::get('/proses',[ProsesController::class,'index']);
 
-    Route::get('/frs',[FRSController::class,'index']);
-
     Route::get('/kuesioner',[KuesionerController::class,'index']);
 
     Route::get('/suratundurdiri',[SuratUndurDiriController::class,'index']);
@@ -85,6 +84,8 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
     Route::get('/ikoma',[IkomaController::class,'index']);
 
     Route::get('/ukt',[UktController::class,'index']);
+
+    Route::resource('/frs',MahasiswaFRSController::class);
 
     Route::get('/biayapendidikan',[BiayaPendidikanController::class,'index']);
 

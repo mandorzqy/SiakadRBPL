@@ -33,7 +33,6 @@ class DosenFRSController extends Controller
     }
 
 
-
     public function search(Request $request,$id){
         $user=User::find($id);
         // $user=User::find(1);

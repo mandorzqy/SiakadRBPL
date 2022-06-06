@@ -98,4 +98,9 @@
             <span data-feather="file"></span>
             Jadwal Kuliah
           </a>
+
+    <a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/frs">
+            <span data-feather="file"></span>
+            FRS
+    </a>
       </div>
