@@ -18,6 +18,8 @@ class CreateClassroomsTable extends Migration
             $table->foreignId('course_id')->references('id')->on('courses');
             $table->char('kelas');
             $table->timestamps();
+            $table->integer('kapasitas');
+            $table->integer('jumlah_mahasiswa')->default(0);
         });
     }
 

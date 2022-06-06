@@ -82,20 +82,11 @@
                 padding-bottom: 40px;
             }
         </style>
+
     </head>
 
-    <body>
-        <div class="container">
-            <div class="card mx-auto">
-                <div class="card-header">
-                    <h2><b>Surat Keterangan Mahasiswa Aktif</b></h2>
-                </div>
-                <div class="card-body">
-                    <div class="container">
 
-                    </div>
-                </div>
-            </div>
-        </div>
+    <body>
+        <h2>Cetak Surat</h2>
     </body>
 </body>

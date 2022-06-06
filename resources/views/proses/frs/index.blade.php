@@ -28,16 +28,10 @@
         <div class="form-floating">
             <select class="form-select" id="matakuliah" name="matakuliah">
                 <option value="" disabled>Daftar Mata Kuliah</option>
-                @foreach($kelas as $k)
-                @if($k->kelas == 'I')
-                <option value="{{ $k->kodeMK }}/{{ $k->kelas }}">
-                    {{ $k->namaMataKuliah }} [IUP] - {{ $peserta->where('kodeMK', $k->kodeMK)->where('kelas', $k->kelas)->count() }}/{{ $k->kapasitas }}
+                @foreach($classrooms as $classroom)
+                <option value="{{ $classroom->course->kode_mata_kuliah }}/{{ $classroom->kelas }}">
+                    {{ $classroom->nama_mata_kuliah }} [{{ $classroom->kelas }}] - {{$classroom->jumlah_mahasiswa}}/{{ $classroom->kapasitas }}
                 </option>
-                @else
-                <option value="{{ $k->kodeMK }}/{{ $k->kelas }}">
-                    {{ $k->namaMataKuliah }} [{{ $k->kelas }}] - {{ $peserta->where('kodeMK', $k->kodeMK)->where('kelas', $k->kelas)->count() }}/{{ $k->kapasitas }}
-                </option>
-                @endif
                 @endforeach
             </select>
             <label for="matakuliah" class="form-label">Daftar Mata Kuliah</label>
@@ -97,6 +91,4 @@
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 @endif
-  
-  
   @endsection
