@@ -28,11 +28,12 @@
 }
 
 </style>
+<center>
 <div class="container">
     <h1>Kurikulum Semester</h1>
     {{-- <a class="btn btn-info" href="{{url('admin/biodata/create')}}">Create New course</a> --}}
       @if($courses->count())
-      <div class="d-flex flex-col mx-3 col-3 mt-5 mb-3">
+      <div class="d-flex flex-col mx-6 col-3 mt-6 mb-3">
         <form class="form" method="get" action="{{route('search')}}">
           <select class="form-select " aria-label="Default select example" id="search" name="search" onchange="this.form.submit()">
             <option selected>Pilih Semester</option>
@@ -91,5 +92,5 @@
         </table>
       @endif
   </div>
-
+</center>
 @endsection

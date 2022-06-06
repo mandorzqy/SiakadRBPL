@@ -31,9 +31,9 @@
 <body>
 <center>
   <h2>Kuesioner Evaluasi Mata Kuliah</h2>
-  <h5></h5>
+  <h3></h3>
   <h5>Riwayat Pengisian Kuesioner</h5>
-  <p></p>
+  <h5></h5>
   <div class="btn-group">
     <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Periode</button>
       <ul class="dropdown-menu">
@@ -68,7 +68,11 @@
     </tbody>
   </table>
 </div>
-@endsection
-</body>
 </center>
+</body>
+
+@endsection
+
+
+
 
