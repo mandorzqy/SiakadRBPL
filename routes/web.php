@@ -113,7 +113,7 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
 
     Route::get('/yudisium',[YudisiumController::class,'index']);
 
-    Route::get('/ukt',[UnggahBahasaController::class,'index']);
+    Route::get('/unggahbahasa',[UnggahBahasaController::class,'index']);
 
 });
 
