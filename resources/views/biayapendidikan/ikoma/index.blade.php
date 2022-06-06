@@ -7,7 +7,7 @@
         margin-top: 15px;
     }
     .table{
-    background-color: rgba(192,229,247,255);
+    background-color:white;
     border-top-style: solid;
     border-right-style: solid;
     border-bottom-style: solid;
@@ -28,5 +28,46 @@
 }
 
 </style>
-<h2>Data Historis Pembayaran Mahasiswa</h2>
+<center>
+<h2>Data Historis Pembayaran IKOMA</h2>
+  <h5></h5>
+  </center>
 
+  <table class="table" align="center">
+    <thead class="table-dark">
+      <tr>
+        <th>Tahun dan Semester</th>
+        <th>Tanggal Bayar</th>
+        <th>Total Bayar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Genap 2022</td>
+        <td>22-01-2022</td>
+        <td>1500000</td>
+      </tr>
+    </tbody>
+  </table>
+						<table width="600" border="0" align="center" cellpadding="4" cellspacing="4"><tr class="tr2" ><td width="500" ><div align="left">
+                            <strong>Jenis Pembayaran</strong></div></td><td width="100" ><div align="center"><strong>Amount </strong></div></td></tr>					<tr>
+						<tr>
+						<td width="100">TAGIHAN IKOMA</td>
+						<td><div align="right">1500000</div></td>
+					</tr>
+						<tr>
+						<td width="100">TUNGGAKAN IKOMA</td>
+						<td><div align="right">0</div></td>
+					</tr>
+						<tr>
+						<tr>
+						<td width="100">TAGIHAN IPITS</td>
+						<td><div align="right">0</div></td>
+					</tr>
+						<tr>
+						<td width="100">TUNGGAKAN IPITS</td>
+						<td><div align="right">0</div></td>
+					</tr>
+
+</div>
+@endsection

@@ -29,7 +29,7 @@
 
 </style>
 <center>
-<h2>Data Historis Pembayaran Mahasiswa</h2>
+<h2>Data Historis Pembayaran UKT Mahasiswa</h2>
   <h5></h5>
   </center>
 
@@ -55,27 +55,13 @@
 						<td><div align="right">10000000</div></td>
 					</tr>
 						<tr>
-						<td width="100">TAGIHAN PELAYARAN</td>
-						<td><div align="right">0</div></td>
-					</tr>
-						<tr>
-						<td width="100">TUNGGAKAN PELAYARAN</td>
-						<td><div align="right">0</div></td>
-					</tr>
 						<tr>
 						<td width="100">TAGIHAN SPI</td>
 						<td><div align="right">0</div></td>
 					</tr>
 						<tr>
-						<td width="100">TAGIHAN IPITS</td>
-						<td><div align="right">0</div></td>
-					</tr>
 						<tr>
-						<td width="100">TAGIHAN KPENYEGARAN</td>
-						<td><div align="right">0</div></td>
-					</tr>
-						<tr>
-						<td width="100">TUNGGAKAN SPP</td>
+						<td width="100">TUNGGAKAN UKT</td>
 						<td><div align="right">0</div></td>
 					</tr>
 						<tr>
@@ -83,12 +69,5 @@
 						<td><div align="right">0</div></td>
 					</tr>
 						<tr>
-						<td width="100">TUNGGAKAN IPITS</td>
-						<td><div align="right">0</div></td>
-					</tr>
-						<tr>
-						<td width="100">TUNGGAKAN KPENYEGARAN</td>
-						<td><div align="right">0</div></td>
-					</tr>
 </div>
 @endsection
