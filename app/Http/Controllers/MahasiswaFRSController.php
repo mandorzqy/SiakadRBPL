@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Classroom;
-use App\Models\Score;
 use App\Models\User;
+use App\Models\Score;
+use App\Models\Classroom;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 
 class MahasiswaFRSController extends Controller
 {
@@ -17,7 +19,7 @@ class MahasiswaFRSController extends Controller
    
         public function index(){
             $user=auth()->user();
-            $scores=$user->score->load('user','course')->where('tahun',2022)->where('periode','genap');
+            $scores=$user->score->load('user','course')->where('tahun',2022)->where('periode','2');
             $classrooms=Classroom::all();
             return view('proses.frs.index',[
                 'title' => 'FRS',
@@ -47,6 +49,12 @@ class MahasiswaFRSController extends Controller
     public function store(Request $request)
     {
         //
+        DB::table('classroom_user')->insert([
+            [
+                'user_id'=>auth()->user()->id,
+                'classroom_id'=>$request->input('classroom_id')
+            ]
+        ]);
     }
 
     /**

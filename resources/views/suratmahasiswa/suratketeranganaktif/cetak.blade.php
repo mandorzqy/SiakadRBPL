@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SIAKAD</title>
+  <title>Cetak Surat</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -18,46 +18,12 @@
   <link href="css/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="css/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="css/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="css/dashboard.css" rel="stylesheet">
-<style>
-  body {
-  background-image: url("https://media.istockphoto.com/photos/abstract-blue-cyan-background-picture-id995719694?k=20&m=995719694&s=612x612&w=0&h=zI2SFqWdZallvqgVphnq5T8ZWYK0TBIkKdyYP60JAI8=");
-}
-
-</style>
 </head>
 
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-
-      <div class="logo me-auto">
-        <h1><a href="/">SIAKAD</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/biodata">{{auth()->user()->name}}</a></li>
-          <li><form action="/logout" method="post">
-            @csrf<button style="
-            background:none;
-            border:none;
-            margin:0;
-            padding: 10px 0 10px 30px;;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;"
-            class="nav-link scrollto" action="/logout">Sign Out</button></form></li>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-  </header><!-- End Header -->
-
+  
     <!-- ======= Portfolio Section ======= -->
 
     <head>
@@ -85,8 +51,16 @@
 
     </head>
 
-
     <body>
-        <h2>Cetak Surat</h2>
+        <div class="container">
+          <div class="card mx-auto">
+            <div class="card-header">
+                <h2><b>Cetak Surat</b></h2>
+            </div>
+            
+        </div>
+        </div>
+
     </body>
+    </section><!-- End Portfolio Section -->
 </body>

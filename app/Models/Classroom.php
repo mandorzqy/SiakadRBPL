@@ -17,4 +17,12 @@ class Classroom extends Model
     public function score(){
         return $this->hasMany(Score::class);
     }
+
+    public function user(){
+        return $this->belongsToMany(User::class,'classroom_user','classroom_id','user_id');
+    }
+
+    // public function users(){
+    //     return $this->belongsToMany(User::class,'schedule)','schedule_id','user_id');
+    // }
 }

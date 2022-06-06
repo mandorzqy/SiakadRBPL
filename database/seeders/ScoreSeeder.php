@@ -84,109 +84,110 @@ class ScoreSeeder extends Seeder
             //     'periode'=>'1'
 
             // ],
+            [
+                'user_id' => '1',
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'2',
+                'classroom_id' => 3,
+            ],
+            [
+                'user_id' => '1',
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'1',
+                'classroom_id' => 4,
+            ],
+            [
+                'user_id' => '1',
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'2',
+                'classroom_id' => 5,
+            ],
+            [
+                'user_id' => '1',
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'2',
+                'classroom_id' =>6
+            ],
+            [
+                'user_id' => '1',
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'2',
+                'classroom_id' => 7,
+            ],
+            [
+                'user_id' => '1',
+                'nilai_angka' => null,
+                'tahun' => 2022,
+                'periode'=>'2',
+                'classroom_id' => 8,
+
+            ],
             // [
             //     'user_id' => '1',
             //     'nilai_angka' => null,
             //     'tahun' => 2022,
-            //     'periode'=>'2'
-
+            //     'periode'=>'2',
+            //     'classroom_id' => 7,
             // ],
             // [
-            //     'user_id' => '1',
+            //     'user_id' => '2',
             //     'nilai_angka' => null,
             //     'tahun' => 2022,
-            //     'periode'=>'1'
-
-            // ],
-            // [
-            //     'user_id' => '1',
-            //     'nilai_angka' => null,
-            //     'tahun' => 2022,
-            //     'periode'=>'2'
-
-            // ],
-            // [
-            //     'user_id' => '1',
-            //     'nilai_angka' => null,
-            //     'tahun' => 2022,
-            //     'periode'=>'2'
-
-            // ],
-            // [
-            //     'user_id' => '1',
-            //     'nilai_angka' => null,
-            //     'tahun' => 2022,
-            //     'periode'=>'2'
-
-            // ],
-            // [
-            //     'user_id' => '1',
-            //     'nilai_angka' => null,
-            //     'tahun' => 2022,
-            //     'periode'=>'2'
-
-            // ],
-            // [
-            //     'user_id' => '1',
-            //     'nilai_angka' => null,
-            //     'tahun' => 2022,
-            //     'periode'=>'2'
+            //     'periode'=>2,
+            //     'classroom_id' => 7,
 
             // ],
             // [
             //     'user_id' => '2',
             //     'nilai_angka' => null,
             //     'tahun' => 2022,
-            //     'periode'=>2
-
-
-            // ],
-            // [
-            //     'user_id' => '2',
-            //     'nilai_angka' => null,
-            //     'tahun' => 2022,
-            //     'periode'=>1
+            //     'periode'=>1,
 
             // ],
             // [
             //     'user_id' => '2',
             //     'nilai_angka' => 100,
             //     'tahun' => 2022,
-            //     'periode'=>1
+            //     'periode'=>1,
 
             // ],
             // [
             //     'user_id' => '2',
             //     'nilai_angka' => 100,
             //     'tahun' => 2022,
-            //     'periode'=>1
+            //     'periode'=>1,
 
             // ],
             // [
             //     'user_id' => '2',
             //     'nilai_angka' => 100,
             //     'tahun' => 2022,
-            //     'periode'=>1
+            //     'periode'=>1,
 
             // ],
             // [
             //     'user_id' => '2',
             //     'nilai_angka' => 100,
             //     'tahun' => 2022,
-            //     'periode'=>1
+            //     'periode'=>1,
 
             // ],
             // [
             //     'user_id' => '2',
             //     'nilai_angka' => 100,
             //     'tahun' => 2022,
-            //     'periode'=>2
+            //     'periode'=>2,
             // ],
             // [
             //     'user_id' => '2',
             //     'nilai_angka' => 100,
             //     'tahun' => 2022,
-            //     'periode'=>2
+            //     'periode'=>2,
 
             // ],
             // [
