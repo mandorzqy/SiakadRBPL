@@ -21,7 +21,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-
+    
 
     protected $guarded=['id'];
     /**
@@ -51,7 +51,7 @@ class User extends Authenticatable
     public function score(){
         return $this->hasMany(Score::class);
     }
-
+    
     public function major(){
         return $this->hasOne(Major::class,'id','major_id');
     }
@@ -64,8 +64,7 @@ class User extends Authenticatable
     public function lecturers(){
         return $this->belongsTo(Lecturer::class,'id','lecturer_id');
     }
-
-
+    
 
     protected function type(): Attribute
     {

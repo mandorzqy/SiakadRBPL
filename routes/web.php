@@ -37,6 +37,8 @@ use App\Http\Controllers\BiayaPendidikanController;
 |
 */
 
+
+// untuk mahasiswa
 Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard.desaindashboard.dashboard',['title'=>"Dashboard"]);
@@ -51,17 +53,50 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
     Route::get('/transkrip/{user:name}',[ScoreController::class,'transkrip']);
 
     Route::resource('/kurikulum',CourseController::class);
+
     Route::get('/search',[CourseController::class,'search'])->name('search');
+
     Route::get('/search-jadwal',[ScheduleController::class,'search'])->name('hari');
+
     Route::resource('/jadwal',ScheduleController::class);
+
+    Route::get('/proses',[ProsesController::class,'index']);
+
+    Route::get('/frs',[FRSController::class,'index']);
+
+    Route::get('/kuesioner',[KuesionerController::class,'index']);
+
+    Route::get('/suratundurdiri',[SuratUndurDiriController::class,'index']);
+
+    Route::get('/suratcuti',[SuratCutiController::class,'index']);
+
+    Route::get('/suratmahasiswa',[SuratMahasiswaController::class,'index']);
+
+    Route::get('/suratketeranganaktif',[SuratKeteranganAktifController::class,'index']);
+
+    Route::get('/ikoma',[IkomaController::class,'index']);
+
+    Route::get('/ukt',[UktController::class,'index']);
+
+    Route::get('/ikoma',[IkomaController::class,'index']);
+
+    Route::get('/ukt',[UktController::class,'index']);
+
+    Route::get('/ikoma',[IkomaController::class,'index']);
+
+    Route::get('/ukt',[UktController::class,'index']);
+
+    Route::get('/biayapendidikan',[BiayaPendidikanController::class,'index']);
+
 });
 
-
+// untuk login logout
 Route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
 Route::post('/login',[LoginController::class,'authenticate']);
 Route::post('/logout',[LoginController::class,'logout']);
 
 
+// untuk admin
 Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin',[AdminController::class,'index'])->name('admin');
     // Route::get('/adminbiodata',[AdminController::class,'biodata'])->name('adminbiodata');
@@ -71,6 +106,7 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
 });
 
 
+// untuk dosen
 Route::middleware(['auth', 'role:dosen'])->group(function () {
     Route::get('/dosen',function () {
         return view('dosen.dosenDashboard.index',['title'=>"Dashboard"]);
@@ -83,36 +119,9 @@ Route::middleware(['auth', 'role:dosen'])->group(function () {
     Route::post('dosen/frs/accept/{user:id}',[DosenFRSController::class,'accept'])->name('frs.accept');
 });
 
-
+// untuk halaman error(jika user tidak memiliki hak akses)
 Route::get('/restricted', function () {
     return view('error');
 })->name('error');
 
-Route::get('/proses',[ProsesController::class,'index']);
-
-Route::get('/frs',[FRSController::class,'index']);
-
-Route::get('/kuesioner',[KuesionerController::class,'index']);
-
-Route::get('/suratundurdiri',[SuratUndurDiriController::class,'index']);
-
-Route::get('/suratcuti',[SuratCutiController::class,'index']);
-
-Route::get('/suratmahasiswa',[SuratMahasiswaController::class,'index']);
-
-Route::get('/suratketeranganaktif',[SuratKeteranganAktifController::class,'index']);
-
-Route::get('/ikoma',[IkomaController::class,'index']);
-
-Route::get('/ukt',[UktController::class,'index']);
-
-Route::get('/ikoma',[IkomaController::class,'index']);
-
-Route::get('/ukt',[UktController::class,'index']);
-
-Route::get('/ikoma',[IkomaController::class,'index']);
-
-Route::get('/ukt',[UktController::class,'index']);
-
-Route::get('/biayapendidikan',[BiayaPendidikanController::class,'index']);
 

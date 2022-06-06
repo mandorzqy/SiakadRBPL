@@ -84,12 +84,23 @@
     </tbody>
    
   </table>
-
-  <form action="/dosen/frs/accept/{{ $user->id }}" method="POST">
+@if ($user->status_frs == false)
+<div class="alert alert-danger alert-dismissible fade show mt-5 pt-5" role="alert">
+    <strong>FRS belum disetujui</strong>
+    <button type="button" class="btn-close mt-5" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<form action="/dosen/frs/accept/{{ $user->id }}" method="POST">
     @csrf
     <button class="btn btn-success shadow-sm me-2" type="submit" name="accept" value="true">
         <i class="bi bi-check-lg"></i>
     </button>
 </form>
+@else
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>FRS telah disetujui</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+@endif
+  
   
   @endsection
