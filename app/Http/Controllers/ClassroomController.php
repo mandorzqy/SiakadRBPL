@@ -2,28 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Score;
-use App\Models\User;
+use App\Models\Classroom;
 use Illuminate\Http\Request;
 
-class MahasiswaFRSController extends Controller
+class ClassroomController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-   
-        public function index(){
-            $user=auth()->user();
-            $scores=$user->score->load('user','course')->where('tahun',2022)->where('periode','genap');
-            return view('proses.frs.index',[
-                'title' => 'FRS',
-                'user'=>$user,
-                'scores'=>$scores
-            ]);
-        }
+    public function index()
+    {
+        //
         
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -49,28 +42,21 @@ class MahasiswaFRSController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function show(Score $score)
+    public function show(Classroom $classroom)
     {
         //
-        $user=auth()->user();
-        $scores=$user->score->load('user','course')->where('tahun',2022);
-        return view('proses.frs.index',[
-            'title' => 'Detail FRS',
-            'user'=>$user,
-            'scores'=>$scores
-    ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function edit(Score $score)
+    public function edit(Classroom $classroom)
     {
         //
     }
@@ -79,10 +65,10 @@ class MahasiswaFRSController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Score $score)
+    public function update(Request $request, Classroom $classroom)
     {
         //
     }
@@ -90,10 +76,10 @@ class MahasiswaFRSController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Score  $score
+     * @param  \App\Models\Classroom  $classroom
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Score $score)
+    public function destroy(Classroom $classroom)
     {
         //
     }

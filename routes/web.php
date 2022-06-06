@@ -98,7 +98,7 @@ Route::post('/logout',[LoginController::class,'logout']);
 
 
 // untuk admin
-Route::middleware(['auth', 'role:admin'])->group(function () {
+    Route::middleware(['auth', 'role:admin'])->group(function () {
     Route::get('/admin',[AdminController::class,'index'])->name('admin');
     // Route::get('/adminbiodata',[AdminController::class,'biodata'])->name('adminbiodata');
     Route::resource('/admin/transkrip',AdminTranskripController::class);

@@ -25,4 +25,8 @@ class Score extends Model
     public function forms(){
         return $this->belongsTo(Form::class,'form_id');
     }
+
+    public function classroom(){
+        return $this->belongsTo(Classroom::class,'classroom_id');
+    }
 }

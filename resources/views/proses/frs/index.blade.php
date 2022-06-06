@@ -22,7 +22,32 @@
 </div>
 
 
-
+<div class="mt-4 text-center">
+    <form class="form-inline" id="input">
+        @csrf
+        <div class="form-floating">
+            <select class="form-select" id="matakuliah" name="matakuliah">
+                <option value="" disabled>Daftar Mata Kuliah</option>
+                @foreach($kelas as $k)
+                @if($k->kelas == 'I')
+                <option value="{{ $k->kodeMK }}/{{ $k->kelas }}">
+                    {{ $k->namaMataKuliah }} [IUP] - {{ $peserta->where('kodeMK', $k->kodeMK)->where('kelas', $k->kelas)->count() }}/{{ $k->kapasitas }}
+                </option>
+                @else
+                <option value="{{ $k->kodeMK }}/{{ $k->kelas }}">
+                    {{ $k->namaMataKuliah }} [{{ $k->kelas }}] - {{ $peserta->where('kodeMK', $k->kodeMK)->where('kelas', $k->kelas)->count() }}/{{ $k->kapasitas }}
+                </option>
+                @endif
+                @endforeach
+            </select>
+            <label for="matakuliah" class="form-label">Daftar Mata Kuliah</label>
+        </div>
+    </form>
+    <div class="mt-4">
+        <button class="btn btn-light shadow-sm me-2" type="button">Ambil</button>
+        <button class="btn btn-light shadow-sm" type="button">Peserta</button>
+    </div>
+</div>
 <table class="table align-items-center justify-content-center mb-0">
     
     <thead>

@@ -19,209 +19,190 @@ class ScoreSeeder extends Seeder
         Score::insert([
             [
                 'user_id' => '1',
-                'course_id' => '1',
+                'tahun' => 2020,
+                'periode'=>'1',
+                'classroom_id' => '1',
+                'nilai_angka' => '90',
+            ],
+            [
+                'user_id' => '1',
                 'nilai_angka' => 100,
                 'tahun' => 2020,
-                'periode'=>'1'
+                'periode'=>'1',
+                'classroom_id' => '2',
             ],
-            [
-                'user_id' => '1',
-                'course_id' => '2',
-                'nilai_angka' => 100,
-                'tahun' => 2020,
-                'periode'=>'1'
+            // 
+            //     'user_id' => '1',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2020,
+            //     'periode'=>'1',
+            //     'classroom_id' => '3',
 
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '3',
-                'nilai_angka' => 100,
-                'tahun' => 2020,
-                'periode'=>'1'
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2020,
+            //     'periode'=>'1',
+            //     'classroom_id' => '4',
 
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '4',
-                'nilai_angka' => 100,
-                'tahun' => 2020,
-                'periode'=>'1'
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2020,
+            //     'periode'=>'1',
+            //     'classroom_id' => '5',
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2021,
+            //     'periode'=>'1',
+            //     'classroom_id' => '6',
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2021,
+            //     'periode'=>'1',
+            //     'classroom_id' => '7',
 
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '5',
-                'nilai_angka' => 100,
-                'tahun' => 2020,
-                'periode'=>'1'
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '6',
-                'nilai_angka' => 100,
-                'tahun' => 2021,
-                'periode'=>'1'
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '7',
-                'nilai_angka' => 100,
-                'tahun' => 2021,
-                'periode'=>'1'
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2021,
+            //     'periode'=>'1',
+            //     'classroom_id' => '8',
 
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '8',
-                'nilai_angka' => 100,
-                'tahun' => 2021,
-                'periode'=>'1'
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2021,
+            //     'periode'=>'1'
 
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '9',
-                'nilai_angka' => 100,
-                'tahun' => 2021,
-                'periode'=>'1'
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => null,
+            //     'tahun' => 2022,
+            //     'periode'=>'2'
 
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '13',
-                'nilai_angka' => null,
-                'tahun' => 2022,
-                'periode'=>'2'
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => null,
+            //     'tahun' => 2022,
+            //     'periode'=>'1'
 
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '14',
-                'nilai_angka' => null,
-                'tahun' => 2022,
-                'periode'=>'1'
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => null,
+            //     'tahun' => 2022,
+            //     'periode'=>'2'
 
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '15',
-                'nilai_angka' => null,
-                'tahun' => 2022,
-                'periode'=>'2'
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => null,
+            //     'tahun' => 2022,
+            //     'periode'=>'2'
 
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '23',
-                'nilai_angka' => null,
-                'tahun' => 2022,
-                'periode'=>'2'
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => null,
+            //     'tahun' => 2022,
+            //     'periode'=>'2'
 
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '24',
-                'nilai_angka' => null,
-                'tahun' => 2022,
-                'periode'=>'2'
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => null,
+            //     'tahun' => 2022,
+            //     'periode'=>'2'
 
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '25',
-                'nilai_angka' => null,
-                'tahun' => 2022,
-                'periode'=>'2'
+            // ],
+            // [
+            //     'user_id' => '1',
+            //     'nilai_angka' => null,
+            //     'tahun' => 2022,
+            //     'periode'=>'2'
 
-            ],
-            [
-                'user_id' => '1',
-                'course_id' => '10',
-                'nilai_angka' => null,
-                'tahun' => 2022,
-                'periode'=>'2'
-
-            ],
-            [
-                'user_id' => '2',
-                'course_id' => '1',
-                'nilai_angka' => null,
-                'tahun' => 2022,
-                'periode'=>2
+            // ],
+            // [
+            //     'user_id' => '2',
+            //     'nilai_angka' => null,
+            //     'tahun' => 2022,
+            //     'periode'=>2
 
 
-            ],
-            [
-                'user_id' => '2',
-                'course_id' => '2',
-                'nilai_angka' => null,
-                'tahun' => 2022,
-                'periode'=>1
+            // ],
+            // [
+            //     'user_id' => '2',
+            //     'nilai_angka' => null,
+            //     'tahun' => 2022,
+            //     'periode'=>1
 
-            ],
-            [
-                'user_id' => '2',
-                'course_id' => '3',
-                'nilai_angka' => 100,
-                'tahun' => 2022,
-                'periode'=>1
+            // ],
+            // [
+            //     'user_id' => '2',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2022,
+            //     'periode'=>1
 
-            ],
-            [
-                'user_id' => '2',
-                'course_id' => '4',
-                'nilai_angka' => 100,
-                'tahun' => 2022,
-                'periode'=>1
+            // ],
+            // [
+            //     'user_id' => '2',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2022,
+            //     'periode'=>1
 
-            ],
-            [
-                'user_id' => '2',
-                'course_id' => '5',
-                'nilai_angka' => 100,
-                'tahun' => 2022,
-                'periode'=>1
+            // ],
+            // [
+            //     'user_id' => '2',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2022,
+            //     'periode'=>1
 
-            ],
-            [
-                'user_id' => '2',
-                'course_id' => '6',
-                'nilai_angka' => 100,
-                'tahun' => 2022,
-                'periode'=>1
+            // ],
+            // [
+            //     'user_id' => '2',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2022,
+            //     'periode'=>1
 
-            ],
-            [
-                'user_id' => '2',
-                'course_id' => '7',
-                'nilai_angka' => 100,
-                'tahun' => 2022,
-                'periode'=>2
-            ],
-            [
-                'user_id' => '2',
-                'course_id' => '8',
-                'nilai_angka' => 100,
-                'tahun' => 2022,
-                'periode'=>2
+            // ],
+            // [
+            //     'user_id' => '2',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2022,
+            //     'periode'=>2
+            // ],
+            // [
+            //     'user_id' => '2',
+            //     'nilai_angka' => 100,
+            //     'tahun' => 2022,
+            //     'periode'=>2
 
-            ],
-            [
-                'user_id' => '2',
-                'course_id' => '9',
-                'tahun' => 2022,
-                'periode'=>2,
-                'nilai_angka' => null,
+            // ],
+            // [
+            //     'user_id' => '2',
+            //     'tahun' => 2022,
+            //     'periode'=>2,
+            //     'nilai_angka' => null,
 
-            ],
-            [
-                'user_id' => '2',
-                'course_id' => '10',
-                'tahun' => 2023,
-                'periode'=>2,
-                'nilai_angka' => null,
+            // ],
+            // [
+            //     'user_id' => '2',
+            //     'tahun' => 2023,
+            //     'periode'=>2,
+            //     'nilai_angka' => null,
 
-            ],
+            // ],
             // [
             //     'user_id' => '5026201139',
             //     'course_id' => '1',
