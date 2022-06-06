@@ -21,7 +21,7 @@
         <td>
           <div class="d-flex px-2">
             <div class="my-auto">
-              <h6 class="mb-0 text-sm">{{ $nilai->course->nama_mata_kuliah}}</h6>
+              <h6 class="mb-0 text-sm">{{ $nilai->classroom->course->nama_mata_kuliah}}</h6>
             </div>
           </div>
         </td>
