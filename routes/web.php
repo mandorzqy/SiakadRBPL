@@ -27,6 +27,7 @@ use App\Http\Controllers\BiayaPendidikanController;
 use App\Http\Controllers\SuratKeteranganAktifController;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -72,6 +73,7 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
     Route::get('/suratmahasiswa',[SuratMahasiswaController::class,'index']);
 
     Route::get('/suratketeranganaktif',[SuratKeteranganAktifController::class,'index']);
+    Route::post('/suratketeranganaktif/cetak',[SuratKeteranganAktifController::class,'cetak']);
 
     Route::get('/ikoma',[IkomaController::class,'index']);
 

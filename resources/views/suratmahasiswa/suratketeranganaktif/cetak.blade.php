@@ -82,7 +82,6 @@
                 padding-bottom: 40px;
             }
         </style>
-
     </head>
 
     <body>
@@ -93,44 +92,10 @@
                 </div>
                 <div class="card-body">
                     <div class="container">
-                        <p style="color: red;">* Mohon Semuanya Diisi Dengan Sesuai *</p>
-                        <form action="/suratketeranganaktif/cetak" method="POST">
-                            @csrf
-                            <input type="hidden" name="tipe" value="suratketeranganaktif">
-                            <div class="form-group">
-                                <label for="state">Periode:</label>
-                                <select class="form-control" name="periode">
-                                    <option value="" selected disabled>Periode</option>
-                                    <option value="2022 Genap">2022 Genap</option>
-                                    <option value="2022 Gasal">2022 Gasal</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="state">Keperluan:</label>
-                                <select class="form-control" name="keperluan">
-                                    <option value="" selected disabled>Keperluan</option>
-                                    <option value="Mengurus Tunjangan Gaji Orang Tua">Mengurus Tunjangan Gaji Orang Tua</option>
-                                    <option value="Mengurus BPJS/Asuransi/Berkas Lainnya">Mengurus BPJS/Asuransi/Berkas Lainnya</option>
-                                    <option value="Mengurus Surat Kehilangan">Mengurus Surat Kehilangan</option>
-                                </select>
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="state">Pilihan Bahasa:</label>
-                                <select class="form-control" name="bahasa">
-                                    <option value="" selected disabled>Bahasa</option>
-                                    <option value="Bahasa Indonesia">Bahasa Indonesia</option>
-                                    <option value="Bahasa Inggris">Bahasa Inggris</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <button type="submit" class="btn btn-warning btn-lg btn-block text-white">Ajukan Surat</button>
-                            </div>
-                        </form>
+
                     </div>
                 </div>
             </div>
         </div>
-
     </body>
-    </section><!-- End Portfolio Section -->
 </body>
