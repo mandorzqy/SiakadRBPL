@@ -82,7 +82,7 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
     Route::get('/suratmahasiswa',[SuratMahasiswaController::class,'index']);
 
     Route::get('/suratketeranganaktif',[SuratKeteranganAktifController::class,'index']);
-    
+
     Route::post('/suratketeranganaktif/cetak',[SuratKeteranganAktifController::class,'cetak']);
 
     Route::get('/ikoma',[IkomaController::class,'index']);
@@ -137,6 +137,7 @@ Route::post('/logout',[LoginController::class,'logout']);
     Route::resource('/admin-kurikulum',AdminKurikulumController::class);
     // Route::get('/search',[AdminKurikulumController::class,'search'])->name('adminsearch');
     Route::get('/adminsearch',[CourseController::class,'search']);
+    Route::resource('/admin-kuesioner',AdminKuesionerController::class);
 });
 
 

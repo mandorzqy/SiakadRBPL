@@ -40,7 +40,7 @@
         @elseif (auth()->user()->type=='dosen')
             action='/dosensearch'
         @else
-            action="/search">
+            action="/search"
         @endif>
           <select class="form-select mb-2" aria-label="Default select example" id="search" name="search" onchange="this.form.submit()">
             <option selected>Pilih Semester</option>
@@ -88,7 +88,7 @@
             <td>
               <span>
                  <a href="{{route('kurikulum.edit', $course->id)}}" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
-             
+
               </span>
              <td> <form action="{{route('kurikulum.destroy', $course->id)}}" method="post">
               @csrf
@@ -101,7 +101,7 @@
           @endforeach
         </tbody>
       </table></div>
-     
+
     </div>
   </div>
 </div>
