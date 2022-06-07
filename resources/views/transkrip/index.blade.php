@@ -1,17 +1,20 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1>Transkrip</h1>
+<div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="text-center">Transkrip</h1>
 </div>
 
-<table class="table align-items-center justify-content-center mb-0">
+<div class="container text-center d-flex justify-content-center">
+  <div class="col-6">  
+    <table class="table table-bordered align-items-center justify-content-center mb-0">
     <thead>
       <tr>
         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Mata Kuliah</th>
-        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nilai Angka</th>
-        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nilai Huruf</th>
-        <th></th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nilai</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">SKS</th>
+        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Semester</th>
+
       </tr>
     </thead>
     <tbody>
@@ -29,11 +32,18 @@
           <p class="text-sm font-weight-bold mb-0">{{ $nilai->nilai_angka }}</p>
         </td>
         <td>
-          <span class="text-xs font-weight-bold">{{ $nilai->nilai_huruf }}</span>
+          <span class="text-xs font-weight-bold">{{ $nilai->classroom->course->sks }}</span>
+        </td>
+        <td>
+          <span class="text-xs font-weight-bold">{{ $nilai->classroom->course->semester }}</span>
         </td>
       </tr>
       @endforeach
       @endif
     </tbody>
   </table>
+</div>
+
+</div>
+
   @endsection

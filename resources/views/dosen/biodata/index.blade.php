@@ -1,4 +1,4 @@
-@extends('dosen.dosenDashboard.layouts.main')
+@extends('dashboard.layouts.main')
 
 @section('container')
 

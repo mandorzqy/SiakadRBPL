@@ -9,30 +9,31 @@ use App\Http\Controllers\IkomaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ScoreController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\IpsIpkController;
 use App\Http\Controllers\ProsesController;
+use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\AkademikController;
 use App\Http\Controllers\DosenBioController;
 use App\Http\Controllers\DosenFRSController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\YudisiumController;
 use App\Http\Controllers\KuesionerController;
 use App\Http\Controllers\SuratCutiController;
+use App\Http\Controllers\TranskripController;
+use App\Http\Controllers\DaftarMhsMkController;
 use App\Http\Controllers\AdminBiodataController;
 use App\Http\Controllers\DashboardBioController;
+use App\Http\Controllers\JadwalKuliahController;
 use App\Http\Controllers\MahasiswaFRSController;
+use App\Http\Controllers\UnggahBahasaController;
+use App\Http\Controllers\AdminKurikulumController;
 use App\Http\Controllers\AdminTranskripController;
 use App\Http\Controllers\DosenTranskripController;
 use App\Http\Controllers\SuratMahasiswaController;
 use App\Http\Controllers\SuratUndurDiriController;
 use App\Http\Controllers\BiayaPendidikanController;
 use App\Http\Controllers\SuratKeteranganAktifController;
-use App\Http\Controllers\AkademikController;
-use App\Http\Controllers\IpsIpkController;
-use App\Http\Controllers\TranskripController;
-use App\Http\Controllers\LaporanController;
-use App\Http\Controllers\DaftarMhsMkController;
-use App\Http\Controllers\JadwalKuliahController;
-use App\Http\Controllers\YudisiumController;
-use App\Http\Controllers\UnggahBahasaController;
 
 
 
@@ -118,6 +119,9 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
 
 });
 
+
+
+
 // untuk login logout
 Route::get('/login',[LoginController::class,'index'])->name('login')->middleware('guest');
 Route::post('/login',[LoginController::class,'authenticate']);
@@ -130,7 +134,9 @@ Route::post('/logout',[LoginController::class,'logout']);
     // Route::get('/adminbiodata',[AdminController::class,'biodata'])->name('adminbiodata');
     Route::resource('/admin/transkrip',AdminTranskripController::class);
     Route::resource('/admin/biodata',AdminBiodataController::class);
-
+    Route::resource('/admin-kurikulum',AdminKurikulumController::class);
+    // Route::get('/search',[AdminKurikulumController::class,'search'])->name('adminsearch');
+    Route::get('/adminsearch',[CourseController::class,'search']);
 });
 
 

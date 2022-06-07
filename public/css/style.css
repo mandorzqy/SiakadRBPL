@@ -24,3 +24,56 @@
 .form-registration input{
   border-radius: 0;
 }
+
+/* Body */
+.bg-white {
+  background-color: var(--white)
+}
+
+.bg-blue {
+  background-color: var(--blue)
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.container {
+  display: flex;
+  flex: 1 auto;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center
+}
+
+.content {
+  display: flex;
+  max-width: 992px;
+  padding: 20px;
+  flex: 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify
+}
+
+.form {
+  max-width: 320px
+}
+
+.table {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-grow: 0;
+  flex-direction: column;
+  padding: 40px 20px;
+  text-align: center;
+}
