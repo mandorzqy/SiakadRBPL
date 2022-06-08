@@ -60,22 +60,12 @@
     }
     .table{
     background-color:white;
-    /* border-top-style: solid;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    border-top-color: #d2d2d2;
-    border-right-color: #d2d2d2;
-    border-bottom-color: #d2d2d2;
-    border-left-color: #d2d2d2; */
 
     padding-top: 16px;
     padding-right: 11px;
     padding-bottom: 13px;
     padding-left: 14px;
     margin-bottom: 15px;
-    /* display: inline-block; */
-    /* position: relative; */
     border-collapse: collapse;
 }
 
@@ -104,7 +94,7 @@
                   <tr>
                     <td>Genap 2022</td>
                     <td>22-01-2022</td>
-                    <td>1500000</td>
+                    <td>1.500.000</td>
                   </tr>
                 </tbody>
               </table>
@@ -122,7 +112,7 @@
                 <tbody>
                     <tr>
                         <td >TAGIHAN IKOMA</td>
-                        <td><div align="right">1500000</div></td>
+                        <td><div align="right">1.500.000</div></td>
                     </tr>
                         <tr>
                         <td >TUNGGAKAN IKOMA</td>

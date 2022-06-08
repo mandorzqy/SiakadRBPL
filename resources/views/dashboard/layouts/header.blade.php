@@ -136,10 +136,8 @@
                     Biaya Pendidikan
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/ikoma">Tagihan & Histori pembayaran IKOMA
-                    </a></li>
-                    <li><a class="dropdown-item" href="/ukt">Tagihan & Histori pembayaran UKT
-                    </a></li>
+                    <li><a class="dropdown-item" href="/ikoma">Tagihan & Histori pembayaran IKOMA</a></li>
+                    <li><a class="dropdown-item" href="/ukt">Tagihan & Histori pembayaran UKT</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -211,12 +209,12 @@
                     Biaya Pendidikan
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Tagihan & Histori pembayaran IKOMA
+                    <li><a class="dropdown-item" href="/ikoma">Tagihan & Histori pembayaran IKOMA
                     </a></li>
-                    <li><a class="dropdown-item" href="#">Tagihan & Histori pembayaran UKT
+                    <li><a class="dropdown-item" href="/ukt">Tagihan & Histori pembayaran UKT
                     </a></li>
                   </ul>
-                </li>
+            </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Akademik
