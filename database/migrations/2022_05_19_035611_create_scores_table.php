@@ -16,7 +16,7 @@ class CreateScoresTable extends Migration
         Schema::create('scores', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->foreignId('course_id');
+            $table->foreignId('classroom_id')->references('id')->on('classrooms');
             // $table->foreignId('form_id')->constrained('forms')->nullable();
             $table->double('nilai_angka')->nullable();
             $table->char('nilai_huruf')->nullable();

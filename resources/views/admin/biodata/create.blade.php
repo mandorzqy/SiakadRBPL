@@ -1,4 +1,4 @@
-@extends('admin.adminDashboard.layouts.main')
+@extends('dashboard.layouts.main')
 
 @section('container')
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2"></div>
@@ -36,5 +36,4 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-
 @endsection

@@ -2,7 +2,7 @@
 
 @section('container')
 <style>
-    h2{
+    h1{
         margin-top: 15px;
     }
     .table{
@@ -25,16 +25,14 @@
     position: relative;
     border-collapse: collapse;
 }
+
 </style>
 
-
-<body>
-<center>
-  <h2>Kuesioner Evaluasi Mata Kuliah</h2>
-  <h5></h5>
-  <h5>Riwayat Pengisian Kuesioner</h5>
-  <p></p>
-  <div class="btn-group">
+<div class="container">
+  <div class="row">
+    <div class="col-10 text-center mx-auto">
+      <h1>Kuesioner Dosen Perkuliahan</h1>
+       <div class="btn-group">
     <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">Periode</button>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Genap</a></li>
@@ -48,27 +46,64 @@
       </ul>
     <button type="button" class="btn btn-outline-secondary">Enter</button>
   </div>
-  <p>Data update setiap satu jam</p>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Kode MK</th>
-        <th>Dosen</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>IS184412</td>
-        <td>Radityo Prasetianto Wibowo, S.Kom., M.Kom</td>
-        <td>Belum</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-@endsection
-</body>
-</center>
+      <div class=" flex-col mx-6 col-3 mt-6 mb-3 d-flex justify-content-center mx-auto">
+        <form class="form " method="get" @if (auth()->user()->type=='admin')
+            action='/adminsearch'
+        @elseif (auth()->user()->type=='dosen')
+            action='/dosensearch'
+        @else
+            action="/search"
+        @endif>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center mx-auto">
+    <div class="col-md-10 text-center d-flex justify-content-center">
+      <div class="div"> <table class="table" id="tabelkurikulum">
+        <thead>
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Kode MK</th>
+            <th scope="col">Mata Kuliah</th>
+            <th scope="col">Dosen</th>
+            <th scope="col">Status</th>
+            @if (auth()->user()->type == 'admin')
+            <th scope="col" colspan="2">Action</th>
+            <th></th>
+            @endif
+          </tr>
+        </thead>
+        <tbody>
+        @foreach ($courses as $courses)
+          <tr>
+            <div class="row"></div>
+            <th scope="row">{{$no++}}</th>
 
+            <td>{{$course->kode_mk}}</td>
+            <td>{{$course->nama_mata_kuliah}}</td>
+            <td>{{$lecturers->nama_dosen}}</td>
+            <td>{{$course->semester}}</td>
+            @if (auth()->user()->type == 'admin')
+            <td>
+              <span>
+                 <a href="{{route('kurikulum.edit', $course->id)}}" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
+
+              </span>
+             <td> <form action="{{route('kurikulum.destroy', $course->id)}}" method="post">
+              @csrf
+              @method('DELETE')
+              <button type="submit" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
+            </form></td>
+            </td>
+            @endif
+          </tr>
+          @endforeach
+        </tbody>
+      </table></div>
+
+    </div>
+  </div>
+</div>
+
+@endsection

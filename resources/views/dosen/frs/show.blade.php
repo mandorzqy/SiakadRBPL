@@ -1,4 +1,4 @@
-@extends('dosen.dosenDashboard.layouts.main')
+@extends('dashboard.layouts.main')
 
 @section('container')
 
@@ -29,7 +29,7 @@
         <option value="2">Genap</option>
     </select>
     <select class="form-select  mt-5" aria-label="Default select example" id="tahun" name="tahun">
-        <option value="" selected>2020</option>
+        <option value="2022" selected>2022</option>
         <option value='2020'>2020</option>
         <option value="2021">2021</option>
         <option value="2022">2022</option>
@@ -44,7 +44,7 @@
 
 </div>
 
-<table class="table align-items-center justify-content-center mb-0">
+<table class="table align-items-center justify-content-center mb-5">
     
     <thead>
       <tr>
@@ -62,7 +62,7 @@
         <td>
           <div class="d-flex px-2">
             <div class="my-auto">
-              <h6 class="mb-0 text-sm">{{ $score->course->nama_mata_kuliah}}</h6>
+              <h6 class="mb-0 text-sm">{{ $score->classroom->course->nama_mata_kuliah}}</h6>
             </div>
           </div>
         </td>
@@ -70,7 +70,7 @@
           <p class="text-sm font-weight-bold mb-0">{{ $score->nilai_angka }}</p>
         </td>
         <td>
-            <p class="text-sm font-weight-bold mb-0">{{ $score->course->semester }}</p>
+            <p class="text-sm font-weight-bold mb-0">{{ $score->classroom->course->semester }}</p>
         </td>
         <td>
           <span class="text-xs font-weight-bold">{{ $score->nilai_huruf }}</span>
@@ -84,12 +84,26 @@
     </tbody>
    
   </table>
-
-  <form action="/dosen/frs/accept/{{ $user->id }}" method="POST">
+@if ($user->status_frs == false)
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>FRS belum disetujui</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<form action="/dosen/frs/accept/{{ $user->id }}" method="POST">
     @csrf
     <button class="btn btn-success shadow-sm me-2" type="submit" name="accept" value="true">
         <i class="bi bi-check-lg"></i>
     </button>
 </form>
+@else
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>FRS telah disetujui</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+@endif
+  
   
   @endsection
+
+
+  

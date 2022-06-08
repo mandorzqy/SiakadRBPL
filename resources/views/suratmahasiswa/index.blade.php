@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -58,7 +58,36 @@
 
   </header><!-- End Header -->
 
-    <!-- ======= Portfolio Section ======= -->
+    <!-- ======= Portfolio Section ======= --> 
+
+
+    
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo me-auto">
+        <h1><a href="/">SIAKAD</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/biodata">{{auth()->user()->name}}</a></li>
+          <li><form action="/logout" method="post">
+            @csrf<button style="
+            background:none;
+            border:none;
+            margin:0;
+            padding: 10px 0 10px 30px;;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;"
+            class="nav-link scrollto" action="/logout">Sign Out</button></form></li>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+  </header><!-- End Header -->
     <section id="portfolio" class="portfolio">
 
 
@@ -122,4 +151,3 @@
       </div>
 
     </section><!-- End Portfolio Section -->
-</body>

@@ -32,7 +32,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
+  {{-- <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
@@ -56,8 +56,8 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-  </header><!-- End Header -->
-
+  </header><!-- End Header --> --}}
+  @include('dashboard.layouts.header')
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
 
@@ -125,7 +125,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Akademik</a></h4>
+                <h4><a href="/akademik">Akademik</a></h4>
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="/transkrip/{{auth()->user()->name}}">Laporan</a></h4>
+                <h4><a href="/laporan">Laporan</a></h4>
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="portfolio-details.html">Yudisium</a></h4>
+                <h4><a href="/yudisium">Yudisium</a></h4>
               </div>
             </div>
           </div>

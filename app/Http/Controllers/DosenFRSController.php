@@ -33,7 +33,6 @@ class DosenFRSController extends Controller
     }
 
 
-
     public function search(Request $request,$id){
         $user=User::find($id);
         // $user=User::find(1);
@@ -50,10 +49,11 @@ class DosenFRSController extends Controller
 
 
     public function accept(Request $request,$id){
+        $user=User::find($id);
         User::find($id)->update([
             'status_frs'=>true
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success'," FRS {$user->name} telah disetujui");
     }
 
 
