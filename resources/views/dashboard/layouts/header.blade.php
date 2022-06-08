@@ -28,7 +28,7 @@
 
 
       @if (auth()->user()->type == 'admin')
-        
+
       <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-light bg-light">
 
         <div class="container-fluid">
@@ -105,7 +105,7 @@
 
 
         @if (auth()->user()->type == 'dosen')
-        
+
         <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-light bg-light">
 
           <div class="container-fluid">
@@ -136,16 +136,16 @@
                     Biaya Pendidikan
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Tagihan & Histori pembayaran IKOMA
+                    <li><a class="dropdown-item" href="/ikoma">Tagihan & Histori pembayaran IKOMA
                     </a></li>
-                    <li><a class="dropdown-item" href="#">Tagihan & Histori pembayaran UKT
+                    <li><a class="dropdown-item" href="/ukt">Tagihan & Histori pembayaran UKT
                     </a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Akademik
-  
+
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#">IPS & IPK</a></li>
@@ -155,7 +155,7 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Laporan
-  
+
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="/admin-kurikulum">Daftar Mata Kuliah</a></li>
@@ -220,7 +220,7 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Akademik
-  
+
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#">IPS & IPK</a></li>
@@ -230,7 +230,7 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Laporan
-  
+
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="/kurikulum">Daftar Mata Kuliah</a></li>
@@ -257,12 +257,11 @@
         @endif
       <!-- .navbar -->
 
-  
-  
-  
-  
+
+
+
+
     </header>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
-    

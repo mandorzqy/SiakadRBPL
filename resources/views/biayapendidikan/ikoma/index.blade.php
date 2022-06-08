@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Kuesioner Dosen dan Mata Kuliah</title>
@@ -49,7 +49,7 @@
 
 </body>
 </center>
-</html>
+</html> --}}
 @extends('dashboard.layouts.main')
 
 @section('container')
@@ -80,6 +80,7 @@
 }
 
 </style>
+
 <div class="mt-3">
     <center>
         <h2>Data Historis Pembayaran IKOMA</h2>
@@ -138,9 +139,10 @@
                     </tr>
                 </tbody>
               </table>
-          </div>
-      </div>
-</div>
+            </div>
+        </div>
+    </div>
+
 
 						{{-- <table width="600" border="0" align="center" cellpadding="4" cellspacing="4"><tr class="tr2" ><td width="500" ><div align="left">
                             <strong>Jenis Pembayaran</strong></div></td><td width="100" ><div align="center"><strong>Amount </strong></div></td></tr><tr>
