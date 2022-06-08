@@ -39,6 +39,7 @@ class CourseSeeder extends Seeder
                 'sks' => 2,
                 'tahunKurikulum' => 2018,
                 'semester' => 1
+                
             ],
             [
                 'kode_mk' => 'IS184101',

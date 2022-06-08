@@ -19,6 +19,8 @@ class MahasiswaFRSController extends Controller
      */
    
         public function index(){
+        
+
             $user=auth()->user();
             $scores=$user->score->load('user','course')->where('tahun',2022)->where('periode','2');
             $classrooms=Classroom::all();
@@ -34,6 +36,7 @@ class MahasiswaFRSController extends Controller
                 'classrooms'=>$classrooms,
                 'masaFrs'=>$masaFrs
             ]);
+
         }
         
 
@@ -56,12 +59,36 @@ class MahasiswaFRSController extends Controller
     public function store(Request $request)
     {
         //
-        DB::table('classroom_user')->insert([
-            [
-                'user_id'=>auth()->user()->id,
-                'classroom_id'=>$request->input('classroom_id')
-            ]
-        ]);
+        // auth()->user()->classrooms->where('id',$request->classroom_id)->first()->course->sks;
+        $sks=0;
+        $classroom=Classroom::find($request->classroom_id);
+        $tambahansks=$classroom->course->where('id',$request->classroom_id)->first()->sks;
+        foreach(auth()->user()->classrooms as $classroom){
+            $sks+=$classroom->course->sks;
+        }  
+        $sks=$sks+$tambahansks;
+        if($request->action=='ambil'){
+            if ($sks>24){
+                return redirect()->back()->with('errorsks','SKS yang anda ambil melebihi batas maksimum');
+            }
+            else if($classroom->count()){
+                return redirect()->back()->with('errorsks','Anda sudah mengambil matkul ini');
+            }
+            else{
+                DB::table('classroom_user')->insert([
+                    [
+                        'user_id'=>auth()->user()->id,
+                        'classroom_id'=>$request->input('classroom_id')
+                    ]
+                ]);
+                return redirect()->back()->with('success','Anda berhasil mendaftar ke kelas '.$request->input('classroom_id'));
+            }
+
+        if($request->action=='peserta'){
+            return redirect('/kelas/'.$request->classroom_id);
+        }
+        }
+        
     }
 
     /**

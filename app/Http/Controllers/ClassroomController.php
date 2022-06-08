@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Classroom;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class ClassroomController extends Controller
 {
@@ -16,6 +17,29 @@ class ClassroomController extends Controller
     {
         //
         
+    }
+
+
+    public function indexMahasiswa(){
+        $user=auth()->user();
+        $classrooms=Classroom::all();
+        return view('laporan.kelas.index',[
+            'title' => 'Kelas',
+            'user'=>$user,
+            'classrooms'=>$classrooms,
+            
+        ]);
+    }
+
+
+    public function showMahasiswa($id){
+        $classroom=Classroom::find($id);
+        $users=$classroom->user;
+        return view('laporan.kelas.show',[
+            'title' => 'Kelas',
+            'classroom'=>$classroom,
+            'users'=>$users,
+        ]);
     }
 
     /**

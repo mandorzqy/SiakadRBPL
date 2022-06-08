@@ -233,7 +233,7 @@
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="/kurikulum">Daftar Mata Kuliah</a></li>
                     <li><a class="dropdown-item" href="/jadwal">Jadwal Kuliah Mahasiswa</a></li>
-                    <li><a class="dropdown-item" href="/admin/kelas">Kelas</a></li>
+                    <li><a class="dropdown-item" href="/kelas">Kelas</a></li>
                   </ul>
                 </li>
                 <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/biodata">{{auth()->user()->name}}</a></li>

@@ -34,6 +34,7 @@ use App\Http\Controllers\DosenTranskripController;
 use App\Http\Controllers\SuratMahasiswaController;
 use App\Http\Controllers\SuratUndurDiriController;
 use App\Http\Controllers\BiayaPendidikanController;
+use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\SuratKeteranganAktifController;
 
 
@@ -116,7 +117,11 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
 
     Route::get('/yudisium',[YudisiumController::class,'index']);
 
-    Route::get('/unggahbahasa',[UnggahBahasaController::class,'index']);
+    Route::get('/unggahbahasa',[UnggahBahasaController::class,'indexMahasiswa']);
+
+    Route::get('/kelas',[ClassroomController::class,'indexMahasiswa']);
+
+    Route::get('/kelas/{kelas:id}',[ClassroomController::class,'showMahasiswa']);
 
 });
 

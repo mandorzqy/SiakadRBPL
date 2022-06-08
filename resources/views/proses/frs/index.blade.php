@@ -9,6 +9,20 @@
 </div>
 @endif
 
+@if(session()->has('errorsks'))
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  {{session('errorsks')}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
+@if(session()->has('success'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{session('success')}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif
+
 <div class="container">
   @if(session()->has('loginError'))
   <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -45,13 +59,12 @@
         </div>
         <div class="row d-flex justify-content-center">
           <div class="mt-4 col-2">
-          <button class="btn btn-primary shadow-sm me-2" type="submit">Ambil</button>
+          <button class="btn btn-primary shadow-sm me-2" name="action" value="ambil" type="submit">Ambil</button>
         </div>
         <div class="mt-4 col-2">
-          <button class="btn btn-primary shadow-sm me-2" type="submit">Peserta</button>
+          <button class="btn btn-primary shadow-sm me-2" type="submit" name="action" value="peserta">Peserta</button>
         </div>
         </div>
-        
       </form>
     </div>
     
@@ -63,7 +76,6 @@
         <thead>
           <tr>
             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Mata Kuliah</th>
-            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nilai</th>
             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Semester</th>
             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">SKS</th>
             <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Kelas</th>
@@ -73,26 +85,23 @@
         </thead>
         <tbody>
         {{-- @if ($scores->count()) --}}
-        @foreach ($scores as $score)
+        @foreach ($user->classrooms as $classroom)
           <tr>
             <td>
               <div class="d-flex px-2">
                 <div class="my-auto">
-                  <h6 class="mb-0 text-sm">{{ $score->classroom->course->nama_mata_kuliah}}</h6>
+                  <h6 class="mb-0 text-sm">{{$classroom->course->nama_mata_kuliah}}</h6>
                 </div>
               </div>
             </td>
             <td>
-              <p class="text-sm font-weight-bold mb-0">{{ $score->nilai_angka }}</p>
+                <p class="text-sm font-weight-bold mb-0">{{ $classroom->course->semester }}</p>
             </td>
             <td>
-                <p class="text-sm font-weight-bold mb-0">{{ $score->classroom->course->semester }}</p>
-            </td>
-            <td>
-              <p class="text-sm font-weight-bold mb-0">{{ $score->classroom->course->sks }}</p>
+              <p class="text-sm font-weight-bold mb-0">{{ $classroom->course->sks }}</p>
           </td>
             <td>
-              <span class="text-xs font-weight-bold">{{ $score->classroom->kelas }}</span>
+              <span class="text-xs font-weight-bold">{{ $classroom->kelas }}</span>
             </td>  
             {{-- <td>
                 <a class="btn btn-info " href={{url('dosen/transkrip/'.$user->id.'/edit')}}>Update</a>
