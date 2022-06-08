@@ -2,10 +2,10 @@
 
 @section('container')
  
-<div class="content">
+<div class="container">
 
     <div class="row mb-4">
-        <h2 class="fw-bold text-center mt-5">Biodata</h2>
+        <h2 class="fw-bold text-center mt-5">Biodata Mahasiswa</h2>
     </div>
     <div class="row mb-4">
         <div class=" text-center">

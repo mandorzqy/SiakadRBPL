@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Score;
 use App\Models\Classroom;
@@ -21,11 +22,17 @@ class MahasiswaFRSController extends Controller
             $user=auth()->user();
             $scores=$user->score->load('user','course')->where('tahun',2022)->where('periode','2');
             $classrooms=Classroom::all();
+
+            $startDate = Carbon::createFromFormat('Y-m-d','2022-01-31');
+            $endDate = Carbon::createFromFormat('Y-m-d','2022-02-05');
+            $masaFrs = Carbon::now()->between($startDate,$endDate);
+
             return view('proses.frs.index',[
                 'title' => 'FRS',
                 'user'=>$user,
                 'scores'=>$scores,
-                'classrooms'=>$classrooms
+                'classrooms'=>$classrooms,
+                'masaFrs'=>$masaFrs
             ]);
         }
         

@@ -102,6 +102,8 @@
         </div>
       </nav>
         @endif
+
+
         @if (auth()->user()->type == 'dosen')
         
         <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-light bg-light">
@@ -189,7 +191,7 @@
                     Proses
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="dosen/frs">FRS</a></li>
+                    <li><a class="dropdown-item" href="/frs">FRS</a></li>
                     <li><a class="dropdown-item" href="#">Kuesioner Dosen dan MK</a></li>
                   </ul>
                 </li>
@@ -222,7 +224,7 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#">IPS & IPK</a></li>
-                    <li><a class="dropdown-item" href="/dosen/transkrip">Transcript</a></li>
+                    <li><a class="dropdown-item" href="/transkrip/{{auth()->user()->name}}">Transcript</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -231,12 +233,12 @@
   
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/admin-kurikulum">Daftar Mata Kuliah</a></li>
-                    <li><a class="dropdown-item" href="/admin/jadwal">Jadwal Kuliah Mahasiswa</a></li>
+                    <li><a class="dropdown-item" href="/kurikulum">Daftar Mata Kuliah</a></li>
+                    <li><a class="dropdown-item" href="/jadwal">Jadwal Kuliah Mahasiswa</a></li>
                     <li><a class="dropdown-item" href="/admin/kelas">Kelas</a></li>
                   </ul>
                 </li>
-                <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/dosen/biodata">Biodata</a></li>
+                <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/biodata">{{auth()->user()->name}}</a></li>
           <li><form action="/logout" method="post">
             @csrf<button style="
             background:none;

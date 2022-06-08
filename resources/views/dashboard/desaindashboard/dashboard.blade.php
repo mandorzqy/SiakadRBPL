@@ -32,7 +32,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
+  {{-- <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
       <div class="logo me-auto">
@@ -56,8 +56,8 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-  </header><!-- End Header -->
-
+  </header><!-- End Header --> --}}
+  @include('dashboard.layouts.header')
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
 
