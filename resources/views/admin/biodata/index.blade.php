@@ -15,7 +15,7 @@
             <th scope="col">#</th>
             <th scope="col">Nama</th>
             <th scope="col">NRP</th>
-            <th colspan="2">Actionasgasgasgasgasg
+            <th colspan="2">Action
         </thead>
         <tbody>
             @foreach ($students as $student)

@@ -31,6 +31,10 @@ class AdminKurikulumController extends Controller
     public function create()
     {
         //
+        return view('proses.kurikulum.create',[
+            'title'=>'Tambah Mata Kuliah',
+            'course'=>new Course()
+        ]);
     }
 
     /**
@@ -41,7 +45,15 @@ class AdminKurikulumController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $course=new Course;
+        $course->nama_mata_kuliah=$request->nama_mata_kuliah;
+        $course->kode_mk=$request->kode_mk;
+        $course->sks=$request->sks;
+        $course->semester=$request->semester;
+        $course->kode_kelas=$request->kode_kelas;
+        $course->tahunKurikulum=$request->tahunKurikulum;
+        $course->save();
+        return redirect()->route('admin-kurikulum.index')->with('success','Data berhasil ditambahkan');
     }
 
     /**
@@ -64,6 +76,12 @@ class AdminKurikulumController extends Controller
     public function edit($id)
     {
         //
+        $course=Course::find($id);
+        return view('proses.kurikulum.edit',[
+            'title'=>'Edit Mata Kuliah',
+            'course'=>$course
+        ]);
+
     }
 
     /**
@@ -76,6 +94,30 @@ class AdminKurikulumController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $course=Course::find($id);
+        $rules=[
+            'nama_mata_kuliah'=>'required',
+            'sks'=>'required',
+            'semester'=>'required',
+            'tahunKurikulum'=>'required',
+            'kode_kelas'=>'required'
+        ];
+
+        if($request->mk!=$course->mk){
+            $rules['kode_mk']='required';
+        }
+
+        $validatedData=$request->validate($rules);
+        // $course=Course::find($id);
+        // $course->nama_mata_kuliah=$request->nama_mata_kuliah;
+        // $course->kode_mk=$request->kode_mk;
+        // $course->sks=$request->sks;
+        // $course->semester=$request->semester;
+        // $course->kode_kelas=$request->kode_kelas;
+        // $course->tahunKurikulum=$request->tahunKurikulum;
+        // $course->update();
+        $course->update($validatedData);
+        return redirect()->route('admin-kurikulum.index')->with('success','Data berhasil diubah');
     }
 
     /**
@@ -87,5 +129,8 @@ class AdminKurikulumController extends Controller
     public function destroy($id)
     {
         //
+        $matkul=Course::find($id);
+        $matkul->delete();
+        return back()->with('success','Data berhasil dihapus');
     }
 }

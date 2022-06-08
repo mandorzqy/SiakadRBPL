@@ -27,6 +27,7 @@ use App\Http\Controllers\DashboardBioController;
 use App\Http\Controllers\JadwalKuliahController;
 use App\Http\Controllers\MahasiswaFRSController;
 use App\Http\Controllers\UnggahBahasaController;
+use App\Http\Controllers\AdminKuesionerController;
 use App\Http\Controllers\AdminKurikulumController;
 use App\Http\Controllers\AdminTranskripController;
 use App\Http\Controllers\DosenTranskripController;

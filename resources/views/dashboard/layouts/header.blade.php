@@ -179,7 +179,79 @@
 
         @endif
         @if (auth()->user()->type == 'mahasiswa')
-        <h1><a href='/'>SIAKAD</a></h1>
+        <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-light bg-light">
+
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Proses
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="dosen/frs">FRS</a></li>
+                    <li><a class="dropdown-item" href="#">Kuesioner Dosen dan MK</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Surat Mahasiswa
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Surat Keterangan Mahasiswa Aktif</a></li>
+                    <li><a class="dropdown-item" href="#">Surat Cuti
+                    </a></li>
+                    <li><a class="dropdown-item" href="#">Surat Mengundurkan Diri</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Biaya Pendidikan
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Tagihan & Histori pembayaran IKOMA
+                    </a></li>
+                    <li><a class="dropdown-item" href="#">Tagihan & Histori pembayaran UKT
+                    </a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Akademik
+  
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">IPS & IPK</a></li>
+                    <li><a class="dropdown-item" href="/dosen/transkrip">Transcript</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Laporan
+  
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/admin-kurikulum">Daftar Mata Kuliah</a></li>
+                    <li><a class="dropdown-item" href="/admin/jadwal">Jadwal Kuliah Mahasiswa</a></li>
+                    <li><a class="dropdown-item" href="/admin/kelas">Kelas</a></li>
+                  </ul>
+                </li>
+                <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/dosen/biodata">Biodata</a></li>
+          <li><form action="/logout" method="post">
+            @csrf<button style="
+            background:none;
+            border:none;
+            margin:0;
+            padding: 10px 0 10px 30px;;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;"
+            class="nav-link scrollto" action="/logout">Sign Out</button></form></li>
+          </ul>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
         @endif
       <!-- .navbar -->
 

@@ -2,7 +2,7 @@
 
 @section('container')
 <h3>Jadwal Kuliah</h3>
-<h5>Nama: {{auth()->user()->major->nama_jurusan}}</h5>
+<h5>Nama: {{auth()->user()->name}}</h5>
 <div class="d-flex flex-col mx-3 col-3 mt-5 mb-3">
   <form class="form" method="get" action="{{route('hari')}}">
     <select class="form-select " aria-label="Default select example" id="hari" name="hari" onchange="this.form.submit()">
