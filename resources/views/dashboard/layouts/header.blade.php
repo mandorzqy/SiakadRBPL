@@ -198,10 +198,10 @@
                     Surat Mahasiswa
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Surat Keterangan Mahasiswa Aktif</a></li>
-                    <li><a class="dropdown-item" href="#">Surat Cuti
+                    <li><a class="dropdown-item" href="/suratketeranganaktif">Surat Keterangan Mahasiswa Aktif</a></li>
+                    <li><a class="dropdown-item" href="/suratcuti">Surat Cuti
                     </a></li>
-                    <li><a class="dropdown-item" href="#">Surat Mengundurkan Diri</a></li>
+                    <li><a class="dropdown-item" href="/suratundurdiri">Surat Mengundurkan Diri</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
