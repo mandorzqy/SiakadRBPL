@@ -18,6 +18,9 @@ use Database\Seeders\CourseSeeder;
 use Illuminate\Support\Facades\DB;
 use Database\Seeders\FacultySeeder;
 use Database\Seeders\ScheduleSeeder;
+use Database\Seeders\SuratAktifSeeder;
+use Database\Seeders\SuratCutiSeeder;
+use Database\Seeders\SuratMundurSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -42,6 +45,7 @@ class DatabaseSeeder extends Seeder
         // $this->call(LecturersSeeder::class);
 
         $this->call(SuratAktifSeeder::class);
-
+        $this->call(SuratCutiSeeder::class);
+        $this->call(SuratMundurSeeder::class);
     }
 }
