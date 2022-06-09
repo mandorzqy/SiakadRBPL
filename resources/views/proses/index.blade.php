@@ -81,7 +81,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="/kurikulum">Kurikulum Semester</a></h4>
+                <h4><a href="/kuesioner">Kurikulum Semester</a></h4>
               </div>
             </div>
           </div>
