@@ -234,7 +234,7 @@
 
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/kurikulum">Daftar Mata Kuliah</a></li>
+                    <li><a class="dropdown-item" href="/daftarmhsmk">Daftar Mata Kuliah</a></li>
                     <li><a class="dropdown-item" href="/jadwal">Jadwal Kuliah Mahasiswa</a></li>
                     <li><a class="dropdown-item" href="/kelas">Kelas</a></li>
                   </ul>
