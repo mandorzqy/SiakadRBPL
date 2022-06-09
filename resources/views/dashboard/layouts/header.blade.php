@@ -118,37 +118,13 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="dosen/frs">FRS</a></li>
-                    <li><a class="dropdown-item" href="#">Kuesioner Dosen dan MK</a></li>
-                    <li><a class="dropdown-item" href="/matkul">Kurikulum</a></li>
+                    <li><a class="dropdown-item" href="dosen/kurikulum">Kurikulum</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Surat Mahasiswa
-                  </a>
+                    Akademik</a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Surat Keterangan Mahasiswa Aktif</a></li>
-                    <li><a class="dropdown-item" href="#">Surat Cuti
-                    </a></li>
-                    <li><a class="dropdown-item" href="#">Surat Mengundurkan Diri</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Biaya Pendidikan
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/ikoma">Tagihan & Histori pembayaran IKOMA</a></li>
-                    <li><a class="dropdown-item" href="/ukt">Tagihan & Histori pembayaran UKT</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Akademik
-
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">IPS & IPK</a></li>
                     <li><a class="dropdown-item" href="/dosen/transkrip">Transcript</a></li>
                   </ul>
                 </li>
@@ -163,7 +139,7 @@
                     <li><a class="dropdown-item" href="/admin/kelas">Kelas</a></li>
                   </ul>
                 </li>
-                <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/dosen/biodata">Biodata</a></li>
+                <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/dosen/biodata">{{auth()->user()->name}}</a></li>
           <li><form action="/logout" method="post">
             @csrf<button style="
             background:none;
