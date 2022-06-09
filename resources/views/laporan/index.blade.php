@@ -95,7 +95,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="/jadwalkuliah">Jadwal Kuliah Mahasiswa</a></h4>
+                <h4><a href="/jadwal">Jadwal Kuliah Mahasiswa</a></h4>
               </div>
             </div>
           </div>
