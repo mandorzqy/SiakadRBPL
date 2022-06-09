@@ -110,7 +110,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="/indexkuisioner">Kuesioner Dosen dan MK</a></h4>
+                <h4><a href="/kuesioner">Kuesioner Dosen dan MK</a></h4>
               </div>
             </div>
           </div>

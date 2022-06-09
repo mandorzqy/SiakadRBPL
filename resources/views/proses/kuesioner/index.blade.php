@@ -60,7 +60,7 @@
   </div>
   <div class="row justify-content-center mx-auto">
     <div class="col-md-10 text-center d-flex justify-content-center">
-      <div class="div"> <table class="table" id="tabelkuesioner">
+      <div class="div"> <table class="table" id="tabelkurikulum">
         <thead>
           <tr>
             <th scope="col">No.</th>
@@ -87,10 +87,10 @@
             @if (auth()->user()->type == 'admin')
             <td>
               <span>
-                 <a href="{{route('kuesioner.edit', $course->id)}}" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
+                 <a href="{{route('kurikulum.edit', $course->id)}}" class="btn btn-warning"><i class="bi bi-pencil-square"></i></a>
 
               </span>
-             <td> <form action="{{route('kuesioner.destroy', $course->id)}}" method="post">
+             <td> <form action="{{route('kurikulum.destroy', $course->id)}}" method="post">
               @csrf
               @method('DELETE')
               <button type="submit" class="btn btn-danger"><i class="bi bi-trash3"></i></button>
