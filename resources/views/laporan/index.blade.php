@@ -71,7 +71,7 @@
 
         <div class="row portfolio-container">
 
-          <div class="col-lg-6 col-md-6 portfolio-item filter-app wow fadeInUp">
+          <div class="col-lg-4   col-md-6 portfolio-item filter-app wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
                 <img src="img/portfolio-1.jpg" class="img-fluid" alt="">
@@ -86,7 +86,7 @@
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
                 <img src="img/portfolio-1.jpg" class="img-fluid" alt="">
@@ -96,6 +96,20 @@
 
               <div class="portfolio-info">
                 <h4><a href="/jadwal">Jadwal Kuliah Mahasiswa</a></h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio-1.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio-1.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="/kelas">Kelas Mahasiswa</a></h4>
               </div>
             </div>
           </div>
