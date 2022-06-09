@@ -29,7 +29,6 @@
 </style>
 </head>
 
-<body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -58,6 +57,7 @@
 
   </header><!-- End Header -->
 
+  @include('dashboard.layouts.header')
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
 
@@ -122,4 +122,3 @@
       </div>
 
     </section><!-- End Portfolio Section -->
-</body>

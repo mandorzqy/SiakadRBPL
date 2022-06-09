@@ -191,6 +191,7 @@
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="/frs">FRS</a></li>
                     <li><a class="dropdown-item" href="#">Kuesioner Dosen dan MK</a></li>
+                    <li><a class="dropdown-item" href="/kurikulum">Kurikulum</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
