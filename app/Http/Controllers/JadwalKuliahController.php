@@ -11,4 +11,6 @@ class JadwalKuliahController extends Controller
             'title'=>"Jadwal Kuliah",
         ]);
     }
+
+
 }

@@ -49,7 +49,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="/admin-kurikulum">Daftar Mata Kuliah</a></li>
-                  <li><a class="dropdown-item" href="/admin/jadwal">Jadwal Kuliah Mahasiswa</a></li>
+                  <li><a class="dropdown-item" href="/admin/schedule">Jadwal Kuliah Mahasiswa</a></li>
                   <li><a class="dropdown-item" href="/admin/kelas">Kelas</a></li>
                 </ul>
               </li>

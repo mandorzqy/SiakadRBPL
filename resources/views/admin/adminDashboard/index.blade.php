@@ -85,7 +85,7 @@
               </figure>
 
               <div class="portfolio-info">
-                <h4><a href="/admin/jadwal">Jadwal Kuliah Mahasiswa</a></h4>
+                <h4><a href="/admin/schedule">Jadwal Kuliah Mahasiswa</a></h4>
               </div>
             </div>
           </div>
