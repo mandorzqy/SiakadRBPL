@@ -22,8 +22,14 @@
   <!-- Template Main CSS File -->
   <link href="css/dashboard.css" rel="stylesheet">
 <style>
+<<<<<<< Updated upstream
  
  
+=======
+  body {
+    background-color:white;
+  }
+>>>>>>> Stashed changes
 
 </style>
 </head>

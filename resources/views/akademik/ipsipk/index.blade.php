@@ -1,7 +1,7 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
-<style>
+{{-- <style>
     h1{
         margin-top: 15px;
     }
@@ -26,7 +26,7 @@
     border-collapse: collapse;
 }
 
-</style>
+</style> --}}
 
 
 <div class="container">
@@ -35,10 +35,10 @@
             <h1>IPS / IPK</h1>
             <br>
             <h5>Nama :
-                {{-- {{$user->name}} --}}
+                {{$user->name}}
             </h5>
             <h5>NRP  :
-                {{-- {{$user->nrp}} --}}
+                {{$user->nrp}}
             </h5>
         </div>
     </div>
@@ -49,6 +49,7 @@
 
             <thead>
               <tr>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Semester</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tahun</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Mata Kuliah</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Kelas</th>
@@ -59,11 +60,15 @@
             {{-- @if ($scores->count()) --}}
             {{-- @foreach ($user->classrooms as $classroom) --}}
               <tr>
+                @foreach ($scores as $score)
+                      
+                 
                 <td>
+                  
                     <div class="mx-auto">
                         <p class="text-sm font-weight-bold mb-0">
-                            2020/Gasal
-                            {{-- {{ $classroom->course->semester }} --}}
+                            {{-- semester --}}
+                            {{ $score->periode }}
                         </p>
                     </div>
                 </td>
@@ -71,8 +76,8 @@
                   <div class="d-flex px-2">
                     <div class="mx-5">
                       <h6 class="mb-0 text-sm">
-                          Proteksi Aset Informasi
-                          {{-- {{$classroom->course->nama_mata_kuliah}} --}}
+                          {{-- Tahun --}}
+                          {{$score->tahun}}
                         </h6>
                     </div>
                   </div>
@@ -80,16 +85,24 @@
                 <td>
                     <div class="mx-5">
                         <p class="text-sm font-weight-bold mb-0">
-                            A
-                            {{-- {{ $classroom->course->semester }} --}}
+                            {{-- mata kuliah --}}
+                            {{ $score->classroom->course->nama_mata_kuliah }}
                         </p>
                     </div>
                 </td>
                 <td>
+                  <div class="mx-5">
+                      <p class="text-sm font-weight-bold mb-0">
+                          {{-- mata kuliah --}}
+                          {{ $score->classroom->kelas }}
+                      </p>
+                  </div>
+              </td>
+                <td>
                     <div class="mx-3">
                         <p class="text-sm font-weight-bold mb-0">
-                        AB
-                        {{-- {{ $classroom->course->sks }} --}}
+                        {{-- nilai --}}
+                        {{ $score->nilai_angka }}
                         </p>
                     </div>
                 </td>
@@ -97,6 +110,7 @@
                     <a class="btn btn-info " href={{url('dosen/transkrip/'.$user->id.'/edit')}}>Update</a>
                 </td> --}}
               </tr>
+              @endforeach
               {{-- @endforeach --}}
               {{-- @endif --}}
             </tbody>

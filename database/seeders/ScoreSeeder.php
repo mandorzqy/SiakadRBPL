@@ -22,7 +22,7 @@ class ScoreSeeder extends Seeder
                 'tahun' => 2020,
                 'periode'=>'1',
                 'classroom_id' => '1',
-                'nilai_angka' => '90',
+                'nilai_angka' => 90,
             ],
             [
                 'user_id' => '1',
