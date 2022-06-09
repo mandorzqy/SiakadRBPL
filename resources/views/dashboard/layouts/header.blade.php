@@ -34,52 +34,18 @@
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Proses
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">FRS</a></li>
-                  <li><a class="dropdown-item" href="#">Kuesioner Dosen dan MK</a></li>
-                  <li><a class="dropdown-item" href="/matkul">Kurikulum</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Surat Mahasiswa
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Surat Keterangan Mahasiswa Aktif</a></li>
-                  <li><a class="dropdown-item" href="#">Surat Cuti
-                  </a></li>
-                  <li><a class="dropdown-item" href="#">Surat Mengundurkan Diri</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Biaya Pendidikan
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Tagihan & Histori pembayaran IKOMA
-                  </a></li>
-                  <li><a class="dropdown-item" href="#">Tagihan & Histori pembayaran UKT
-                  </a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
+                <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/admin/biodata">Biodata</a></li>
+                <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Akademik
-
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">IPS & IPK</a></li>
                   <li><a class="dropdown-item" href="/admin/transkrip">Transcript</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Laporan
-
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="/admin-kurikulum">Daftar Mata Kuliah</a></li>
@@ -87,8 +53,7 @@
                   <li><a class="dropdown-item" href="/admin/kelas">Kelas</a></li>
                 </ul>
               </li>
-              <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/admin/biodata">Biodata</a></li>
-        <li><form action="/logout" method="post">
+              <li><form action="/logout" method="post">
           @csrf<button style="
           background:none;
           border:none;
