@@ -21,6 +21,7 @@ use Database\Seeders\ScheduleSeeder;
 use Database\Seeders\SuratAktifSeeder;
 use Database\Seeders\SuratCutiSeeder;
 use Database\Seeders\SuratMundurSeeder;
+use Database\Seeders\IkomaSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -47,5 +48,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SuratAktifSeeder::class);
         $this->call(SuratCutiSeeder::class);
         $this->call(SuratMundurSeeder::class);
+        $this->call(IkomaSeeder::class);
     }
 }
