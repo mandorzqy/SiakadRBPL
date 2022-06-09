@@ -26,7 +26,7 @@
     </center>
 </div>
 
-
+@foreach($ukt as $u)
   <div class="container justify-content-center  ">
       <div class="row d-flex justify-content-center">
           <div class="col-7">
@@ -40,9 +40,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Genap 2022</td>
-                    <td>22-01-2022</td>
-                    <td>7.500.000</td>
+                    <td>{{ $u->periode }}</td>
+                    <td>{{ $u->tanggal }}</td>
+                    <td>{{ $u->total }}</td>
                   </tr>
                 </tbody>
               </table>
@@ -60,24 +60,25 @@
                 <tbody>
                     <tr>
                         <td >TAGIHAN SPI</td>
-                        <td><div align="right">7.500.000</div></td>
+                        <td><div align="right">{{ $u->tagihan1 }}</div></td>
                     </tr>
                         <tr>
                         <td >TUNGGAKAN UKT</td>
-                        <td><div align="right">0</div></td>
+                        <td><div align="right">{{ $u->tagihan2 }}</div></td>
                     </tr>
                         <tr>
                         <tr>
                         <td >TUNGGAKAN UKT</td>
-                        <td><div align="right">0</div></td>
+                        <td><div align="right">{{ $u->tagihan3 }}</div></td>
                     </tr>
                         <tr>
                         <td >TUNGGAKAN SPI</td>
-                        <td><div align="right">0</div></td>
+                        <td><div align="right">{{ $u->tagihan4 }}</div></td>
                     </tr>
                 </tbody>
               </table>
             </div>
         </div>
     </div>
+@endforeach
 @endsection

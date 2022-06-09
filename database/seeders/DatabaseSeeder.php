@@ -22,6 +22,7 @@ use Database\Seeders\SuratAktifSeeder;
 use Database\Seeders\SuratCutiSeeder;
 use Database\Seeders\SuratMundurSeeder;
 use Database\Seeders\IkomaSeeder;
+use Database\Seeders\UKTSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -49,5 +50,6 @@ class DatabaseSeeder extends Seeder
         $this->call(SuratCutiSeeder::class);
         $this->call(SuratMundurSeeder::class);
         $this->call(IkomaSeeder::class);
+        $this->call(UKTSeeder::class);
     }
 }
