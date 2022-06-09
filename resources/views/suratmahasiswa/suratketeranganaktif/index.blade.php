@@ -1,38 +1,38 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
+    <style>
+        h1 {
+            margin-top: 15px;
+        }
 
-<style>
-    h1{
-        margin-top: 15px;
-    }
-    .table{
-    background-color:white;
+        .table {
+            background-color: white;
 
-    padding-top: 16px;
-    padding-right: 11px;
-    padding-bottom: 13px;
-    padding-left: 14px;
-    margin-bottom: 15px;
-    border-collapse: collapse;
-}
-
-</style>
-
+            padding-top: 16px;
+            padding-right: 11px;
+            padding-bottom: 13px;
+            padding-left: 14px;
+            margin-bottom: 15px;
+            border-collapse: collapse;
+        }
+    </style>
 
 
-        <style>
-            .card {
-                width: 70%;
-                border-radius: 15px;
-            }
-            .card-header{
-                text-align: center;
-                border: 0;
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
+
+    <style>
+        .card {
+            width: 70%;
+            border-radius: 15px;
+        }
+
+        .card-header {
+            text-align: center;
+            border: 0;
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+    </style>
 
     </head>
 
@@ -45,7 +45,7 @@
                 <div class="card-body">
                     <div class="container">
                         <p style="color: red;">* Mohon Semuanya Diisi Dengan Sesuai *</p>
-                        <form action="/suratketeranganaktif/cetak" method="POST">
+                        <form action="/suratketeranganaktif/simpan" method="POST">
                             @csrf
                             <input type="hidden" name="tipe" value="suratketeranganaktif">
                             <div class="form-group">
@@ -60,8 +60,10 @@
                                 <label for="state">Keperluan:</label>
                                 <select class="form-control" name="keperluan">
                                     <option value="" selected disabled>Keperluan</option>
-                                    <option value="Mengurus Tunjangan Gaji Orang Tua">Mengurus Tunjangan Gaji Orang Tua</option>
-                                    <option value="Mengurus BPJS/Asuransi/Berkas Lainnya">Mengurus BPJS/Asuransi/Berkas Lainnya</option>
+                                    <option value="Mengurus Tunjangan Gaji Orang Tua">Mengurus Tunjangan Gaji Orang Tua
+                                    </option>
+                                    <option value="Mengurus BPJS/Asuransi/Berkas Lainnya">Mengurus BPJS/Asuransi/Berkas
+                                        Lainnya</option>
                                     <option value="Mengurus Surat Kehilangan">Mengurus Surat Kehilangan</option>
                                 </select>
                             </div>
@@ -73,8 +75,9 @@
                                     <option value="Bahasa Inggris">Bahasa Inggris</option>
                                 </select>
                             </div>
-                            <div class="mb-3 text-center">
-                                <button type="submit" class="btn btn-primary btn-lg btn-block text-white">Ajukan Surat</button>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block text-white">Ajukan
+                                    Surat</button>
                             </div>
                         </form>
                     </div>
@@ -82,7 +85,33 @@
             </div>
         </div>
 
+        <div class="container justify-content-center mt-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-5">
+                    <table class=" mt-2 table center table-bordered text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Periode</th>
+                                <th>Keperluan</th>
+                                <th>Bahasa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($surataktif as $surat)
+                            <tr>
+                                <td>{{ $surat->periode }}</td>
+                                <td>{{ $surat->keperluan }}</td>
+                                <td>{{ $surat->bahasa }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
     </body>
     </section><!-- End Portfolio Section -->
-</body>
+    </body>
 @endsection
