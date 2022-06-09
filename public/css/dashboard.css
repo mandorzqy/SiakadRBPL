@@ -16,9 +16,7 @@ body {
     background-repeat: no-repeat;
     background-size: auto;
     background-size: cover;
-    /* background-color: #9cd0f3; */
-    background-color: #000;
-  }
+    /* background-color: #9cd0f3; */  }
 
   a {
     color: #3498db;
@@ -526,3 +524,13 @@ body {
   .portfolio-details .portfolio-description p {
     padding: 0;
   }
+  .card {
+    width: 70%;
+    border-radius: 15px;
+}
+.card-header{
+    text-align: center;
+    border: 0;
+    padding-top: 120px;
+    padding-bottom: 40px;
+}

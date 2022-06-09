@@ -17,7 +17,7 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
+    {{-- <link href="/css/dashboard.css" rel="stylesheet"> --}}
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/sidebar.css">
   </head>
