@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CourseController extends Controller
 {
@@ -14,12 +15,17 @@ class CourseController extends Controller
      */
     public function index()
     {
+
+        $courses = DB::table('courses')->get();
+
+        return view('proses.kuesioner.index', compact('courses'));
+
         //
-        return view('proses.kurikulum.index',[
-            'no'=>1,
-            'title'=>'Mata Kuliah',
-            'courses'=>Course::all()
-        ]);
+        // return view('proses.kurikulum.index',[
+        //     'no'=>1,
+        //     'title'=>'Mata Kuliah',
+        //     'courses'=>Course::all()
+        // ]);
     }
 
     public function search(Request $request){

@@ -125,6 +125,8 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
 
     Route::get('/kelas/{kelas:id}',[ClassroomController::class,'showMahasiswa']);
 
+    Route::get('/indexkuisioner', 'CourseController@index');
+
 });
 
 
