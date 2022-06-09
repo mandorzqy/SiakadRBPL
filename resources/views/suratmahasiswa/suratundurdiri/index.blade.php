@@ -1,82 +1,110 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
+    <style>
+        h1 {
+            margin-top: 15px;
+        }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>praktikum</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+        .table {
+            background-color: white;
 
-        <style>
-            .card {
-                width: 70%;
-                border-radius: 15px;
-            }
-            .card-header{
-                text-align: center;
-                border: 0;
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-        </style>
+            padding-top: 16px;
+            padding-right: 11px;
+            padding-bottom: 13px;
+            padding-left: 14px;
+            margin-bottom: 15px;
+            border-collapse: collapse;
+        }
+    </style>
+
+
+
+    <style>
+        .card {
+            width: 70%;
+            border-radius: 15px;
+        }
+
+        .card-header {
+            text-align: center;
+            border: 0;
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+    </style>
 
     </head>
 
     <body>
-        <div class="container mt-4">
+        <div class="container mt-4 ">
             <div class="card mx-auto">
                 <div class="card-header">
-                    <h2><b>Surat Mengundurkan Diri</b></h2>
+                    <h2><b>Surat Undur Diri</b></h2>
                 </div>
-                <br>
-                <div class="card-body"></div>
-                <div class="container">
-                    <p style="color: red;">* Mohon Semuanya Diisi Dengan Sesuai *</p>
-                    <form id="formvalidation" action="https://www.sea.playblackdesert.com/Main/Index">
-                        <div class="form-group">
-                            <label for="state">Periode:</label>
-                            <select class="form-control">
-                                <option class="disabled">Please Choose</option>
-                                <option>2022 Genap</option>
-                                <option>2022 Gasal</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="state">Alasan:</label>
-                            <input type="text" name="alasan" class="form-control"  id="alasan" placeholder="Masukkan Alasan" autofocus required>
-                        </div>
-                        <div class="form-group">
-                            <label for="state">Pilihan Pengiriman:</label>
-                            <select class="form-control">
-                                <option class="disabled">Please Choose</option>
-                                <option>Diambil</option>
-                                <option>Dikirim ke Alamat Rumah</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="state">Pilih Bahasa:</label>
-                            <select class="form-control">
-                                <option class="disabled">Please Choose</option>
-                                <option>Bahasa Indonesia</option>
-                                <option>Bahasa Inggris</option>
-                            </select>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                        <button type="button" class="btn btn-primary btn-lg ">Ajukan Surat</button>   
-                        </div>
-                        <br>
-                        <br>
-                    </form>
+                <div class="card-body">
+                    <div class="container">
+                        <p style="color: red;">* Mohon Semuanya Diisi Dengan Sesuai *</p>
+                        <form action="/suratundurdiri/simpan" method="POST">
+                            @csrf
+                            <input type="hidden" name="tipe" value="suratundurdiri">
+                            <div class="form-group">
+                                <label for="state">Periode:</label>
+                                <select class="form-control" name="periode">
+                                    <option value="" selected disabled>Periode</option>
+                                    <option value="2022 Genap">2022 Genap</option>
+                                    <option value="2022 Gasal">2022 Gasal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">Alasan:</label>
+                                <input type="text" name="alasan" class="form-control"  id="alasan" placeholder="Masukkan Alasan" autofocus required>
+                            </div>
+                            <div class="form-group mb-3 mt-2">
+                                <label for="state">Pilihan Bahasa:</label>
+                                <select class="form-control" name="bahasa">
+                                    <option value="" selected disabled>Bahasa</option>
+                                    <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                                    <option value="Bahasa Inggris">Bahasa Inggris</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block text-white">Ajukan
+                                    Surat</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
 
+        <div class="container justify-content-center mt-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-5">
+                    <table class=" mt-2 table center table-bordered text-center">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Periode</th>
+                                <th>Alasan</th>
+                                <th>Bahasa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($suratmundur as $surat)
+                            <tr>
+                                <td>{{ $surat->periode }}</td>
+                                <td>{{ $surat->alasan }}</td>
+                                <td>{{ $surat->bahasa }}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
     </body>
     </section><!-- End Portfolio Section -->
-</body>
+    </body>
 @endsection
