@@ -192,7 +192,7 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="/frs">FRS</a></li>
-                    <li><a class="dropdown-item" href="#">Kuesioner Dosen dan MK</a></li>
+                    <li><a class="dropdown-item" href="/kuesioner">Kuesioner Dosen dan MK</a></li>
                     <li><a class="dropdown-item" href="/kurikulum">Kurikulum</a></li>
                   </ul>
                 </li>
@@ -224,7 +224,7 @@
 
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">IPS & IPK</a></li>
+                    <li><a class="dropdown-item" href="/ipsipk">IPS & IPK</a></li>
                     <li><a class="dropdown-item" href="/transkrip/{{auth()->user()->name}}">Transcript</a></li>
                   </ul>
                 </li>
@@ -234,7 +234,7 @@
 
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/kurikulum">Daftar Mata Kuliah</a></li>
+                    <li><a class="dropdown-item" href="/daftarmhsmk">Daftar Mata Kuliah</a></li>
                     <li><a class="dropdown-item" href="/jadwal">Jadwal Kuliah Mahasiswa</a></li>
                     <li><a class="dropdown-item" href="/kelas">Kelas</a></li>
                   </ul>
