@@ -1,59 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('dashboard.layouts.main')
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+@section('container')
 
-  <title>SIAKAD</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="css/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="css/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="css/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="css/dashboard.css" rel="stylesheet">
 <style>
-  body {
-  background-image: url("");
+    h1{
+        margin-top: 15px;
+    }
+    .table{
+    background-color:white;
+
+    padding-top: 16px;
+    padding-right: 11px;
+    padding-bottom: 13px;
+    padding-left: 14px;
+    margin-bottom: 15px;
+    border-collapse: collapse;
 }
 
 </style>
-</head>
 
-<body>
 
-  <!-- ======= Header ======= -->
-  @include('dashboard.layouts.header')
-
-    <!-- ======= Portfolio Section ======= -->
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>praktikum</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
 
         <style>
-            
+            .card {
+                width: 70%;
+                border-radius: 15px;
+            }
+            .card-header{
+                text-align: center;
+                border: 0;
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
         </style>
 
     </head>
 
     <body>
-        <div class="container">
+        <div class="container mt-4 ">
             <div class="card mx-auto">
                 <div class="card-header">
                     <h2><b>Surat Keterangan Mahasiswa Aktif</b></h2>
@@ -72,7 +56,7 @@
                                     <option value="2022 Gasal">2022 Gasal</option>
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group mt-2">
                                 <label for="state">Keperluan:</label>
                                 <select class="form-control" name="keperluan">
                                     <option value="" selected disabled>Keperluan</option>
@@ -81,7 +65,7 @@
                                     <option value="Mengurus Surat Kehilangan">Mengurus Surat Kehilangan</option>
                                 </select>
                             </div>
-                            <div class="form-group mb-3">
+                            <div class="form-group mb-3 mt-2">
                                 <label for="state">Pilihan Bahasa:</label>
                                 <select class="form-control" name="bahasa">
                                     <option value="" selected disabled>Bahasa</option>
@@ -90,7 +74,7 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-warning btn-lg btn-block text-white">Ajukan Surat</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block text-white">Ajukan Surat</button>
                             </div>
                         </form>
                     </div>
@@ -101,3 +85,4 @@
     </body>
     </section><!-- End Portfolio Section -->
 </body>
+@endsection
