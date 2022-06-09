@@ -60,7 +60,7 @@
                         </figure>
 
                         <div class="portfolio-info">
-                            <h4><a href="/#">Formulir Rencana Studi</a></h4>
+                            <h4><a href="dosen/frs">Formulir Rencana Studi</a></h4>
                         </div>
                     </div>
                 </div>
