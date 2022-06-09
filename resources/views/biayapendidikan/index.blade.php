@@ -28,35 +28,7 @@
 
 </style>
 </head>
-
-{{-- <body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-
-      <div class="logo me-auto">
-        <h1><a href="/">SIAKAD</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/biodata">{{auth()->user()->name}}</a></li>
-          <li><form action="/logout" method="post">
-            @csrf<button style="
-            background:none;
-            border:none;
-            margin:0;
-            padding: 10px 0 10px 30px;;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;"
-            class="nav-link scrollto" action="/logout">Sign Out</button></form></li>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-  </header><!-- End Header --> --}}
+<body>
     @include('dashboard.layouts.header')
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
@@ -74,9 +46,9 @@
           <div class="col-lg-6 col-md-6 portfolio-item filter-app wow fadeInUp">
             <div class="portfolio-wrap">
               <figure>
-                <img src="img/portfolio-1.jpg" class="img-fluid" alt="">
+                <img src="img/portfolio-03.jpg" class="img-fluid" alt="">
                 <i class="bookmarks"></i>
-                <a href="img/portfolio-1.jpg" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a>
+                <a href="img/portfolio-03.jpg" data-gallery="portfolioGallery" class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a>
                 <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
               </figure>
 
@@ -86,11 +58,11 @@
             </div>
           </div>
 
-          <div class="col-lg-6 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+          <div class="col-lg-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio-02.jpg" class="img-fluid" alt="">
-                <a href="img/portfolio-02.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
+              <figure >
+                <img src="img/portfolio-03.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio-03.jpg" class="link-preview portfolio-lightbox" data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
                 <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bx bx-link"></i></a>
               </figure>
 
@@ -103,5 +75,5 @@
 
       </div>
 
-    {{-- </section><!-- End Portfolio Section --> --}}
+    </section><!-- End Portfolio Section -->
 </body>

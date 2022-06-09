@@ -29,7 +29,7 @@
 
       @if (auth()->user()->type == 'admin')
 
-      <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-light bg-light">
+      <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-light">
 
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -41,6 +41,7 @@
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">FRS</a></li>
                   <li><a class="dropdown-item" href="#">Kuesioner Dosen dan MK</a></li>
+                  <li><a class="dropdown-item" href="/matkul">Kurikulum</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -106,7 +107,7 @@
 
         @if (auth()->user()->type == 'dosen')
 
-        <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-light bg-light">
+        <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-light">
 
           <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -118,6 +119,7 @@
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="dosen/frs">FRS</a></li>
                     <li><a class="dropdown-item" href="#">Kuesioner Dosen dan MK</a></li>
+                    <li><a class="dropdown-item" href="/matkul">Kurikulum</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -179,7 +181,7 @@
 
         @endif
         @if (auth()->user()->type == 'mahasiswa')
-        <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-light bg-light">
+        <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-light">
 
           <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">

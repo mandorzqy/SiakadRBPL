@@ -30,8 +30,8 @@
 </head>
 
 <body>
-
-  <!-- ======= Header ======= -->
+@include('dashboard.layouts.header')
+  {{-- <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
@@ -56,7 +56,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-  </header><!-- End Header -->
+  </header><!-- End Header --> --}}
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">

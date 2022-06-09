@@ -26,11 +26,9 @@
     -@include('dashboard.layouts.header')
     <div class="container-fluid">
     <div class="row">
-        {{-- @include('dashboard.layouts.sidebar') --}}
         <main class="col-md-12">
         @yield('container')
         </div>
-        {{-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> --}}
         </main>
     </div>
     </div>
