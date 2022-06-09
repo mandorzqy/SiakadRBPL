@@ -6,7 +6,7 @@
         margin-top: 15px;
     }
     .table{
-    background-color: rgba(192,229,247,255);
+    background-color: white;
     border-top-style: solid;
     border-right-style: solid;
     border-bottom-style: solid;

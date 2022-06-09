@@ -73,7 +73,7 @@
                                     <option value="Bahasa Inggris">Bahasa Inggris</option>
                                 </select>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-3 text-center">
                                 <button type="submit" class="btn btn-primary btn-lg btn-block text-white">Ajukan Surat</button>
                             </div>
                         </form>
