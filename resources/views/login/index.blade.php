@@ -1,43 +1,82 @@
-@extends('layouts.main')
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistem Informasi Akademik</title>
+    <link rel="stylesheet" href="/assets/css/main/app.css">
+    <link rel="stylesheet" href="/assets/css/pages/auth.css">
+</head>
 
-<div class="row justify-content-center">
-<div class="col-md-4">
-  {{-- apakah session mempunyai key succes, jika ada, tampilkan alert(dari register controller)--}}
-  @if(session()->has('success'))
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
-    {{session('success')}}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-  @endif
+<body>
+    
+    <div id="auth">
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
 
+                @if (session()->has('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ session('success') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
 
-  @if(session()->has('loginError'))
-  <div class="alert alert-danger alert-dismissible fade show" role="alert">
-    {{session('loginError')}}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
-  @endif
+                @if (session()->has('loginError'))
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{ session('loginError') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
 
-  <main class="form-signin my-5 py-5">
-    <h1 class="h3 mb-3 fw-normal text-center">LOGIN SIAKAD</h1>
-    <form action="/login" method="post">
-      @csrf
-      <div class="form-floating">
-        <input type="text" name="nrp" class="form-control @error('nrp')is-invalid @enderror"  id="nrp" placeholder="Masukkan NRP" autofocus required>
-        <label for="nrp">NRP</label>
-        @error('nrp')
-        <div class="invalid-feedback">
-          {{$message}}
+                <div id="auth-center">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="auth-logo">
+                                <img src="/img/Badge_ITS.png" alt="Logo">
+                            </div>
+                            <h1 class="auth-title">Log in</h1>
+                            <p class="auth-subtitle mb-5">Sistem Informasi Akademik</p>
+                        </div>
+                    </div>
+
+                    <form action="/login" method="post">
+                        @csrf
+                        <div class="form-group position-relative has-icon-left mb-2">
+                            <input type="text" name="nrp" class="form-control @error('nrp') is-invalid @enderror" id="nrp" placeholder="Masukkan NRP" autofocus
+                                required>
+                            <div class="form-control-icon">
+                                <i class="bi bi-person"></i>
+                            </div>
+                            @error('nrp')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="form-group position-relative has-icon-left mb-4">
+                            <input type="password" name="password" id="password" class="form-control
+                                @error('password') is-invalid @enderror" placeholder="Password" autofocus required>
+                            <div class="form-control-icon">
+                                <i class="bi bi-shield-lock"></i>
+                            </div>
+                            @error('password')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <button class="btn btn-primary btn-block btn-lg shadow-lg" type="submit">Log in</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        @enderror
-      </div>
-      <div class="form-floating">
-        <input type="password" name="password" id="password" class="form-control @error('password')is-invalid @enderror" placeholder="Password" autofocus required>
-        <label for="password">Password</label>
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-    </form>
-  </main>
-</div>
-</div>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
