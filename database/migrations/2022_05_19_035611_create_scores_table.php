@@ -22,7 +22,8 @@ class CreateScoresTable extends Migration
             $table->char('nilai_huruf')->nullable();
             $table->timestamps();
             $table->integer('tahun')->default('0')->nullable();
-            $table->integer('periode')->nullable();
+            // $table->integer('periode')->nullable();
+            $table->integer('semester')->nullable();
         });
     }
 

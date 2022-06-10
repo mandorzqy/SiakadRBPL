@@ -43,17 +43,39 @@
         </div>
     </div>
     <br>
-    <div class="row d-flex justify-content-center text-center">
-        <div class="col-6">
-          <table class="table align-items-center justify-content-center mb-0">
+    <div class=" flex-col mx-6 col-3 mt-6 mb-3 d-flex justify-content-center mx-auto">
+        <form class="form " method="get" @if (auth()->user()->type=='admin')
+            action='/adminsearchips'
+        @elseif (auth()->user()->type=='dosen')
+            action='/dosensearchips'
+        @else
+            action="/search/ips"
+        @endif>
+          <select class="form-select mb-2" aria-label="Default select example" id="search" name="search" onchange="this.form.submit()">
+            <option selected>Pilih Semester</option>
+            <option value='all'>Semua</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+        </form>
+      </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-7">
+          <table class="table align-items-center justify-content-center mb-0 table-bordered">
 
-            <thead>
+            <thead class="text-center">
               <tr>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Semester</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tahun</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Mata Kuliah</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Kode MK</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Semester</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Mata Kuliah</th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Kelas</th>
-                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nilai</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 ">Nilai</th>
+                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 ">SKS</th>
               </tr>
             </thead>
             <tbody>
@@ -62,25 +84,22 @@
               <tr>
                 @foreach ($scores as $score)
                       
-                 
                 <td>
-                  
                     <div class="mx-auto">
-                        <p class="text-sm font-weight-bold mb-0">
+                        <p class="text-sm font-weight-bold mb-0 text-center">
                             {{-- semester --}}
-                            {{ $score->periode }}
+                            {{ $score->classroom->course->kode_mk }}
                         </p>
                     </div>
                 </td>
                 <td>
-                  <div class="d-flex px-2">
-                    <div class="mx-5">
-                      <h6 class="mb-0 text-sm">
-                          {{-- Tahun --}}
-                          {{$score->tahun}}
-                        </h6>
+                  
+                    <div class="mx-auto">
+                        <p class="text-sm font-weight-bold mb-0 text-center">
+                            {{-- semester --}}
+                            {{ $score->semester }}
+                        </p>
                     </div>
-                  </div>
                 </td>
                 <td>
                     <div class="mx-5">
@@ -106,6 +125,14 @@
                         </p>
                     </div>
                 </td>
+                <td>
+                    <div class="mx-3">
+                        <p class="text-sm font-weight-bold mb-0">
+                        {{-- nilai --}}
+                        {{ $score->classroom->course->sks }}
+                        </p>
+                    </div>
+                </td>
                 {{-- <td>
                     <a class="btn btn-info " href={{url('dosen/transkrip/'.$user->id.'/edit')}}>Update</a>
                 </td> --}}
@@ -116,6 +143,20 @@
             </tbody>
 
           </table>
+          
+            <div class="card d-flex justify-content-center mt-5 mb-5">
+            <div class="card-body d-flex justify-content-center">
+                <div class="">
+                    <h6>Total SKS: {{$sks}}</h6>
+                    <h6>IPK      : {{$ipk}}</h6>
+                    <h6>IPS      : {{$ips}}</h6>
+                </div>
+                
+            </div>
+          </div>
+          
+          
+          
         </div>
     </div>
 

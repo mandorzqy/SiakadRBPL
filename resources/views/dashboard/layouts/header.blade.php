@@ -9,10 +9,10 @@
 
 </head>
 <body>
-  <header id="header" class="d-flex align-items-center">
-    <div class="container d-flex align-items-center">
+  <header id="header" class="d-flex align-items-center bg-warning ">
+    <div class="container d-flex align-items-center ">
 
-      <div class="logo me-auto">
+      <div class="logo me-auto text-white">
         @if (auth()->user()->type == 'admin')
         <h1><a href='/admin'>SIAKAD</a></h1>
         @endif
@@ -29,7 +29,7 @@
 
       @if (auth()->user()->type == 'admin')
 
-      <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-light">
+      <nav id="navbar" class="navbar navbar-expand-lg navbar-light nav navbar navbar-fixed-top">
 
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -121,8 +121,9 @@
         </nav>
 
         @endif
+
         @if (auth()->user()->type == 'mahasiswa')
-        <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-light">
+        <nav id="navbar" class="navbar order-last order-lg-0 navbar-expand-lg navbar-fixed-top">
 
           <div class="container-fluid">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -175,7 +176,7 @@
 
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/daftarmhsmk">Daftar Mata Kuliah</a></li>
+                    <li><a class="dropdown-item" href="/kurikulum">Daftar Mata Kuliah</a></li>
                     <li><a class="dropdown-item" href="/jadwal">Jadwal Kuliah Mahasiswa</a></li>
                     <li><a class="dropdown-item" href="/kelas">Kelas</a></li>
                   </ul>

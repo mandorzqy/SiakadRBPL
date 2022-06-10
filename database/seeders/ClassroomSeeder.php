@@ -21,7 +21,7 @@ class ClassroomSeeder extends Seeder
                 'kelas' => 'A',
                 'created_at' => now(),
                 'updated_at' => now(),
-                'kapasitas' => 20
+                'kapasitas' => 1
             ],
             [
                 'course_id' => 1,

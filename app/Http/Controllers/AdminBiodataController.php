@@ -74,7 +74,7 @@ class AdminBiodataController extends Controller
         $user=User::find($id);
         return view('admin.biodata.show',[
             'title'=>'Detail Biodata',
-            'majors'=>Major::all(),
+            's'=>Major::all(),
             'student'=>$user
         ]);
     }
@@ -99,7 +99,7 @@ class AdminBiodataController extends Controller
 
         ]);
     }
-
+    
     /**
      * Update the specified resource in storage.
      *

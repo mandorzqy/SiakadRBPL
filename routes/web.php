@@ -72,6 +72,8 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
 
     Route::get('/search-jadwal',[ScheduleController::class,'search'])->name('hari');
 
+    Route::get('/search/ips',[IpsIpkController::class,'search'])->name('search.ips');
+
     Route::resource('/jadwal',ScheduleController::class);
 
     Route::get('/proses',[ProsesController::class,'index']);
@@ -87,6 +89,7 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
     Route::get('/suratmahasiswa',[SuratMahasiswaController::class,'index']);
 
     Route::get('/suratketeranganaktif',[SuratKeteranganAktifController::class,'index']);
+    
     Route::post('/suratketeranganaktif/simpan',[SuratKeteranganAktifController::class,'simpan']);
 
     Route::get('/ikoma',[IkomaController::class,'index']);

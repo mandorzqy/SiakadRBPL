@@ -19,8 +19,6 @@ class MahasiswaFRSController extends Controller
      */
    
         public function index(){
-        
-
             $user=auth()->user();
             $scores=$user->score->load('user','course')->where('tahun',2022)->where('periode','2');
             $classrooms=Classroom::all();
@@ -29,12 +27,12 @@ class MahasiswaFRSController extends Controller
             $endDate = Carbon::createFromFormat('Y-m-d','2022-02-05');
             $masaFrs = Carbon::now()->between($startDate,$endDate);
 
-            return view('proses.frs.index',[
+        return view('proses.frs.index',[
                 'title' => 'FRS',
                 'user'=>$user,
                 'scores'=>$scores,
                 'classrooms'=>$classrooms,
-                'masaFrs'=>$masaFrs
+                'masaFrs'=>$masaFrs,
             ]);
 
         }
@@ -59,32 +57,31 @@ class MahasiswaFRSController extends Controller
     public function store(Request $request)
     {
         //
-        // auth()->user()->classrooms->where('id',$request->classroom_id)->first()->course->sks;
+        // auth()->user()->classrooms->where('id',$request->classroom_id)->first()->course->sks;\
+        $array=[];
         $sks=0;
         $classroom=Classroom::find($request->classroom_id);
+        foreach($classroom->user as $user){
+            array_push($array,$user->id);
+        }
         $tambahansks=$classroom->course->where('id',$request->classroom_id)->first()->sks;
         foreach(auth()->user()->classrooms as $classroom){
             $sks+=$classroom->course->sks;
         }  
         $sks=$sks+$tambahansks;
         if($request->action=='ambil'){
-            if ($sks>24){
-                return redirect()->back()->with('errorsks','SKS yang anda ambil melebihi batas maksimum');
-            }
-            else if($classroom->count()){
-                return redirect()->back()->with('errorsks','Anda sudah mengambil matkul ini');
-            }
-            else{
+            if ($sks>24) return redirect()->back()->with('errorsks','SKS yang anda ambil melebihi batas maksimum');
+            if(in_array(auth()->user()->id,$array)) return redirect()->back()->with('errorsks','Anda sudah mengambil matkul ini');
+            if($classroom->user->count()+$tambahansks>$classroom->kapasitas) return redirect()->back()->with('errorsks','Kapasitas kelas penuh');
                 DB::table('classroom_user')->insert([
                     [
                         'user_id'=>auth()->user()->id,
                         'classroom_id'=>$request->input('classroom_id')
                     ]
                 ]);
-                return redirect()->back()->with('success','Anda berhasil mendaftar ke kelas '.$request->input('classroom_id'));
-            }
-
-        if($request->action=='peserta'){
+                return redirect()->back()->with('success','Anda berhasil mendaftar ke kelas ');
+            
+            if($request->action=='peserta'){
             return redirect('/kelas/'.$request->classroom_id);
         }
         }

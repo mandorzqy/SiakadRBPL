@@ -16,14 +16,10 @@ body {
     background-repeat: no-repeat;
     background-size: auto;
     background-size: cover;
-<<<<<<< Updated upstream
-    /* background-color: #9cd0f3; */  }
-=======
     /* background-color: #9cd0f3; */
     background-color: white;
 
   }
->>>>>>> Stashed changes
 
   a {
     color: #3498db;

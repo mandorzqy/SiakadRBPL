@@ -3,13 +3,14 @@
 @section('container')
 
 
-<div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+<div class="justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="text-center">Transkrip</h1>
 </div>
 
-<div class="container text-center d-flex justify-content-center">
-  <div class="col-7">
-    <table class="table table-bordered align-items-center justify-content-center mb-0">
+<div class="container">
+  <div class="container justify-content-center row">
+  <div class="col-md-7">
+    <table class="table table-bordered align-items-center justify-content-center mb-0 text-center">
     <thead>
       <tr>
         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Mata Kuliah</th>
@@ -44,8 +45,27 @@
       @endif
     </tbody>
   </table>
+  <div class="container mx-auto">
+    <div class="card mt-5 mb-5 row">
+    <div class="col-4 card-body d-flex justify-content-center mx-auto">
+      <div class="container">
+            <h6>Total SKS: {{$sks}}</h6>
+            <h6>IPK      : {{$ipk}}</h6>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  
 </div>
 
-</div>
 
+
+
+
+
+
+
+
+  
   @endsection
