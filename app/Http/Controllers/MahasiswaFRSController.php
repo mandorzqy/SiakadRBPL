@@ -80,11 +80,11 @@ class MahasiswaFRSController extends Controller
                     ]
                 ]);
                 return redirect()->back()->with('success','Anda berhasil mendaftar ke kelas ');
-            
+        }
             if($request->action=='peserta'){
             return redirect('/kelas/'.$request->classroom_id);
         }
-        }
+        
         
     }
 

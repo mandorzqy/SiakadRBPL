@@ -28,20 +28,40 @@
 
 </style> --}}
 
-
+  
 <div class="container">
-    <div class="row">
-        <div class="col-10 text-center mx-auto">
-            <h1>IPS / IPK</h1>
+    <h1 class="text-center mt-3">IPS / IPK</h1>
+<div class="card d-flex justify-content-center mt-5 mb-3 col-5 mx-auto">
+    <div class="card-body d-flex justify-content-center mx-auto">
+            <div class="row">
+        <div class=" mx-auto d-flex justify-content-center">
+            
             <br>
-            <h5>Nama :
+            <table class="table table-borderless ">
+                <tbody>
+                    <tr>
+                        <td>Nama</td>
+                        <td>:</td>
+                        <td>{{$user->name}}</td>
+                    </tr>
+                    <tr>
+                        <td>NRP</td>
+                        <td>:</td>
+                        <td>{{$user->nrp}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            {{-- <h5>Nama :
                 {{$user->name}}
             </h5>
             <h5>NRP  :
                 {{$user->nrp}}
-            </h5>
+            </h5> --}}
         </div>
     </div>
+    </div>
+</div> 
+
     <br>
     <div class=" flex-col mx-6 col-3 mt-6 mb-3 d-flex justify-content-center mx-auto">
         <form class="form " method="get" @if (auth()->user()->type=='admin')
@@ -144,12 +164,30 @@
 
           </table>
           
-            <div class="card d-flex justify-content-center mt-5 mb-5">
-            <div class="card-body d-flex justify-content-center">
-                <div class="">
-                    <h6>Total SKS: {{$sks}}</h6>
-                    <h6>IPK      : {{$ipk}}</h6>
-                    <h6>IPS      : {{$ips}}</h6>
+            <div class="card d-flex justify-content-center mt-5 mb-5 col-5 mx-auto">
+            <div class="card-body d-flex justify-content-center mx-auto">
+                <div >
+                    <table class="table table-borderless">
+                        <tbody>
+                            <tr>
+                            <td><h6>IPK</h6></td>
+                            <td><h6>:</h6></td>
+                            <td><h6>{{$ipk}}</h6></td>
+                        </tr>
+                        <tr>
+                            <td><h6>IPS</h6></td>
+                            <td><h6>:</h6></td>
+                            <td><h6>{{$ips}}</h6></td>
+                        </tr>
+                        <tr>
+                            <td><h6>SKS</h6></td>
+                            <td><h6>:</h6></td>
+                            <td><h6>{{$sks}}</h6></td>
+                        </tr>
+                        </tbody>
+                        
+
+                    </table>
                 </div>
                 
             </div>

@@ -51,7 +51,6 @@
       <div class="container">
             <h6>Total SKS: {{$sks}}</h6>
             <h6>IPK      : {{$ipk}}</h6>
-
       </div>
     </div>
   </div>

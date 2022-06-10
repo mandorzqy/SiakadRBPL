@@ -50,7 +50,7 @@
                             <input type="hidden" name="tipe" value="suratketeranganaktif">
                             <div class="form-group">
                                 <label for="state">Periode:</label>
-                                <select class="form-control" name="periode">
+                                <select class="form-control" name="periode" required>
                                     <option value="" selected disabled>Periode</option>
                                     <option value="2022 Genap">2022 Genap</option>
                                     <option value="2022 Gasal">2022 Gasal</option>
@@ -58,7 +58,7 @@
                             </div>
                             <div class="form-group mt-2">
                                 <label for="state">Keperluan:</label>
-                                <select class="form-control" name="keperluan">
+                                <select class="form-control" name="keperluan" required>
                                     <option value="" selected disabled>Keperluan</option>
                                     <option value="Mengurus Tunjangan Gaji Orang Tua">Mengurus Tunjangan Gaji Orang Tua
                                     </option>
@@ -69,7 +69,7 @@
                             </div>
                             <div class="form-group mb-3 mt-2">
                                 <label for="state">Pilihan Bahasa:</label>
-                                <select class="form-control" name="bahasa">
+                                <select class="form-control" name="bahasa" >
                                     <option value="" selected disabled>Bahasa</option>
                                     <option value="Bahasa Indonesia">Bahasa Indonesia</option>
                                     <option value="Bahasa Inggris">Bahasa Inggris</option>
@@ -87,7 +87,7 @@
 
         <div class="container justify-content-center mt-4">
             <div class="row d-flex justify-content-center">
-                <div class="col-5">
+                <div class="col-7">
                     <table class=" mt-2 table center table-bordered text-center">
                         <thead class="table-dark">
                             <tr>
