@@ -1,6 +1,28 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-7 mx-auto">
+ @if (session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"
+            aria-label="Close"></button>
+        </div>
+    @endif
+
+    @if (session()->has('loginError'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session('loginError') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"
+            aria-label="Close"></button>
+        </div>
+    @endif
+        </div>
+    </div>
+</div>
+   
     <div class="text-center mt-3">
         <h3>Jadwal Kuliah</h3>
         <h5>Nama: {{ auth()->user()->name }}</h5>
@@ -9,7 +31,7 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-7">
-                <a class="btn btn-info" href="{{ url('admin/schedule/create') }}">Create New Student</a>
+                <a class="btn btn-info" href="{{ url('admin/schedule/create') }}">Buat Jadwal Baru</a>
                 <div class="d-flex flex-col mx-3 col-3 mt-5 mb-3">
                 </div>
                 <table class="table center ">
@@ -28,17 +50,19 @@
                             <tr>
                                 <td>{{ $schedule->hari }}</td>
                                 <td>{{ $schedule->jam }}</td>
-                                <td>{{ $schedule->course->nama_mata_kuliah }}</td>
-                                <td>{{ $schedule->course->kode_kelas }}</td>
+                                <td>{{ $schedule->classrooms->course->nama_mata_kuliah }}</td>
+                                <td>{{ $schedule->classrooms->course->kode_kelas }}</td>
                                 {{-- <div class="row"> --}}
                                 <td>
                                     <a class="btn btn-info" href={{ url('admin/schedule/' . $schedule->id . '/edit') }}><i
                                             class="bi bi-pencil-square"></i></a>
                                 </td>
                                 <td>
-                                    <form action="{{ url('admin/schedule/' . $schedule->id) }}" method="POST" @csrf <input
-                                        type="hidden" name="_method" value="DELETE">
-                                        <button class="btn btn-danger" type="submit">
+
+                                    <form action="{{ url('admin/schedule/' . $schedule->id) }}" method="POST"> 
+                                        @csrf 
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <button class="btn btn-danger show_confirm" type="submit">
                                             <i class="bi bi-trash3"></i>
                                         </button>
                                     </form>

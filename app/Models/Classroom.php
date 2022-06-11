@@ -26,6 +26,9 @@ class Classroom extends Model
         return $this->belongsTo(Lecturer::class,'lecturer_id');
     }
     
+    public function schedules(){
+        return $this->hasMany(Schedule::class);
+    }
     // public function users(){
     //     return $this->belongsToMany(User::class,'schedule)','schedule_id','user_id');
     // }

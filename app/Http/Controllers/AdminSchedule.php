@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Course;
 use App\Models\Schedule;
+use App\Models\Classroom;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -36,7 +37,8 @@ class AdminSchedule extends Controller
         return view('admin.schedule.create',[
             'title'=>'Tambah schedule',
             'active'=>'schedule',
-             'courses'=>Course::all()
+            'classes'=>Classroom::all(),
+            'courses'=>Course::all()
         ]);
     }
 
@@ -50,7 +52,7 @@ class AdminSchedule extends Controller
     {
         //
         $schedule=new Schedule;
-        $schedule->course_id=$request->course_id;
+        $schedule->classroom_id=$request->classroom_id;
         $schedule->hari=$request->hari;
         $schedule->jam=$request->jam;
         $schedule->save();
@@ -69,7 +71,7 @@ class AdminSchedule extends Controller
         $user=Schedule::find($id);
         return view('admin.schedule.show',[
             'title'=>'Detail schedule',
-            'courses'=>Course::all(),
+            'classes'=>Classroom::all(),
             'student'=>$user
         ]);
     }
@@ -87,7 +89,7 @@ class AdminSchedule extends Controller
         return view('admin.schedule.edit',[
             'title'=>'Edit schedule',
             'active'=>'schedule',
-            'courses'=>Course::all(),
+            'classes'=>Classroom::all(),
             'schedule'=>$user
 
         ]);
@@ -104,7 +106,7 @@ class AdminSchedule extends Controller
     {
         //
         $schedule=Schedule::find($id);
-        $schedule->course_id=$request->course_id;
+        $schedule->classroom_id=$request->classroom_id;
         $schedule->hari=$request->hari;
         $schedule->jam=$request->jam;
         $schedule->save();
@@ -122,6 +124,5 @@ class AdminSchedule extends Controller
         //
         $schedule=Schedule::find($id);
         $schedule->delete();
-        return redirect('admin/schedule')->with('success','Data berhasil dihapus');
-    }
+        return back()->with('success','Data berhasil dihapus');    }
 }
