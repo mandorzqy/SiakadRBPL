@@ -15,6 +15,6 @@ Anggota Kelompok 3:
 10. M. Farhan Rahmandika / 5026201
 11. Juan Septian / 5026201
 
-Berikut merupakan link menuju dokumen proyek ini:
+**Berikut merupakan link menuju dokumen proyek ini**<br>
 Laporan akhir proyek: <insert link><br>
 User manual: <insert link>
