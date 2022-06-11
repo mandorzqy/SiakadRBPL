@@ -14,7 +14,6 @@
         body {
             background-image: url("https://media.istockphoto.com/photos/abstract-blue-cyan-background-picture-id995719694?k=20&m=995719694&s=612x612&w=0&h=zI2SFqWdZallvqgVphnq5T8ZWYK0TBIkKdyYP60JAI8=");
         }
-
     </style>
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
@@ -32,99 +31,88 @@
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
                     <div class="portfolio-wrap">
-                        <figure>
-                            <img src="img/portfolio-1.jpg" class="img-fluid" alt="">
-                            <i class="bookmarks"></i>
-                            <a href="img/portfolio-1.jpg" data-gallery="portfolioGallery"
-                                class="link-preview portfolio-lightbox" title="Preview"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" class="link-details" title="More Details"><i
-                                    class="bx bx-link"></i></a>
-                        </figure>
+                        <a href="/dosen/frs">
+                            <figure>
+                                <img src="img/portfolio-1.jpg" class="img-fluid" alt="">
+                            </figure>
 
-                        <div class="portfolio-info">
-                            <h4><a href="/dosen/frs">Kelas</a></h4>
-                        </div>
+                            <div class="portfolio-info">
+                                <h4>Kelas</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
                     <div class="portfolio-wrap">
-                        <figure>
-                            <img src="img/portfolio-03.jpg" class="img-fluid" alt="">
-                            <i class="bi bi-bank"></i>
-                            <a href="img/portfolio-03.jpg" class="link-preview portfolio-lightbox"
-                                data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                            <a href="/suratmahasiswa">{{ auth()->user()->name }} class="link-details" title="More
-                                Details"><i class="bx bx-link"></i></a>
-                        </figure>
+                       <a href="/dosen/frs">
+                            <figure>
+                                <img src="img/portfolio-03.jpg" class="img-fluid" alt="">
+                                {{-- <a href="/suratmahasiswa" {{ auth()->user()->name }} class="link-details" title="More
+                                    Details"><i class="bx bx-link"></i></a> --}}
+                            </figure>
 
-                        <div class="portfolio-info">
-                            <h4><a href="dosen/frs">Formulir Rencana Studi</a></h4>
-                        </div>
+                            <div class="portfolio-info">
+                                <h4>Formulir Rencana Studi</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
                     <div class="portfolio-wrap">
-                        <figure>
-                            <img src="img/portfolio-04.jpg" class="img-fluid" alt="">
-                            <a href="img/portfolio-04.jpg" class="link-preview portfolio-lightbox"
-                                data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" class="link-details" title="More Details"><i
-                                    class="bx bx-link"></i></a>
-                        </figure>
+                        <a href="/dosen/kurikulum">
+                            <figure>
+                                <img src="img/portfolio-04.jpg" class="img-fluid" alt="">
+                            </figure>
 
-                        <div class="portfolio-info">
-                            <h4><a href="/dosen/kurikulum">Kurikulum</a></h4>
-                        </div>
+                            <div class="portfolio-info">
+                                <h4>Kurikulum</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
                     <div class="portfolio-wrap">
-                        <figure>
-                            <img src="img/portfolio-05.jpg" class="img-fluid" alt="">
-                            <a href="img/portfolio-05.jpg" class="link-preview portfolio-lightbox"
-                                data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" class="link-details" title="More Details"><i
-                                    class="bx bx-link"></i></a>
-                        </figure>
-                        <div class="portfolio-info">
-                            <h4><a href="/dosen/transkrip">Transkrip</a></h4>
-                        </div>
+                        <a href="/dosen/transkrip">
+                            <figure>
+                                <img src="img/portfolio-05.jpg" class="img-fluid" alt="">
+                            </figure>
+
+                            <div class="portfolio-info">
+                                <h4>Transkrip</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
                     <div class="portfolio-wrap">
-                        <figure>
-                            <img src="img/portfolio-06.jpg" class="img-fluid" alt="">
-                            <a href="img/portfolio-06.jpg" class="link-preview portfolio-lightbox"
-                                data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" class="link-details" title="More Details"><i
-                                    class="bx bx-link"></i></a>
-                        </figure>
+                        <a href="#">
+                            <figure>
+                                <img src="img/portfolio-06.jpg" class="img-fluid" alt="">
+                            </figure>
 
-                        <div class="portfolio-info">
-                            <h4><a href="#">Jadwal Kuliah Mahasiswa</a></h4>
-                        </div>
+                            <div class="portfolio-info">
+                                <h4>Jadwal Kuliah Mahasiswa</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
                     <div class="portfolio-wrap">
-                        <figure>
-                            <img src="img/portfolio-05.jpg" class="img-fluid" alt="">
-                            <a href="img/portfolio-05.jpg" class="link-preview portfolio-lightbox"
-                                data-gallery="portfolioGallery" title="Preview"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" class="link-details" title="More Details"><i
-                                    class="bx bx-link"></i></a>
-                        </figure>
+                        <a href="#">
+                            <figure>
+                                <img src="img/portfolio-05.jpg" class="img-fluid" alt="">
+                            </figure>
 
-                        <div class="portfolio-info">
-                            <h4><a href="#">Daftar Mata Kuliah</a></h4>
-                        </div>
+                            <div class="portfolio-info">
+                                <h4>Daftar Mata Kuliah</h4>
+                            </div>
+                        </a>
                     </div>
                 </div>
 
