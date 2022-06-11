@@ -1,7 +1,25 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
- 
+ <div class="row w-25 mx-auto text-center">
+    @if (session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                aria-label="Close"></button>
+        </div>
+    @endif
+
+    @if (session()->has('loginError'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ session('loginError') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                aria-label="Close"></button>
+        </div>
+    @endif
+ </div>
+
+
 <div class="container">
 
     <div class="row mb-4">
@@ -33,7 +51,7 @@
                     <label for="departemen" class="form-label">Departemen</label>
                 </div>
                 <div class=" d-flex justify-content-center">
-                    <a class="btn btn-info " href={{url('dosen/biodata/'.auth()->user()->id.'/edit')}}>Update</a>
+                    <a class="btn btn-info " href={{url('mahasiswa/biodata/'.auth()->user()->id.'/edit')}}>Update</a>
                 </div>
             </form>
             

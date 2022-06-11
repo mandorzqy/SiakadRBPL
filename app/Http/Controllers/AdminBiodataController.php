@@ -119,7 +119,8 @@ class AdminBiodataController extends Controller
         $biodata->address=$request->address;
         $biodata->generation=$request->generation;
         $biodata->save();
-        return redirect('admin/biodata')->with('success','Data berhasil diubah');
+        if (auth()->user()->role=='admin') return redirect('admin/biodata')->with('success','Data berhasil diubah');
+        else return redirect('biodata')->with('success','Data berhasil diubah');
     }
 
     /**

@@ -8,7 +8,9 @@
     <div class="row mb-4 d-flex justify-content-center mx-auto">
         <div class=" text-center">
             <div class="d-flex align-items-center justify-content-center">
-                 <form class="col-lg-5  justify-content-center" action="{{url('admin/biodata/'.$biodata->id)}}" method="POST" enctype="multipart/form-data">
+                 <form class="col-lg-5  justify-content-center"  @if (auth()->user()->type=="mahasiswa") action="{{url('mahasiswa/biodata/'.auth()->user()->id)}}"
+                @else action="{{url('admin/biodata/'.auth()->user()->id)}}" @endif method="POST"
+                enctype="multipart/form-data">
                 @csrf
                 @method('put')
                 <div class="input-group form-floating mb-3">
