@@ -18,7 +18,7 @@ class DosenFRSController extends Controller
     public function index(){
         return view('dosen.frs.index',[
             'title' => 'FRS',
-            'users'=>User::all()
+            'users'=>User::all()->where('type','mahasiswa')
         ]);
     }
 

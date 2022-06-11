@@ -7,6 +7,39 @@
     <h1 class="text-center">Transkrip</h1>
 </div>
 
+
+<div class="card mt-5 mb-3 mx-auto w-25 container">
+  <div class="card-body mx-auto ">
+      <div class="row">
+              <br>
+              <div class="col">
+                 <table class="table table-borderless">
+                  <tbody>
+                      <tr>
+                          <td>Nama</td>
+                          <td>:</td>
+                          <td>{{$user->name}}</td>
+                      </tr>
+                      <tr>
+                          <td>NRP</td>
+                          <td>:</td>
+                          <td>{{$user->nrp}}</td>
+                      </tr>
+                      <tr>
+                        <td>Total SKS</td>
+                        <td>:</td>
+                        <td>{{$sks}}</td>
+                    </tr>
+                    <tr>
+                        <td>IPK</td>
+                        <td>:</td>
+                        <td>{{$ipk}}</td>
+                  </tbody>
+              </table>
+              </div>
+      </div>
+  </div>
+</div> 
 <div class="container">
   <div class="container justify-content-center row">
   <div class="col-md-7">
@@ -45,17 +78,6 @@
       @endif
     </tbody>
   </table>
-  <div class="container mx-auto">
-    <div class="card mt-5 mb-5 row">
-    <div class="col-4 card-body d-flex justify-content-center mx-auto">
-      <div class="container">
-            <h6>Total SKS: {{$sks}}</h6>
-            <h6>IPK      : {{$ipk}}</h6>
-      </div>
-    </div>
-  </div>
-  </div>
-  
 </div>
 
 

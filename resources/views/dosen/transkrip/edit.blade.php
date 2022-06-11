@@ -16,11 +16,7 @@
             <label for="nrp">Nilai Angka</label>
             <input type="text" class="form-control" id="nilai_angka" name="nilai_angka" placeholder="Enter Score" value="{{old('nilai_angka',$score->nilai_angka)}}">
         </div>
-        <div class="form-group">
-            <label for="email">Nilai Huruf</label>
-            <input type="text" class="form-control" id="nilai_huruf" name="nilai_huruf" placeholder="Enter Score" value="{{$score->nilai_huruf}}">
-        </div>
-        <button type="submit" class="btn btn-primary mt-5">Submit</button>
+    <button type="submit" class="btn btn-primary mt-5">Submit</button>
     </form>
     
 @endsection
