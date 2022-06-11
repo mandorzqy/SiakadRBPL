@@ -1,7 +1,7 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+<div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1>Transkrip</h1>
 </div>
 
@@ -17,6 +17,7 @@
     @endforeach
     @endif
 </div> --}}
+<div class="container">
 <table class="table">
     <thead>
       <tr>
@@ -31,7 +32,7 @@
       <tr>
         <div class="row"></div>
         <th scope="row">{{$users->id}}</th>
-        
+
         <td>{{$users->name}}</td>
         <td>{{$users->nrp}}</td>
         <td><a class="btn btn-info col" href={{url('admin/transkrip/'.$users->id)}}><i class="bi bi-eye"></i></a></td>
@@ -39,5 +40,6 @@
       @endforeach
     </tbody>
   </table>
-  
+</div>
+
 @endsection

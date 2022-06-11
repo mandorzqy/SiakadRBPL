@@ -1,7 +1,7 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
- 
+
 <div class="container">
 
     <div class="row mb-4 ">
@@ -45,16 +45,17 @@
             </div>
 
             <div class="mt-4">
-                {{-- <a href="/dosen/biodata">
-                    <button class="btn btn-warning">
-                        <i class="bi bi-pencil-square fs-5"></i><span class="fs-5 ms-2">Kembali</span>
-                    </button>
-                </a> --}}
             </div>
-            
+
         </div>
-        
+
     </div>
 </div>
 
 @endsection
+
+  {{-- <a href="/dosen/biodata">
+                    <button class="btn btn-warning">
+                        <i class="bi bi-pencil-square fs-5"></i><span class="fs-5 ms-2">Kembali</span>
+                    </button>
+                </a> --}}

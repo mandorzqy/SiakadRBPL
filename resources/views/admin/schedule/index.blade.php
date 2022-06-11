@@ -6,13 +6,14 @@
         <h5>Nama: {{ auth()->user()->name }}</h5>
     </div>
     <div class="container justify-content-center ">
-        <a class="btn btn-info" href="{{ url('admin/schedule/create') }}">Create New Student</a>
+
         <div class="row d-flex justify-content-center">
             <div class="col-7">
+                <a class="btn btn-info" href="{{ url('admin/schedule/create') }}">Create New Student</a>
                 <div class="d-flex flex-col mx-3 col-3 mt-5 mb-3">
                 </div>
-                <table class="table center table-bordered">
-                    <thead class="table-dark ">
+                <table class="table center ">
+                    <thead class="table ">
                         <tr>
                             <th class="text-uppercase text-xxs font-weight-bolder opacity-7">Hari</th>
                             <th class="text-uppercase text-xxs font-weight-bolder opacity-7 ps-2">Jam</th>

@@ -6,15 +6,15 @@
         margin-top: 15px;
     }
     .table{
-    background-color: rgba(192,229,247,255);
-    border-top-style: solid;
+    /* background-color: rgba(192,229,247,255); */
+    /* border-top-style: solid;
     border-right-style: solid;
     border-bottom-style: solid;
     border-left-style: solid;
     border-top-color: #d2d2d2;
     border-right-color: #d2d2d2;
     border-bottom-color: #d2d2d2;
-    border-left-color: #d2d2d2;
+    border-left-color: #d2d2d2; */
 
     padding-top: 16px;
     padding-right: 11px;
