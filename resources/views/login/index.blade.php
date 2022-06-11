@@ -36,7 +36,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-12">
                             <div class="auth-logo">
-                                <img src="/img/Badge_ITS.png" alt="Logo">
+                                <img src="/img/Logo-ITS-1-300x185.png" alt="Logo">
                             </div>
                             <h1 class="auth-title">Log in</h1>
                             <p class="auth-subtitle mb-5">Sistem Informasi Akademik</p>
