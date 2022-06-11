@@ -16,5 +16,12 @@
 <br>
 <h3>Berikut merupakan link menuju dokumen proyek ini</h3>
 Dokumen Requirements & Design: -insert link-<br>
-User Guide: -insert link-
+User Guide: -insert link-<br>
 
+
+<h3>General Information</h3>
+Proyek ini menggunakan Framework Laravel 9. 
+<h3>Petunjuk Instalasi</h3>
+
+<br>
+<h3>Petunjuk Penggunaan</h3>
