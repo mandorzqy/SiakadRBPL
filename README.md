@@ -16,5 +16,5 @@ Anggota Kelompok 3:
 11. Juan Septian / 5026201
 
 Berikut merupakan link menuju dokumen proyek ini:
-Laporan akhir proyek: <insert link>
+Laporan akhir proyek: <insert link><br>
 User manual: <insert link>
