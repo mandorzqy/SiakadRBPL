@@ -9,7 +9,7 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-7">
-                <a class="btn btn-info" href="{{ url('admin/schedule/create') }}">Create New Student</a>
+                <a class="btn btn-info" href="{{ url('admin/schedule/create') }}">Create New Schedule</a>
                 <div class="d-flex flex-col mx-3 col-3 mt-5 mb-3">
                 </div>
                 <table class="table center ">
