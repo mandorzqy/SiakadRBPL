@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-            <div class="row portfolio-container">
+            <div class="row portfolio-container justify-content-center">
 
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
                     <div class="portfolio-wrap">
