@@ -33,32 +33,25 @@
     <h1 class="text-center mt-3">IPS / IPK</h1>
 <div class="card d-flex justify-content-center mt-5 mb-3 col-5 mx-auto">
     <div class="card-body d-flex justify-content-center mx-auto">
-            <div class="row">
-        <div class=" mx-auto d-flex justify-content-center">
-            
-            <br>
-            <table class="table table-borderless ">
-                <tbody>
-                    <tr>
-                        <td>Nama</td>
-                        <td>:</td>
-                        <td>{{$user->name}}</td>
-                    </tr>
-                    <tr>
-                        <td>NRP</td>
-                        <td>:</td>
-                        <td>{{$user->nrp}}</td>
-                    </tr>
-                </tbody>
-            </table>
-            {{-- <h5>Nama :
-                {{$user->name}}
-            </h5>
-            <h5>NRP  :
-                {{$user->nrp}}
-            </h5> --}}
+        <div class="row">
+            <div class=" mx-auto d-flex justify-content-center">
+                <br>
+                <table class="table table-borderless ">
+                    <tbody>
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td>{{$user->name}}</td>
+                        </tr>
+                        <tr>
+                            <td>NRP</td>
+                            <td>:</td>
+                            <td>{{$user->nrp}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
     </div>
 </div> 
 

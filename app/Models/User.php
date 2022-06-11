@@ -69,6 +69,7 @@ class User extends Authenticatable
         return $this->belongsToMany(Classroom::class,'classroom_user','user_id','classroom_id');
     }
 
+
     protected function type(): Attribute
     {
         return new Attribute(

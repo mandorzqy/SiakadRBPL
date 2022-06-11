@@ -51,12 +51,12 @@ class DosenTranskripController extends Controller
      */
 
 
-    public function hitungIPK(){
+    public function hitungIPK($id){
         $ipk=0;
         $sum=0;
-        $user=auth()->user();
+        $user=User::find($id);
         $scores=$user->score->load('user','course');
-        $sks=$this->hitungSKSTotal();
+        $sks=$this->hitungSKSTotal($id);
 
         foreach($scores as $score){
             $sum=($sum)+$score->nilai_angka*$score->classroom->course->sks;
@@ -68,9 +68,9 @@ class DosenTranskripController extends Controller
     }
      
 
-    public function hitungSKSTotal(){
+    public function hitungSKSTotal($id){
         $sks=0;
-        $user=auth()->user();
+        $user=User::find($id);
 
         // total sks
         $scores=$user->score->load('user','course');
@@ -86,8 +86,8 @@ class DosenTranskripController extends Controller
             // 'user'=>$user,
             'title'=>'Transkrip',
             'score'=>$user->score->load('user','course'),
-            'ipk'=>$this->hitungIPK(),
-            'sks'=>$this->hitungSKSTotal()
+            'ipk'=>$this->hitungIPK($user->id),
+            'sks'=>$this->hitungSKSTotal($user->id)
         ]);
     }
 
@@ -100,8 +100,8 @@ class DosenTranskripController extends Controller
         return view('dosen.transkrip.show',[
             'title'=>'Transkrip',
             // 'majors'=>Major::all(),
-            'ipk'=>$this->hitungIPK(),
-            'sks'=>$this->hitungSKSTotal(),
+            'ipk'=>$this->hitungIPK($id),
+            'sks'=>$this->hitungSKSTotal($id),
             'user'=>$user,
             'score'=>$user->score->load('user','course')
         ]);

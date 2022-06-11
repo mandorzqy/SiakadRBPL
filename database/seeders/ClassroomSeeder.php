@@ -21,14 +21,16 @@ class ClassroomSeeder extends Seeder
                 'kelas' => 'A',
                 'created_at' => now(),
                 'updated_at' => now(),
-                'kapasitas' => 1
+                'kapasitas' => 1,
+                'lecturer_id' => 1
             ],
             [
                 'course_id' => 1,
                 'kelas' => 'B',
                 'created_at' => now(),
                 'updated_at' => now(),
-                'kapasitas' => 20
+                'kapasitas' => 20,
+                'lecturer_id' => 2
 
             ],
             [
@@ -36,7 +38,8 @@ class ClassroomSeeder extends Seeder
                 'kelas' => 'A',
                 'created_at' => now(),
                 'updated_at' => now(),
-                'kapasitas' => 20
+                'kapasitas' => 20,
+                'lecturer_id' => 1
 
             ],
             [
@@ -44,7 +47,8 @@ class ClassroomSeeder extends Seeder
                 'kelas' => 'B',
                 'created_at' => now(),
                 'updated_at' => now(),
-                'kapasitas' => 20
+                'kapasitas' => 20,
+                'lecturer_id' => 2
 
             ],
             [
@@ -52,7 +56,9 @@ class ClassroomSeeder extends Seeder
                 'kelas' => 'A',
                 'created_at' => now(),
                 'updated_at' => now(),
-                'kapasitas' => 20
+                'kapasitas' => 20,
+                'lecturer_id' => 1
+
 
             ],
             [
@@ -60,7 +66,8 @@ class ClassroomSeeder extends Seeder
                 'kelas' => 'B',
                 'created_at' => now(),
                 'updated_at' => now(),
-                'kapasitas' => 20
+                'kapasitas' => 20,
+                'lecturer_id' => 2
 
             ],
             [
@@ -68,7 +75,8 @@ class ClassroomSeeder extends Seeder
                 'kelas' => 'A',
                 'created_at' => now(),
                 'updated_at' => now(),
-                'kapasitas' => 20
+                'kapasitas' => 20,
+                'lecturer_id' => 1
 
             ],
             [
@@ -76,7 +84,8 @@ class ClassroomSeeder extends Seeder
                 'kelas' => 'B',
                 'created_at' => now(),
                 'updated_at' => now(),
-                'kapasitas' => 20
+                'kapasitas' => 20,
+                'lecturer_id' => 2
 
             ]
             ]);

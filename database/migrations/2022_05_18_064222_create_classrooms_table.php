@@ -16,6 +16,7 @@ class CreateClassroomsTable extends Migration
         Schema::create('classrooms', function (Blueprint $table) {
             $table->id();
             $table->foreignId('course_id')->references('id')->on('courses');
+            $table->foreignId('lecturer_id')->references('id')->on('lecturers');
             $table->char('kelas');
             $table->timestamps();
             $table->integer('kapasitas');

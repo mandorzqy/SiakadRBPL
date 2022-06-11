@@ -17,9 +17,7 @@ class CreateLecturersTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->foreignId('user_id')->constrained('users')->nullable();
-            $table->foreignId('lecturers_id')->constrained('lecturers')->nullable();
-            $table->foreignId('course_id')->constrained('courses')->nullable();
+            $table->bigInteger('nrp');
         });
     }
 

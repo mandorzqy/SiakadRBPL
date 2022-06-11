@@ -17,6 +17,8 @@ class CreateUsersTable extends Migration
             $table->id();
             // $table->unsignedBigInteger('major_id');
             $table->foreignId('major_id')->constrained('majors');
+            $table->foreignId('lecturer_id')->constrained('lecturers')->default(1);
+
             // $table->foreign('major_id')->references('id')->on('majors');
             $table->string('name');
             $table->boolean('status_frs')->default(false);
