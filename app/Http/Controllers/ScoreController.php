@@ -56,7 +56,8 @@ class ScoreController extends Controller
             'title'=>'Transkrip',
             'score'=>$user->score->load('user','course'),
             'ipk'=>$this->hitungIPK(),
-            'sks'=>$this->hitungSKSTotal()
+            'sks'=>$this->hitungSKSTotal(),
+            'user'=>auth()->user()
         ]);
     }
 

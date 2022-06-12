@@ -12,9 +12,10 @@ class Schedule extends Model
     use HasFactory;
     protected $guarded=['id'];
 
-    public function course(){
-        return $this->belongsTo(Course::class);
+    public function classrooms(){
+        return $this->belongsTo(Classroom::class,'classroom_id','id');
     }
+
     public function users(){
         return $this->belongsToMany(User::class,'schedule_user','schedule_id','user_id');
     }

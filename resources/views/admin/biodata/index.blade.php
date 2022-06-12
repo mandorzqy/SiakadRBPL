@@ -1,14 +1,14 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
-<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+<div class="d-flex justify-content-center flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1>Biodata</h1>
 </div>
 
 <div class="container">
   <a class="btn btn-info" href="{{url('admin/biodata/create')}}">Create New Student</a>
     @if($students->count())
-    
+
     <table class="table">
         <thead>
           <tr>
@@ -22,7 +22,7 @@
           <tr>
             <div class="row"></div>
             <th scope="row">{{$student->id}}</th>
-            
+
             <td>{{$student->name}}</td>
             <td>{{$student->nrp}}</td>
             <div class="row"></div>

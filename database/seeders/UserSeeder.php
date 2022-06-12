@@ -27,7 +27,8 @@ class UserSeeder extends Seeder
                 // 'major'=>'Sistem Informasi',
                 // 'faculty'=>'FTEIC',
                 'password'=>bcrypt('admin123'),
-                'type' => 0
+                'type' => 0,
+                'lecturer_id'=>1,
             ],
             [
                 'name'=>'Hatif Isfahani',
@@ -39,7 +40,8 @@ class UserSeeder extends Seeder
                 // 'major'=>'FTEIC',
                 // 'faculty'=>'Sistem Informasi',
                 'password'=>bcrypt('admin123'),
-                'type' => 0
+                'type' => 0,
+                'lecturer_id'=>2,
             ],
             [
                 'name'=>'Abyan Tahta',
@@ -51,7 +53,8 @@ class UserSeeder extends Seeder
                 // 'major'=>'Teknik Komputer',
                 // 'faculty'=>'FTEIC',
                 'password'=>bcrypt('admin123'),
-                'type' => 0
+                'type' => 0,
+                'lecturer_id'=>2,
             ],
             [
                 'name'=>'Ernando Taufiq',
@@ -63,7 +66,8 @@ class UserSeeder extends Seeder
                 // 'major'=>'Teknik Komputer',
                 // 'faculty'=>'FTEIC',
                 'password'=>bcrypt('admin123'),
-                'type' => 0
+                'type' => 0,
+                'lecturer_id'=>1,
 
             ],
 
@@ -77,7 +81,8 @@ class UserSeeder extends Seeder
                 // 'major'=>'Teknik Komputer',
                 // 'faculty'=>'FTEIC',
                 'password'=>bcrypt('admin123'),
-                'type' => 2
+                'type' => 2,
+                'lecturer_id'=>1,
 
             ],
             [
@@ -90,7 +95,8 @@ class UserSeeder extends Seeder
                 // 'major'=>'Teknik Komputer',
                 // 'faculty'=>'FTEIC',
                 'password'=>bcrypt('dosen123'),
-                'type' => 1
+                'type' => 1,
+                'lecturer_id'=>2,
 
             ],
             [
@@ -103,20 +109,22 @@ class UserSeeder extends Seeder
                 // 'major'=>'Teknik Komputer',
                 // 'faculty'=>'FTEIC',
                 'password'=>bcrypt('dosen123'),
-                'type' => 1
+                'type' => 1,
+                'lecturer_id'=>2,
 
             ],
             [
                 'name'=>'Faizal Johan Atletiko',
                 'major_id'=>13,
                 'email'=>'faizal@gmail.com',
-                'nrp'=>602621,
+                'nrp'=>602622,
                 'address'=>'Institut Teknologi Sepuluh Nopember Surabaya',
                 'generation'=>2000,
                 // 'major'=>'Teknik Komputer',
                 // 'faculty'=>'FTEIC',
                 'password'=>bcrypt('dosen123'),
-                'type' => 1
+                'type' => 1,
+                'lecturer_id'=>1,
             ]
 
             ]);

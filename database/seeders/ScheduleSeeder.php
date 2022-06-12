@@ -21,31 +21,31 @@ class ScheduleSeeder extends Seeder
             [
                 'hari'=>'Senin',
                 'jam'=>'07.00 - 10.00',
-                'course_id'=>1,
+                'classroom_id'=>1,
             ],[
                 'hari'=>'Senin',
                 'jam'=>'11.00 - 13.00',
-                'course_id'=>2,
+                'classroom_id'=>2,
             ],
             [
                 'hari'=>'Selasa',
                 'jam'=>'07.00 - 10.00',
-                'course_id'=>2,
+                'classroom_id'=>2,
             ],
             [
                 'hari'=>'Rabu',
                 'jam'=>'07.00 - 10.00',
-                'course_id'=>3,
+                'classroom_id'=>3,
             ],
             [
                 'hari'=>'Kamis',
                 'jam'=>'07.00 - 10.00',
-                'course_id'=>1,
+                'classroom_id'=>1,
             ],
             [
                 'hari'=>'Jumat',
                 'jam'=>'07.00 - 10.00',
-                'course_id'=>3,
+                'classroom_id'=>3,
             ]
 
             ]);

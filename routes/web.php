@@ -128,6 +128,9 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
 
     Route::get('/kelas/{kelas:id}',[ClassroomController::class,'showMahasiswa']);
 
+    Route::resource('/mahasiswa/biodata',AdminBiodataController::class);
+
+
 });
 
 
@@ -150,6 +153,7 @@ Route::post('/logout',[LoginController::class,'logout']);
     // Route::get('/search',[AdminKurikulumController::class,'search'])->name('adminsearch');
     Route::get('/adminsearch',[CourseController::class,'search']);
     Route::resource('/admin-kuesioner',AdminKuesionerController::class);
+    
 });
 
 
@@ -164,6 +168,10 @@ Route::middleware(['auth', 'role:dosen'])->group(function () {
     Route::get('dosen/frs/{user:nrp}',[DosenFRSController::class,'show'])->name('frs.show');
     Route::get('/search/frs/{nrp}',[DosenFRSController::class,'search'])->name('frs.search');
     Route::post('dosen/frs/accept/{user:id}',[DosenFRSController::class,'accept'])->name('frs.accept');
+    Route::resource('dosen/kurikulum',CourseController::class);
+    Route::resource('/dosen/jadwal',ScheduleController::class);
+    Route::get('dosensearch',[CourseController::class,'search'])->name('search');
+
 });
 
 // untuk halaman error(jika user tidak memiliki hak akses)

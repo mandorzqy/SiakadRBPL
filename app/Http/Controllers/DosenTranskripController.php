@@ -18,7 +18,7 @@ class DosenTranskripController extends Controller
         //
         return view('dosen.transkrip.index',[
             'title'=>'Transkrip Mahasiswa',
-            'users'=>User::all()            
+            'users'=>User::all()->where('type','mahasiswa')           
         ]);
     }
 
@@ -49,13 +49,59 @@ class DosenTranskripController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
+    public function hitungIPK($id){
+        $ipk=0;
+        $sum=0;
+        $user=User::find($id);
+        $scores=$user->score->load('user','course');
+        $sks=$this->hitungSKSTotal($id);
+
+        foreach($scores as $score){
+            $sum=($sum)+$score->nilai_angka*$score->classroom->course->sks;
+        }
+        if($sks!=0){
+            $ipk=$sum/$sks;
+        }
+        return $ipk;
+    }
+     
+
+    public function hitungSKSTotal($id){
+        $sks=0;
+        $user=User::find($id);
+
+        // total sks
+        $scores=$user->score->load('user','course');
+        foreach($scores as $score){
+        $sks+=$score->classroom->course->sks;
+        }  
+        return $sks;
+    }
+
+
+    public function transkrip(User $user){
+        return view('transkrip.index',[
+            // 'user'=>$user,
+            'title'=>'Transkrip',
+            'score'=>$user->score->load('user','course'),
+            'ipk'=>$this->hitungIPK($user->id),
+            'sks'=>$this->hitungSKSTotal($user->id)
+        ]);
+    }
+
+
+
     public function show($id)
     {
         //
         $user=User::find($id);
         return view('dosen.transkrip.show',[
-            'title'=>'Detail Nilai',
+            'title'=>'Transkrip',
             // 'majors'=>Major::all(),
+            'ipk'=>$this->hitungIPK($id),
+            'sks'=>$this->hitungSKSTotal($id),
             'user'=>$user,
             'score'=>$user->score->load('user','course')
         ]);

@@ -8,15 +8,22 @@
         @csrf
         <div class="form-group">
             <label for="major">Mata Kuliah</label>
-            <select class="form-control" id="course_id" name="course_id">
-                @foreach ($courses as $course)
-                <option value="{{$course->id}}">{{$course->nama_mata_kuliah}}</option>
+            <select class="form-control" id="classroom_id" name="classroom_id">
+                @foreach ($classes as $class)
+                <option value="{{$class->id}}">{{$class->course->nama_mata_kuliah}} ({{$class->kelas}})</option>
                 @endforeach
             </select>
         </div>
         <div class="form-group">
-            <label for="hari">hari</label>
-            <input type="text" class="form-control" id="hari" name="hari" placeholder="Enter NRP">
+            <label for="hari">Hari</label>
+            <select name="hari" id="hari" class="form-control">
+                <option value="Senin">Senin</option>
+                <option value="Selasa">Selasa</option>
+                <option value="Rabu">Rabu</option>
+                <option value="Kamis">Kamis</option>
+                <option value="Jumat">Jumat</option>
+            </select>
+            {{-- <input type="text" class="form-control" id="hari" name="hari" placeholder="Enter NRP"> --}}
         </div>
         <div class="form-group">
             <label for="jam">jam</label>

@@ -29,16 +29,18 @@
                     <th class="text-uppercase text-xxs font-weight-bolder opacity-7 ps-2">Jam</th>
                     <th class="text-uppercase text-xxs font-weight-bolder opacity-7 ps-2">Mata Kuliah</th>
                     <th class="text-uppercase text-xxs font-weight-bolder opacity-7 ps-2">Kelas</th>
+                    <th class="text-uppercase text-xxs font-weight-bolder opacity-7 ps-2">Kelas</th>
 
                   </tr>
               </thead>
               <tbody>
                 @foreach ($schedules as $schedule)
-      <tr>
+      <tr >
         <td>{{$schedule->hari}}</td>
         <td>{{$schedule->jam}}</td>
-        <td>{{$schedule->course->nama_mata_kuliah}}</td>
-        <td>{{$schedule->course->kode_kelas}}</td>
+        <td>{{$schedule->classrooms->course->nama_mata_kuliah}}</td>
+        <td class="text-center">{{$schedule->classrooms->kelas}}</td>
+        <td class="text-center">{{$schedule->classrooms->course->kode_kelas}}</td>
       </tr>
       @endforeach
               </tbody>

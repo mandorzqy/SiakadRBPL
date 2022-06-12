@@ -9,7 +9,7 @@
 
 </head>
 <body>
-  <header id="header" class="d-flex align-items-center bg-warning ">
+  <header id="header" class="d-flex align-items-center  ">
     <div class="container d-flex align-items-center ">
 
       <div class="logo me-auto text-white">
@@ -82,8 +82,8 @@
                     Proses
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="dosen/frs">FRS</a></li>
-                    <li><a class="dropdown-item" href="dosen/kurikulum">Kurikulum</a></li>
+                    <li><a class="dropdown-item" href="/dosen/frs">FRS</a></li>
+                    <li><a class="dropdown-item" href="/dosen/kurikulum">Kurikulum</a></li>
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -100,7 +100,6 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="/admin-kurikulum">Daftar Mata Kuliah</a></li>
-                    <li><a class="dropdown-item" href="/admin/jadwal">Jadwal Kuliah Mahasiswa</a></li>
                     <li><a class="dropdown-item" href="/admin/kelas">Kelas</a></li>
                   </ul>
                 </li>
@@ -134,7 +133,7 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="/frs">FRS</a></li>
-                    <li><a class="dropdown-item" href="/kuesioner">Kuesioner Dosen dan MK</a></li>
+                    {{-- <li><a class="dropdown-item" href="/kuesioner">Kuesioner Dosen dan MK</a></li> --}}
                     <li><a class="dropdown-item" href="/kurikulum">Kurikulum</a></li>
                   </ul>
                 </li>
