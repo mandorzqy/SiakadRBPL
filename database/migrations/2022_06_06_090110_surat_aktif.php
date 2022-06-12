@@ -21,6 +21,7 @@ class SuratAktif extends Migration
             $table->string('periode');
             $table->string('keperluan');
             $table->string('bahasa');
+            $table->boolean('status')->default('false');
         });
     }
 

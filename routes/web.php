@@ -1,5 +1,5 @@
 <?php
-
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FRSController;
 use App\Http\Controllers\UktController;
@@ -36,6 +36,7 @@ use App\Http\Controllers\SuratMahasiswaController;
 use App\Http\Controllers\SuratUndurDiriController;
 use App\Http\Controllers\BiayaPendidikanController;
 use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\DosenNilaiController;  
 use App\Http\Controllers\SuratKeteranganAktifController;
 
 
@@ -130,6 +131,9 @@ Route::middleware(['auth', 'role:mahasiswa'])->group(function () {
 
     Route::resource('/mahasiswa/biodata',AdminBiodataController::class);
 
+    Route::get('/cetak/surat',function(){
+        return view('suratMahasiswa',['title'=>'Cetak Surat','surat']); 
+    });
 
 });
 
@@ -153,7 +157,10 @@ Route::post('/logout',[LoginController::class,'logout']);
     // Route::get('/search',[AdminKurikulumController::class,'search'])->name('adminsearch');
     Route::get('/adminsearch',[CourseController::class,'search']);
     Route::resource('/admin-kuesioner',AdminKuesionerController::class);
-    
+    Route::get('admin/surat/cuti',[SuratCutiController::class,'indexAdmin']);
+    Route::get('admin/acc/surat/cuti/{nrp}',[SuratCutiController::class,'accept']);
+    Route::get('admin/reject/surat/cuti/{nrp}',[SuratCutiController::class,'reject']);
+
 });
 
 
@@ -171,6 +178,10 @@ Route::middleware(['auth', 'role:dosen'])->group(function () {
     Route::resource('dosen/kurikulum',CourseController::class);
     Route::resource('/dosen/jadwal',ScheduleController::class);
     Route::get('dosensearch',[CourseController::class,'search'])->name('search');
+    Route::get('dosen-kelas',[ClassroomController::class,'indexDosen'])->name('dosen.kelas');
+    Route::get('/dosen-kelas/{kelas:id}',[ClassroomController::class,'showMahasiswa']);
+    Route::resource('/dosen-nilai',ClassroomController::class);
+    Route::get('/dosen/{user:nrp}/{classroon:id}/edit',[DosenNilaiController::class,'editNilai'])->name('dosen.nilai.edit');
 
 });
 

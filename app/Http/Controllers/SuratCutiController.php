@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\SuratCuti;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class SuratCutiController extends Controller
 {
@@ -13,6 +15,14 @@ class SuratCutiController extends Controller
         return view('/suratmahasiswa.suratcuti.index',[
             'title'=>"Surat Cuti",
             'suratcuti' => $suratcuti
+        ]);
+    }
+
+    public function indexAdmin(){
+        $letters=SuratCuti::join('users','users.nrp','=','surat_cuti.nrp')->get();
+        return view('admin.surat.surat-cuti.index',[
+            'title'=>"Surat Cuti",
+            'letters'=>$letters
         ]);
     }
 
@@ -28,5 +38,20 @@ class SuratCutiController extends Controller
         ]);
 
         return redirect('/suratcuti');
+    }
+
+
+    public function accept($nrp){
+        SuratCuti::where('nrp',$nrp)->update([
+            'status'=>true
+        ]);
+        return redirect('admin/surat/cuti')->with('success'," Surat telah disetujui");
+    }
+
+    public function reject($nrp){
+        SuratCuti::where('nrp',$nrp)->update([
+            'status'=>false
+        ]);
+        return redirect('admin/surat/cuti')->with('success'," Surat telah disetujui");
     }
 }

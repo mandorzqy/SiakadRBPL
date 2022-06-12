@@ -2,6 +2,21 @@
 
 @section('container')
 
+@if (session()->has('success'))
+<div class="alert alert-success alert-dismissible fade show w-25 mx-auto text-center" role="alert">
+        {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"
+        aria-label="Close"></button>
+</div>
+@endif
+
+@if (session()->has('loginError'))
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{ session('loginError') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert"
+        aria-label="Close"></button>
+</div>
+@endif
     <div class="container">
         <div class="row mt-5 mb-5">
             <h1 class="text-center">Kelas</h1>
@@ -44,7 +59,9 @@
                             <th scope="col">#</th>
                             <th scope="col">Nama</th>
                             <th scope="col">NRP</th>
-                            
+                            @if (auth()->user()->type == 'dosen')
+                            <th>Nilai</th>
+                            @endif
                         </tr>
                     </thead>
                     <tbody>
@@ -53,7 +70,17 @@
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->nrp}}</td>
-                                
+                                <td>
+                                    @if (auth()->user()->type == 'dosen')
+                                    {{$user->score->where('classroom_id', $classroom->id)->first()->nilai_angka}}
+                                    
+                                </td>
+                                <td>
+                                    <a href="/dosen/{{$user->nrp}}/{{$classroom->id}}/edit">
+                                        <i class="bi bi-pencil-fill text-dark"></i>
+                                    </a>
+                                </td>
+                                @endif
                         </tr>
                         @endforeach
                     </tbody>

@@ -14,7 +14,7 @@
         @foreach ($users as $user)
       <tr>
         <div class="row"></div>
-        <th scope="row">{{$user->id}}</th>
+        <td>{{ $loop->iteration }}</td>
         
         <td>{{$user->name}}</td>
         <td>{{$user->nrp}}</td>

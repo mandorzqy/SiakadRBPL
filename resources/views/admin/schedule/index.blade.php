@@ -31,11 +31,7 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-7">
-<<<<<<< HEAD
                 <a class="btn btn-info" href="{{ url('admin/schedule/create') }}">Buat Jadwal Baru</a>
-=======
-                <a class="btn btn-info" href="{{ url('admin/schedule/create') }}">Create New Schedule</a>
->>>>>>> 41648c289ab35c6bdb6439a48a06629a3dfa63e1
                 <div class="d-flex flex-col mx-3 col-3 mt-5 mb-3">
                 </div>
                 <table class="table center ">

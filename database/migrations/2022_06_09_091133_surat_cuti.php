@@ -22,6 +22,7 @@ class SuratCuti extends Migration
             $table->string('alasan');
             $table->integer('durasi');
             $table->string('bahasa');
+            $table->boolean('status')->default(false);
         });
     }
 

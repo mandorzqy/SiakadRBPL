@@ -31,6 +31,13 @@ class ScoreSeeder extends Seeder
                 'classroom_id' => '2',
                 'semester'=>1
             ],
+            [
+                'user_id' => '1',
+                'nilai_angka' => 4.00,
+                'tahun' => 2020,
+                'classroom_id' => '3',
+                'semester'=>1
+            ],
             // 
             //     'user_id' => '1',
             //     'nilai_angka' => 100,

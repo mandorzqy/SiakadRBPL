@@ -92,6 +92,7 @@
                                 <th>Alasan</th>
                                 <th>Durasi</th>
                                 <th>Bahasa</th>
+                                <th>Cetak</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -101,6 +102,13 @@
                                 <td>{{ $surat->alasan }}</td>
                                 <td>{{ $surat->durasi }}</td>
                                 <td>{{ $surat->bahasa }}</td>
+                                <td>{{$surat->status}}</td>
+                                @if($surat->status == true)
+                                <td>
+                                    <a href="cetak/surat/"><i class="bi bi-printer-fill"></i></a>
+                                    
+                                </td>
+                                @endif
                             </tr>
                             @endforeach
                         </tbody>

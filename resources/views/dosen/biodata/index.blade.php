@@ -2,17 +2,33 @@
 
 @section('container')
 
+@section('container')
+ <div class="row w-25 mx-auto text-center mt-5">
+    @if (session()->has('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                aria-label="Close"></button>
+        </div>
+    @endif
 
-<div class="container justify-content-center">
+    @if (session()->has('loginError'))
+        <div class="alert alert-danger alert-dismissible fade show" role="alert mt-5">
+            {{ session('loginError') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"
+                aria-label="Close"></button>
+        </div>
+    @endif
+ </div> 
     {{-- Content --}}
-    <main>
 
-        <div class="content">
-
+        <div class="container">
             <div class="row mb-4">
                 <h2 class="fw-bold text-center mt-5">Biodata</h2>
             </div>
-            <div class="row mb-4">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-10">
+                                <div class="row mb-4">
                 <div class=" text-center">
                     <div class="d-flex align-items-center justify-content-center">
                          <form class="col-lg-5  justify-content-center ">
@@ -43,21 +59,15 @@
                     </form>
                     
                     </div>
-  
-                    <div class="mt-4">
-                        {{-- <a href="/dosen/biodata">
-                            <button class="btn btn-warning">
-                                <i class="bi bi-pencil-square fs-5"></i><span class="fs-5 ms-2">Kembali</span>
-                            </button>
-                        </a> --}}
-                    </div>
-                    
                 </div>
                 
             </div>
+                </div>
+            </div>
         </div>
-    </main>
-</div>
+
+
+
 
 
 @endsection

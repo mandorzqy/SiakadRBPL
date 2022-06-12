@@ -72,20 +72,6 @@
 
         <div class="row portfolio-container justify-content-center">
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
-                <div class="portfolio-wrap">
-                    <a href="/kuesioner">
-                        <figure>
-                            <img src="img/portfolio-05.jpg" class="img-fluid" alt="">
-                        </figure>
-
-                        <div class="portfolio-info">
-                            <h4>Kurikulum Semester</h4>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
             <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
                 <div class="portfolio-wrap">
                     <a href="/frs">

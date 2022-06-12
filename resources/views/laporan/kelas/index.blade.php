@@ -27,7 +27,13 @@
                                 <td>{{$classroom->kelas}}</td>
                                 <td>{{$classroom->user->count()}}</td>
                                 <td>{{$classroom->kapasitas}}</td>
+                                @if (auth()->user()->type == 'dosen')
+                                <td><a href="/dosen-kelas/{{$classroom->id}}"><i class="bi bi-eye"></i></a></td>
+                                @endif
+                                @if (auth()->user()->type == 'dosen')
                                 <td><a href="/kelas/{{$classroom->id}}"><i class="bi bi-eye"></i></a></td>
+                                @endif
+                                
                         </tr>
                         @endforeach
                     </tbody>

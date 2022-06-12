@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Score;
 use App\Models\User;
+use App\Models\Score;
+use App\Models\Lecturer;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class DosenFRSController extends Controller
 {
@@ -16,9 +18,11 @@ class DosenFRSController extends Controller
 
 
     public function index(){
+        $doswal=Lecturer::where('nrp',auth()->user()->nrp)->first();
+        $users=$doswal->users;
         return view('dosen.frs.index',[
             'title' => 'FRS',
-            'users'=>User::all()->where('type','mahasiswa')
+            'users'=>$users->where('type','mahasiswa'),
         ]);
     }
 

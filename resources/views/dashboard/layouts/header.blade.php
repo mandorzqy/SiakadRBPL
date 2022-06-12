@@ -53,6 +53,16 @@
                   <li><a class="dropdown-item" href="/admin/kelas">Kelas</a></li>
                 </ul>
               </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Surat Mahasiswa
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/admin/surat/cuti">Surat Cuti</a></li>
+                  <li><a class="dropdown-item" href="/admin/schedule">Surat Keterangan Mahasiswa Aktif</a></li>
+                  <li><a class="dropdown-item" href="/admin/kelas">Surat Undur Diri</a></li>
+                </ul>
+              </li>
               <li><form action="/logout" method="post">
           @csrf<button style="
           background:none;
@@ -100,7 +110,7 @@
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="/admin-kurikulum">Daftar Mata Kuliah</a></li>
-                    <li><a class="dropdown-item" href="/admin/kelas">Kelas</a></li>
+                    <li><a class="dropdown-item" href="/dosen-kelas">Kelas</a></li>
                   </ul>
                 </li>
                 <li><a class="nav-link {{Request::is('/biodata'?'active':'')}}" href="/dosen/biodata">{{auth()->user()->name}}</a></li>
