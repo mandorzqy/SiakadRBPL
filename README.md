@@ -23,8 +23,9 @@
 
 ## Documents
 
-Dokumen Requirements & Design: -insert link-<br>
-User Guide: -insert link-<br>
+Dokumen Requirements & Design: [Gdocs](https://docs.google.com/document/d/e/2PACX-1vSPDHtFf2sJtUdeCWvu-1EHtQfbHaVR4uIBswGl6Q_ebxdfL8CenUNiDWb0S4TxWIdKjoWEbdFkUFgU/pub)<br>
+Dokumen Test Plan: [Gdocs](https://docs.google.com/document/d/e/2PACX-1vSPDHtFf2sJtUdeCWvu-1EHtQfbHaVR4uIBswGl6Q_ebxdfL8CenUNiDWb0S4TxWIdKjoWEbdFkUFgU/pub)<br>
+User Guide: [Gdocs](https://docs.google.com/document/d/e/2PACX-1vT0VqThGL-IdI3YetCXB83CZ7pqEJwHq9IPFuulkuw9uYnXcIzIX_vnYG_K-j54ZJ8R94tW0OOXqnQ7/pub)<br>
 
 ## General Information
 - **PHP** `8.x` atau lebih
