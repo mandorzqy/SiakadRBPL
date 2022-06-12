@@ -20,8 +20,21 @@ User Guide: -insert link-<br>
 
 
 <h3>General Information</h3>
-Proyek ini menggunakan Framework Laravel 9. 
+Proyek ini menggunakan XAMPP dengan PHP versi 8 dan Framework Laravel 9.
+
 <h3>Petunjuk Instalasi</h3>
+1. Download dan install XAMPP dengan PHP minimal versi 8.<br>
+2. Clone Repository <a href="https://github.com/armando2326/SiakadRBPL">SiakadRBPL</a> pada folder htdocs XAMPP.<br>
+3. Install composer pada cloned repository.<br>
+4. Copy paste file <i>.env.example</i> dan rubah file hasil copy paste jadi <i>.env</i>.<br>
+5. Buka file <i>.env</i> dan ubah nama database <i>(DB_DATABASE)</i>, username <i>(DB_USERNAME)</i>, dan password <i>(DB_PASSWORD)</i> sesuai dengan konfigarasi database yang dimiliki.<br>
+6. Buka XAMPP dan jalankan module <i>Apache</i> dan <i>MySQL</i>. <br>
+7. Buka terminal pada folder cloned repository. <br>
+8. Jalankan <i>php artisan key:generate</i><br>
+9. Jalankan <i>php artisan migrate</i><br>
+10. Jalankan <i>php artisan migrate:fresh --seed</i><br>
+11. Jalankan <i>php artisan serve</i><br>
+12. Buka http://localhost:8000 dan aplikasi siap digunakan
 
 <br>
 <h3>Petunjuk Penggunaan</h3>
