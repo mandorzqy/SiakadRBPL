@@ -65,10 +65,7 @@ php artisan config:cache
 ```
 
 ### Database
-- Buat database `siakad_rbpl`
-```
-php artisan database:create
-```
+- Buat database `siakad_rbpl` lalu atur konfigurasi pada file .env untuk `DB_DATABASE` `DB_USERNAME` `DB_PASSWORD`
 - Migrate dan database seeder
 ```
 php artisan migrate:fresh --seed
